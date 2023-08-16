@@ -1,22 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { navbar } from '../../data/data.json'
 
 function Navbar() {
-  return (
+
+    return (
     <nav>
         <ul>
-            <li>
-                <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-                <NavLink to="/pages/about">About</NavLink>
-            </li>
-            <li>
-                <NavLink to="/services">Services</NavLink>
-            </li>
-            <li>
-                <NavLink to="/contact">Contact</NavLink>
-            </li>
+            {
+                navbar.map( (data) => (
+                    data.page !== "page404" &&(
+                            <li key={data.path} >
+                                <NavLink  to={data.path}>{data.content}</NavLink>
+                            </li>
+                    )
+                ) )
+            }
         </ul>
     </nav>
   )
