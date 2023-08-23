@@ -1,6 +1,8 @@
+import HeroSection from "../components/Hero/HeroSection";
+import { about } from "../data/data.json"
 
 export default function About() {
   return (
-    <div>About</div>
+    <HeroSection {...about.hero} />
   )
 }
