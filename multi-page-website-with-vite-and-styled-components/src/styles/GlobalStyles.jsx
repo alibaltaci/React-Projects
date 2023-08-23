@@ -30,13 +30,14 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h3{
+        color: ${({theme}) => theme.colors.heading};
         font-size: 1.8rem;
         font-weight: 400;
     }
     
     p{
-        color: ${({theme}) => theme.colors.text};
-        opacity: .7;
+        color: ${ ( {theme} ) => theme.colors.heading };
+        /* opacity: .7; */
         font-size: 1.65rem;
         line-height: 1.5rem;
         margin-top: 1rem;

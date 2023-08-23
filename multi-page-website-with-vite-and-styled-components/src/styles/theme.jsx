@@ -1,9 +1,12 @@
+
 const theme  = {
     colors: {
         heading: "rgb(24 24 29)",
-        text: "rgb(24 24 29)",
+        // text: "rgb(24 24 29)",
+        text: "black",
         white: "#fff",
-        black: "#212529",
+        // black: "#212529",
+        black: "black",
         helper: "#8490ff",
         bg: "rgb(249 249 255)",
         footer_bg: "#0a1435",

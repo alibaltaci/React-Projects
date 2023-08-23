@@ -1,16 +1,16 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
+import StyledHeader from './StyledHeader'
 
 function Header() {
   return (
-    <header>
+    <StyledHeader>
         <NavLink to="/" >
-            {/* <img src='./logo/logo.png' alt='logo' /> */}
-            <p>Logo</p>
+            {/* <img src='./logo/logo.png' alt='logo'  className='logo' /> */}
+            <h1 className='logo' >Logo</h1>
         </NavLink>
         <Navbar />
-    </header>
+    </StyledHeader>
   )
 }
 
