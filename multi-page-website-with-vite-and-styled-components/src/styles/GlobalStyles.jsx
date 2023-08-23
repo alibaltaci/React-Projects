@@ -15,6 +15,11 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    div{
+        color: ${ ( {theme} ) => theme.colors.heading };
+        font-weight: 900;
+    }
+
     h1{
         color: ${ ( {theme} ) => theme.colors.heading };
         font-size: 6rem;
@@ -36,8 +41,8 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     p{
-        color: ${ ( {theme} ) => theme.colors.heading };
-        /* opacity: .7; */
+        color: ${ ( {theme} ) => theme.colors.text };
+        opacity: .7;
         font-size: 1.65rem;
         line-height: 1.5rem;
         margin-top: 1rem;
