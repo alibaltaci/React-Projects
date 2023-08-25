@@ -3,10 +3,10 @@ import StyledHeroSection from "./StyledHeroSection";
 import { Button } from "../UI/Button/Button";
 import { useGlobalContext } from "../../context";
 
-export default function HeroSection({ topContent, heading, content, button, imgUrl }) {
+export default function HeroSection({pageName}) {
 
-    const data = useGlobalContext()  // remove useContext and AppProvider
-
+    const { topContent, heading, content, button, imgUrl } = useGlobalContext()[pageName].hero  // remove useContext and AppProvider
+    
   return (
     <StyledHeroSection>
         <div className="container grid grid-two-column">
