@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import StyledHeroSection from "./StyledHeroSection";
 import { Button } from "../UI/Button/Button";
+import { useGlobalContext } from "../../context";
 
 export default function HeroSection({ topContent, heading, content, button, imgUrl }) {
 
-    // const { topContent, heading, content, button, imgUrl } = data
+    const data = useGlobalContext()  // remove useContext and AppProvider
 
   return (
     <StyledHeroSection>

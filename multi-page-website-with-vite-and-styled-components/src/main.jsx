@@ -6,14 +6,17 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import theme from "./styles/theme"
 import { GlobalStyles } from './styles/GlobalStyles.jsx'
+import { AppProvider } from './context.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme} >
-      <GlobalStyles />
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
-  </React.StrictMode>
+  <AppProvider>
+    <React.StrictMode>
+      <ThemeProvider theme={theme} >
+        <GlobalStyles />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </React.StrictMode>
+  </AppProvider>
 )
