@@ -4,9 +4,9 @@ import {  useGlobalContext } from "../context";
 
 export default function Home() {
 
-  const { updateHomePage } = useGlobalContext()
+  const { dispatchReturner } = useGlobalContext()
 
-  useEffect( () =>  updateHomePage(), [] )
+  useEffect( () =>  dispatchReturner( "home" ), [] )
 
   return (
     // <HeroSection {...home.hero} />

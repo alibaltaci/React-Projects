@@ -20,22 +20,31 @@ const AppProvider = ({ children }) => {
 
     const [ state, dispatch ] = useReducer( reducer, initialState );
 
-    const updateHomePage = () => {
+    const getHomePageData = () => {
         return dispatch({
-            type: "HOME_UPDATE",
+            type: "HOME_DATA",
             payload: data.home
         })
     }
 
-    const updateAboutPage = () => {
+    const getAboutPageData = () => {
         return dispatch({
-            type: "ABOUT_UPDATE",
+            type: "ABOUT_DATA",
             payload: data.about
         })
     }  
 
+    const dispatchReturner = ( page ) => {
+
+        page === "home" 
+        ? getHomePageData()
+        : page === "about"
+        ? getAboutPageData()
+        : state
+    }
+
     return (
-        <AppContext.Provider value={{...state, updateHomePage, updateAboutPage}} >
+        <AppContext.Provider value={{...state, dispatchReturner}} >
             { children }
         </AppContext.Provider>
     )

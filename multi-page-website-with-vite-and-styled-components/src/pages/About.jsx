@@ -4,9 +4,9 @@ import { useGlobalContext } from "../context";
 
 export default function About() {
 
-  const { updateAboutPage } = useGlobalContext()
+  const { dispatchReturner } = useGlobalContext()
 
-  useEffect( () =>  updateAboutPage(), [])
+  useEffect( () =>  dispatchReturner( "about" ), [])
 
   return (
     <HeroSection />
