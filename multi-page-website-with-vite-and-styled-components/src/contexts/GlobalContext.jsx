@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
-import data from "../src/data/data.json"
-import reducer from "./reducer";
+import data from "../data/data.json"
+import reducer from "../reducer";
 
 const AppContext = createContext()
 

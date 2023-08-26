@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import StyledHeroSection from "./StyledHeroSection";
 import { Button } from "../UI/Button/Button";
-import { useGlobalContext } from "../../context";
+import { useGlobalContext } from "../../contexts/GlobalContext";
 
 export default function HeroSection() {
 

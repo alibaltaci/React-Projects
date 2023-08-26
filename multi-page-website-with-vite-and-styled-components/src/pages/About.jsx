@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import HeroSection from "../components/Hero/HeroSection";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../contexts/GlobalContext";
 
 export default function About() {
 
