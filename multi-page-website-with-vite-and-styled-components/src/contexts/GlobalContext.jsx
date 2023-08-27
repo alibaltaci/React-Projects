@@ -4,6 +4,8 @@ import reducer from "../reducer";
 
 const AppContext = createContext()
 
+
+
 const initialState = {
     pageData: {
         hero:{
