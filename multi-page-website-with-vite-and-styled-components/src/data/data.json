@@ -45,6 +45,46 @@
             "button": "Hire Me",
             "imgUrl": "./images/about1.svg"
         }
-    }
+    },
 
+    "servicesPage":{
+        "services": [
+            {
+                "id":{"$numberInt":"1"},
+                "title":"Web Development",
+                "image":"./images/services/web-services.jpg",
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+            },
+            {
+                "id":{"$numberInt":"2"},
+                "title":"App Development",
+                "image":"./images/services/web-services.jpg",
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+            },
+            {
+                "id":{"$numberInt":"3"},
+                "title":"Digital Marketing",
+                "image":"./images/services/web-services.jpg",
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+            },
+            {
+                "id":{"$numberInt":"4"},
+                "title":"Data Science",
+                "image":"./images/services/web-services.jpg",
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+            },
+            {
+                "id":{"$numberInt":"5"},
+                "title":"Cyber Security",
+                "image":"./images/services/web-services.jpg",
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+            },
+            {
+                "id":{"$numberInt":"6"},
+                "title":"SEO",
+                "image":"./images/services/web-services.jpg",
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+            }
+        ]
+    }
 }

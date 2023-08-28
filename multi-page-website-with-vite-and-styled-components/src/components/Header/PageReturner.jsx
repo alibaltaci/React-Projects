@@ -1,6 +1,6 @@
 import Home from '../../pages/Home'
 import About from '../../pages/About'
-import Services from '../../pages/Services'
+import Services from '../../pages/services/Services'
 import Contact from '../../pages/Contact'
 import Page404 from '../../pages/Page404.jsx'
 

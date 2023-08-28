@@ -6,7 +6,7 @@ import { useGlobalContext } from "../../contexts/GlobalContext";
 export default function HeroSection() {
 
     // const { topContent, heading, content, button, imgUrl } = useGlobalContext()[pageName].hero  // remove useContext and AppProvider
-    const { topContent, heading, content, button, imgUrl } = useGlobalContext().pageData.hero
+    const { topContent, heading, content, button, imgUrl } = useGlobalContext().common.hero
 
   return (
     <StyledHeroSection>

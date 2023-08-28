@@ -7,15 +7,19 @@ const AppContext = createContext()
 
 
 const initialState = {
-    pageData: {
+    common: {
         hero:{
             // topContent: "",
             // heading: "",
             // content: "",
             // button: "",
             // imgUrl: ""
-        }
+        },
+    },
+    servicesPage:{
+        services:[]
     }
+
 }
 
 const AppProvider = ({ children }) => {
@@ -36,12 +40,21 @@ const AppProvider = ({ children }) => {
         })
     }  
 
+    const getServicesPageData = () => {
+        return dispatch({
+            type: "SERVICES_DATA",
+            payload: data.servicesPage
+        })
+    }
+
     const dispatchReturner = ( page ) => {
 
         page === "home" 
         ? getHomePageData()
         : page === "about"
         ? getAboutPageData()
+        : page === "services"
+        ? getServicesPageData()
         : state
     }
 
