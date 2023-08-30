@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../contexts/GlobalContext"
 import StyledServicesPage from "./StyledServicesPage";
 import Button from "../../components/UI/Button/Button"
 import Typography from "../../components/UI/Typography/Typography"
-
+import Container from "../../components/Common/Container/Container"
 export default function Services() {
 
   const { dispatchReturner, servicesPage } = useGlobalContext()
@@ -19,7 +19,7 @@ export default function Services() {
   return (
     <StyledServicesPage className="section" >
       <Typography elementType="h2" text={ pageTitle } className="common-heading" />
-      <div className="container grid grid-three-column">
+      <Container grid="3" >
         {
           services.map( service => {
             const { id, title, image, description } = service;
@@ -37,7 +37,7 @@ export default function Services() {
             )
           }) 
         }
-      </div>
+      </Container>
     </StyledServicesPage>
   )
 }
