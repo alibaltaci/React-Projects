@@ -14,7 +14,7 @@ export default function Home() {
     // <HeroSection pageName="home" />
 
     <>
-     <HeroSection />
+      <HeroSection />
     </>
   )
 }

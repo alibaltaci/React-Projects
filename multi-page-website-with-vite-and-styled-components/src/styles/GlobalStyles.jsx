@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 900;
     }
 
-    h1{
+    /* h1{
         color: ${ ( {theme} ) => theme.colors.heading };
         font-size: 6rem;
         font-weight: 900;
@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
         line-height: 1.5rem;
         margin-top: 1rem;
         font-weight: 400;
-    }
+    } */
 
     a{
         text-decoration: none;
