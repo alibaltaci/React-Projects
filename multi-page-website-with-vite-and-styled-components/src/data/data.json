@@ -48,6 +48,9 @@
     },
 
     "servicesPage":{
+        "pageTitle": "Our Services",
+        "button": "Read More",
+        "servicesRoute": "/services",
         "services": [
             {
                 "id":1,

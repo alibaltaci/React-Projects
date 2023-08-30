@@ -13,12 +13,14 @@ export default function Services() {
 
   console.log(servicesPage)
 
+  const { services, pageTitle, button, servicesRoute} = servicesPage
+
   return (
     <StyledServicesPage className="section">
-      <h2 className="common-heading">Our Services</h2>
+      <h2 className="common-heading">{pageTitle}</h2>
       <div className="container grid grid-three-column">
         {
-          servicesPage.services.map( service => {
+          services.map( service => {
             const { id, title, image, description } = service;
             return(
               <div key={ id } className="card">
@@ -28,7 +30,7 @@ export default function Services() {
                 <div className="card-data">
                   <h3>{ title }</h3>
                   <p>{ description }</p>
-                  <Button route="/services" text="Read More" />
+                  <Button route={servicesRoute} text={button} />
                 </div>
               </div>
             )
