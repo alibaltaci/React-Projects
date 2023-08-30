@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useGlobalContext } from "../../contexts/GlobalContext"
 import StyledServicesPage from "./StyledServicesPage";
 import Button from "../../components/UI/Button/Button"
+import Typography from "../../components/UI/Typography/Typography"
 
 export default function Services() {
 
@@ -16,8 +17,8 @@ export default function Services() {
   const { services, pageTitle, button, servicesRoute} = servicesPage
 
   return (
-    <StyledServicesPage className="section">
-      <h2 className="common-heading">{pageTitle}</h2>
+    <StyledServicesPage className="section" >
+      <Typography elementType="h2" text={ pageTitle } className="common-heading" />
       <div className="container grid grid-three-column">
         {
           services.map( service => {
@@ -28,8 +29,8 @@ export default function Services() {
                   <img src={ image } alt={ title } />
                 </figure>
                 <div className="card-data">
-                  <h3>{ title }</h3>
-                  <p>{ description }</p>
+                  <Typography elementType="h3" text={ title } />
+                  <Typography text={ description } />
                   <Button route={servicesRoute} text={button} />
                 </div>
               </div>
@@ -37,8 +38,6 @@ export default function Services() {
           }) 
         }
       </div>
-
-
     </StyledServicesPage>
   )
 }

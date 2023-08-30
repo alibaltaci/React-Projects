@@ -20,6 +20,16 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 900;
     }
 
+    a{
+        text-decoration: none;
+    }
+    
+    li{
+        list-style: none;
+    }
+    
+    /* --> Typography */
+
     /* h1{
         color: ${ ( {theme} ) => theme.colors.heading };
         font-size: 6rem;
@@ -49,15 +59,9 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
     } */
 
-    a{
-        text-decoration: none;
-    }
+    /* --> StyledContainer */
 
-    li{
-        list-style: none;
-    }
-
-    .container{
+    /* .container{
         max-width: 120rem;
         margin: 0 auto;
     }
@@ -77,6 +81,6 @@ export const GlobalStyles = createGlobalStyle`
 
     .grid-four-column{
         grid-template-columns: repeat(4, 1fr);
-    }
+    } */
 `
 

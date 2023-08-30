@@ -16,7 +16,7 @@ export const sharedTextStyles = css`
         (props.color  &&
 
         css`
-            color: ${theme.colors.text};
+            color: ${props.color};
         `)  
     };
 

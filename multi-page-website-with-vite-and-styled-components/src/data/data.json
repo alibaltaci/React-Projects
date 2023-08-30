@@ -33,7 +33,8 @@
             "heading":"SISYPHUS SOFT",
             "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex alias, provident quam, asperiores cupiditate nam eius iusto sint et error omnis voluptatibus praesentium tempora quisquam amet architecto. Rerum, sed.",
             "button": "Hire Me",
-            "imgUrl": "./images/hero.svg"
+            "imgUrl": "./images/hero.svg",
+            "route": "/contact"
         }
     },
 
