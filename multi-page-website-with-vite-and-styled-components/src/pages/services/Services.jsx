@@ -1,8 +1,7 @@
-import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { useGlobalContext } from "../../contexts/GlobalContext"
 import StyledServicesPage from "./StyledServicesPage";
-import {Button} from "../../components/UI/Button/Button"
+import Button from "../../components/UI/Button/Button"
 
 export default function Services() {
 
@@ -29,9 +28,7 @@ export default function Services() {
                 <div className="card-data">
                   <h3>{ title }</h3>
                   <p>{ description }</p>
-                  <NavLink to="/services">
-                    <Button >Read More</Button>
-                  </NavLink>
+                  <Button route="/services" text="Read More" />
                 </div>
               </div>
             )
