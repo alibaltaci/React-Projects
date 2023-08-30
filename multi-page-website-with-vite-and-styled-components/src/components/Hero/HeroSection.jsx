@@ -15,9 +15,11 @@ export default function HeroSection() {
                 <p className="hero-top-data" >{topContent}</p>
                 <h1 className="hero-heading" >{ heading }</h1>
                 <p className="hero-para" >{ content }</p>
-            <Button className="btn hireme-btn">
-                <NavLink to="/contact" >{ button }</NavLink>
-            </Button>
+                <NavLink to="/contact" className="btn hireme-btn" >
+                    <Button >
+                        { button }
+                    </Button>
+                </NavLink>
             </div>
             {/* for image */}
             <div className="section-hero-image">
