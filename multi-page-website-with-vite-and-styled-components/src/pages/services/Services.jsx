@@ -10,7 +10,7 @@ export default function Services() {
 
   useEffect(() => {
       dispatchReturner("services");
-  }, [servicesPage])
+  }, [])
 
   console.log(servicesPage)
 
@@ -18,7 +18,7 @@ export default function Services() {
 
   return (
     <StyledServicesPage className="section" >
-      <Typography elementType="h2" text={ pageTitle } className="common-heading" />
+      <Typography elementType="h2" text={ pageTitle } />
       <Container grid="3" >
         {
           services.map( service => {
@@ -29,8 +29,8 @@ export default function Services() {
                   <img src={ image } alt={ title } />
                 </figure>
                 <div className="card-data">
-                  <Typography elementType="h3" text={ title } />
-                  <Typography text={ description } />
+                  <Typography elementType="h3" text={ title } fontSize="2.4rem" margin="2rem 0" />
+                  <Typography text={ description } margin="2rem  0" />
                   <Button route={servicesRoute} text={button} />
                 </div>
               </div>

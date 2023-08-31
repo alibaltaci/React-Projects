@@ -63,7 +63,7 @@ const AppProvider = ({ children }) => {
             "services" : () => getServicesPageData(),
         }
 
-        return pageMap[page]
+        return pageMap[page]()
     }
 
     return (
