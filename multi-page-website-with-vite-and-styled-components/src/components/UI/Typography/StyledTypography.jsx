@@ -4,21 +4,41 @@ import theme from "../../../styles/theme"
 export const sharedTextStyles = css`
 
     ${props =>
+
         (props.color === "heading" &&
-        css`
-            color: ${theme.colors.heading};
+            css`
+                color: ${theme.colors.heading};
         `) ||
         (props.color === "text" &&
-
-        css`
-            color: ${theme.colors.text};
+            css`
+                color: ${theme.colors.text};
         `) ||
         (props.color  &&
-
-        css`
-            color: ${props.color};
+            css`
+                color: ${props.color};
         `)  
     };
+
+    ${ props => 
+        props.fontSize &&
+            css`
+                font-size: ${ props.fontSize || '1.65rem'};
+            `
+    }
+
+    ${ props => 
+        props.marginTop && 
+            css`
+                margin-top: ${props.marginTop || '1rem'};
+            `    
+    }
+
+    ${ props => 
+        props.opacity &&
+            css`
+                opacity: ${ props.opacity };
+            `
+    }
 
     word-wrap: break-word;
     
@@ -26,11 +46,9 @@ export const sharedTextStyles = css`
 
 export const StyledParagraph = styled.p`
     ${ sharedTextStyles }
-    opacity: .7;
-    font-size: 1.65rem;
-    line-height: 1.5rem;
-    margin-top: 1rem;
-    font-weight: 400;
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem ;
 `
 
 export const StyledSpan = styled.span`

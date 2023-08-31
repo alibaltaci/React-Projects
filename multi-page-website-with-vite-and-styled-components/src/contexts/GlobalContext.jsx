@@ -49,10 +49,18 @@ const AppProvider = ({ children }) => {
 
     const dispatchReturner = ( page ) => {
 
+        // page === "home" 
+        // ? getHomePageData()
+        // : page === "about"
+        // ? getAboutPageData()
+        // : page === "services"
+        // ? getServicesPageData()
+        // : null
+
         const pageMap = {
-            "home" : getHomePageData(),
-            "about" : getAboutPageData(),
-            "services" : getServicesPageData(),
+            "home" : () => getHomePageData(),
+            "about" : () => getAboutPageData(),
+            "services" : () => getServicesPageData(),
         }
 
         return pageMap[page]

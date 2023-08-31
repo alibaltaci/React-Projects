@@ -6,8 +6,7 @@ export default function Home() {
 
   const { dispatchReturner } = useGlobalContext()
 
-  useEffect( () =>  {dispatchReturner( "home" );
-  }, [] )
+  useEffect( () =>  dispatchReturner( "home" ), [] )
 
   return (
     // <HeroSection {...home.hero} />

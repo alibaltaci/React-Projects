@@ -30,7 +30,7 @@
     "home":{
         "hero":{
             "topContent":"THIS IS ME",
-            "heading":"SISYPHUS SOFT",
+            "heading":"SISYPHUS SOFT HOME",
             "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex alias, provident quam, asperiores cupiditate nam eius iusto sint et error omnis voluptatibus praesentium tempora quisquam amet architecto. Rerum, sed.",
             "button": "Hire Me",
             "imgUrl": "./images/hero.svg",
@@ -41,10 +41,11 @@
     "about":{
         "hero":{
             "topContent":"THIS IS ME",
-            "heading":"SISYPHUS SOFT",
+            "heading":"SISYPHUS SOFT ABOUT",
             "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex alias, provident quam, asperiores cupiditate nam eius iusto sint et error omnis voluptatibus praesentium tempora quisquam amet architecto. Rerum, sed.",
             "button": "Hire Me",
-            "imgUrl": "./images/about1.svg"
+            "imgUrl": "./images/about1.svg",
+            "route":"/contact"
         }
     },
 
