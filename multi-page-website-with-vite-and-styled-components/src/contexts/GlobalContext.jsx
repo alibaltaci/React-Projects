@@ -15,10 +15,18 @@ const initialState = {
             // button: "",
             // imgUrl: ""
         },
+
     },
+
+    form:{
+        data:[]
+    },
+
     servicesPage:{
         services:[]
-    }
+    },
+
+    contactPage:{ }
 
 }
 
@@ -47,6 +55,16 @@ const AppProvider = ({ children }) => {
         })
     }
 
+    const getContactPageData = () => {
+        return dispatch({
+            type: "CONTACT_DATA",
+            payload: {
+                page : data.contactPage,
+                form : data.contactPage.formData
+            }
+        })
+    }
+
     const dispatchReturner = ( page ) => {
 
         // page === "home" 
@@ -61,6 +79,7 @@ const AppProvider = ({ children }) => {
             "home" : () => getHomePageData(),
             "about" : () => getAboutPageData(),
             "services" : () => getServicesPageData(),
+            "contact" : () => getContactPageData()
         }
 
         return pageMap[page]()

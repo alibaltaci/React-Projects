@@ -1,14 +1,16 @@
+import { useGlobalContext } from "../../../contexts/GlobalContext";
 import Input from "../Input/Input";
 import { StyledForm, StyledFormContainer } from "./StyledForm";
 
-function Form({formData}) {
+function Form() {
 
-    console.log(formData)
+    const { action, method, data } = useGlobalContext().form
+    
   return (
     <StyledFormContainer >
-        <StyledForm action="https://formspree.io/f/xrgwkppd" method="POST" >
+        <StyledForm action={action} method={method} >
         {
-            formData.map( (el, index )=> {
+            data.map( (el, index )=> {
                 const { type, name, placeholder, value } = el
                 
                 return(

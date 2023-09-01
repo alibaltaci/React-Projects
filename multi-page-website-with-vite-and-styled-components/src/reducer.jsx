@@ -7,6 +7,8 @@ const reducer = (state, action) => {
             return { ...state, common: action.payload}
         case "SERVICES_DATA":
             return { ...state, servicesPage: action.payload }
+        case "CONTACT_DATA":
+            return { ...state, contactPage: action.payload.page, form: action.payload.form}
         default:
             return state
     }
