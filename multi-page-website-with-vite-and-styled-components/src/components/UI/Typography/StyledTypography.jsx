@@ -1,7 +1,7 @@
 import { styled, css } from "styled-components"
 import theme from "../../../styles/theme"
 
-export const sharedTextStyles = css`
+const sharedTextStyles = css`
 
     ${props =>
 
@@ -72,7 +72,7 @@ export const sharedTextStyles = css`
     
 `;
 
-export const sharedTitleStyles = css`
+const sharedTitleStyles = css`
 
     ${ props => 
         props.marginBottom ? 

@@ -91,5 +91,29 @@
                 "description":"Lorem ipsum sit amet consectetur adipisicing elit."
             }
         ]
+    },
+
+    "contactPage":{
+        "formData":[
+            {
+                "type":"text",
+                "name": "Name",
+                "placeholder":"Name"
+            },
+            {
+                "type":"email",
+                "name": "Email",
+                "placeholder":"Email"
+            },
+            {
+                "type":"textarea",
+                "name": "message",
+                "placeholder":"Message"
+            },
+            {
+                "type":"submit",
+                "value": "Send"
+            }
+        ]
     }
 }

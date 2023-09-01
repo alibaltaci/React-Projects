@@ -12,7 +12,7 @@ const SharedStyles = css`
 
 export const StyledInputArea = styled.input`
     ${SharedStyles}
-    
+
     &[type="submit"]{
         max-width: 16rem;
         margin-top: 2rem;
@@ -24,6 +24,14 @@ export const StyledInputArea = styled.input`
         text-transform: uppercase;
         font-size: 1.8rem;
         cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover{
+            background-color: ${({theme}) => theme.colors.white};
+            border: 1px solid ${({theme}) => theme.colors.btn};
+            color: ${({theme}) => theme.colors.btn};
+            transform: scale(0.9);
+        }
     }
 `
 
