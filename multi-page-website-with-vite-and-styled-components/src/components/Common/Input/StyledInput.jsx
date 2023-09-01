@@ -2,7 +2,8 @@ import { styled, css } from 'styled-components'
 
 const SharedStyles = css`
 
-    max-width: 50rem;
+    /* max-width: 50rem; */
+    width: 60%;
     color: ${({theme}) => theme.colors.black};
     padding: 1.6rem 2.4rem;
     border: 1px solid ${({theme}) => theme.colors.border};
@@ -37,4 +38,6 @@ export const StyledInputArea = styled.input`
 
 export const StyledTextArea = styled.textarea`
     ${SharedStyles}
+    height: 12rem;
+
 `

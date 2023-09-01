@@ -24,9 +24,7 @@ export default function Contact() {
         loading="lazy" 
         referrerPolicy="no-referrer-when-downgrade">
       </iframe>
-
       <Form />
-
     </StyledContact>
   )
 }
