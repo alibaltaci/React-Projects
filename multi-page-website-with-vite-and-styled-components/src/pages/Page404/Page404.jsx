@@ -2,14 +2,22 @@
 import { StyledPage404 } from './StyledPage404'
 import Typography from '../../components/UI/Typography/Typography'
 import Button from '../../components/UI/Button/Button'
+import { useGlobalContext } from '../../contexts/GlobalContext'
+import { useEffect } from 'react'
 
 function Page404() {
+
+  const { dispatchReturner ,page404 } = useGlobalContext()
+
+  useEffect( () => dispatchReturner("404"), [] )
+  
+  const { image, error, title, subTitle, button, route } = page404
   return (
     <StyledPage404>
-        <img src='../images/error.svg' alt='error' />
-        <Typography elementType="h1" text="404" />
-        <Typography elementType="h2" text="Page Not Found!!!" />
-        <Button route="/" text="Home Page" />
+        <img src={image} alt={error} />
+        <Typography elementType="h1" text={title} />
+        <Typography elementType="h2" text={subTitle} />
+        <Button route={route} text={button} />
     </StyledPage404>
   )
 }

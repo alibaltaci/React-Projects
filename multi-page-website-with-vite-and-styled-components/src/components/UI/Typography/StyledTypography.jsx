@@ -117,6 +117,6 @@ export const StyledH2 = styled.h2`
 export const StyledH3 = styled.h3`
     ${ sharedTextStyles }
     ${ sharedTitleStyles }
-    /* font-size: 1.8rem; */
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 600;
 `

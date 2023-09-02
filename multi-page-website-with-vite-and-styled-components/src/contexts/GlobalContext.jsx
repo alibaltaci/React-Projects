@@ -26,7 +26,9 @@ const initialState = {
         services:[]
     },
 
-    contactPage:{ }
+    contactPage:{ },
+
+    page404:{}
 
 }
 
@@ -65,6 +67,13 @@ const AppProvider = ({ children }) => {
         })
     }
 
+    const getPage404Data = () => {
+        return dispatch({
+            type: "PAGE404_DATA",
+            payload: data.page404
+        })
+    }
+
     const dispatchReturner = ( page ) => {
 
         // page === "home" 
@@ -79,7 +88,8 @@ const AppProvider = ({ children }) => {
             "home" : () => getHomePageData(),
             "about" : () => getAboutPageData(),
             "services" : () => getServicesPageData(),
-            "contact" : () => getContactPageData()
+            "contact" : () => getContactPageData(),
+            "404" : () => getPage404Data()
         }
 
         return pageMap[page]()

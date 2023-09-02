@@ -121,5 +121,14 @@
                 }
             ]
     }
+    },
+
+    "page404":{
+        "image":"../images/error.svg",
+        "alt": "error",
+        "title":"404",
+        "subTitle": "Page Not Found!",
+        "button":"Go Back",
+        "route": "/"
     }
 }

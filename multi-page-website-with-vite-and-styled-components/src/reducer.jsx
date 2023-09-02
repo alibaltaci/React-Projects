@@ -9,6 +9,8 @@ const reducer = (state, action) => {
             return { ...state, servicesPage: action.payload }
         case "CONTACT_DATA":
             return { ...state, contactPage: action.payload.page, form: action.payload.form}
+        case "PAGE404_DATA":
+            return { ...state, page404: action.payload }
         default:
             return state
     }
