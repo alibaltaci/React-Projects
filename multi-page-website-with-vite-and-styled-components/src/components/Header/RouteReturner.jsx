@@ -2,9 +2,9 @@ import Home from '../../pages/Home'
 import About from '../../pages/About'
 import Services from '../../pages/services/Services'
 import Contact from '../../pages/Contact/Contact'
-import Page404 from '../../pages/Page404.jsx'
+import Page404 from '../../pages/Page404/Page404.jsx'
 
-function PageReturner({page}) {
+function RouteReturner({page}) {
 
     const Page = page === "home" 
         ? Home 
@@ -21,4 +21,4 @@ function PageReturner({page}) {
   )
 }
 
-export default PageReturner
+export default RouteReturner

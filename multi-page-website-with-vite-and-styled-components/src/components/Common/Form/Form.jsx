@@ -10,14 +10,8 @@ function Form() {
     <StyledFormContainer >
         <StyledForm action={action} method={method} >
         {
-            data.map( (el, index )=> {
-                const { type, name, placeholder, value } = el
-                
-                return(
-                    <Input key={index} type={type} placeholder={placeholder} name={name} value={value} />
-                    )
-                })
-            }
+            data.map( (el, index ) => <Input key={index} {...el} /> )
+        }
         </StyledForm>
     </StyledFormContainer>
   )
