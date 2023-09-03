@@ -25,7 +25,18 @@ const initialState = {
     },
     contactPage:{ },
     page404:{},
-    footer:{}
+    footer:{
+        top:{
+            content:[]
+        },
+        contact:{
+            about:{},
+            formData:{},
+            social:{},
+            phone:{}
+        },
+        bottom:{}
+    }
 }
 
 const AppProvider = ({ children }) => {

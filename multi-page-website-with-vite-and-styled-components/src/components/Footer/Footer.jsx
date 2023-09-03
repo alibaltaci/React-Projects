@@ -2,8 +2,8 @@ import { StyledFooterWrapper } from "./StyledFooter"
 import FooterTop from "./FooterTop"
 import { useGlobalContext } from "../../contexts/GlobalContext"
 import { useEffect } from "react"
-// import FooterBottom from "./FooterBottom"
-// import FooterContact from "./FooterContact"
+import FooterBottom from "./FooterBottom"
+import FooterContact from "./FooterContact"
 
 function Footer() {
 
@@ -14,9 +14,9 @@ function Footer() {
   return (
     <StyledFooterWrapper>
       <FooterTop />
-      {/* <FooterContact />
+      <FooterContact />
       <hr />
-      <FooterBottom /> */}
+      <FooterBottom />
     </StyledFooterWrapper>
   )
 }

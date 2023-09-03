@@ -2,15 +2,12 @@ import Container from "../Common/Container/Container";
 import Button from "../UI/Button/Button";
 import Typography from "../UI/Typography/Typography";
 import { StyledFooterTop } from "./StyledFooter";
-// import { footer } from "../../data/data.json"
 import { useGlobalContext } from "../../contexts/GlobalContext";
+
 export default function FooterTop() {
 
     const { content, button, route } = useGlobalContext().footer.top
-
-    console.log("-->", useGlobalContext().footer)
   
-    // const { content, button, route } = footer.top
     return (
     <StyledFooterTop>
         <Container grid="2"  >
