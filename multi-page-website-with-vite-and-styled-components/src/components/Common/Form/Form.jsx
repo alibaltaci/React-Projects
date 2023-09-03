@@ -1,22 +1,20 @@
 import { useGlobalContext } from "../../../contexts/GlobalContext";
-import Typography from "../../UI/Typography/Typography";
 import Input from "../Input/Input";
 import { StyledForm, StyledFormContainer } from "./StyledForm";
 
-function Form() {
+function Form({formData, ...props}) {
 
-  // const { footerData, formData } = useGlobalContext().form
+  const { form } = useGlobalContext()
 
-  // let { title, action, method, data } = type ? footerData : formData;
+  let { action, method, data } = formData ? formData : form;
 
-  const { title, action, method, data } = useGlobalContext().form
+  // const { title, action, method, data } = useGlobalContext().form
      
   return (
-    <StyledFormContainer >
-        { title && <Typography elementType="h2" text={title} /> }
+    <StyledFormContainer {...props} >
         <StyledForm action={action} method={method} >
         {
-            data.map( (el, index ) => <Input key={index} {...el} /> )
+          data && data.map( (el, index ) => <Input key={index} {...el} /> )
         }
         </StyledForm>
     </StyledFormContainer>

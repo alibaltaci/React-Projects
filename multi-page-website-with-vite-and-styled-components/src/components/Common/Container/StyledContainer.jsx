@@ -48,4 +48,11 @@ export const StyledContainer = styled.div`
             `
     }
 
+    ${ props => 
+        props.padding && 
+            css`
+                padding: ${props.padding};
+            `
+    }
+
 `

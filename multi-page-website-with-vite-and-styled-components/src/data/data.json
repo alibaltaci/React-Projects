@@ -46,8 +46,9 @@
                 "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
             },
             "formData":{
-                "title": "Subscribe to get important updates",
-                "action":"#",
+                "title": "Subscribe",
+                "action":"https://formspree.io/f/mvojrrrn",
+                "method":"POST",
                 "data":[
                     {
                         "type":"email",

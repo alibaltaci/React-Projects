@@ -1,16 +1,15 @@
 import { useGlobalContext } from "../../contexts/GlobalContext";
+import Form from "../Common/Form/Form";
 import Typography from "../UI/Typography/Typography";
 
 export default function FooterForm() {
 
-    const { title, action, data  } = useGlobalContext().footer.contact.formData
+    const {  formData  } = useGlobalContext().footer.contact
   
-    console.log(action, data)
-    
     return (
     <div>
-        <Typography elementType="h3" text={title}  color="white" marginBottom="2.4rem" />
-        {/* <Form /> */}
+        <Typography elementType="h3" text={formData.title}  color="white" align="center" />
+        <Form formData={ formData } marginTop="0" />
     </div>
   )
 }

@@ -1,11 +1,20 @@
-import { styled } from 'styled-components'
+import { css, styled } from 'styled-components'
 
 export const StyledFormContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
     /* text-align: center; */
-    max-width: 100%;
+    min-width: 100%;
+
+    ${props => 
+           props.marginTop ? css`
+                margin-top: ${ props.marginTop } ;
+           `
+           : css`
+                margin-top: 6rem ;
+           `
+    
+    }
 `
 
 export const StyledForm = styled.form`

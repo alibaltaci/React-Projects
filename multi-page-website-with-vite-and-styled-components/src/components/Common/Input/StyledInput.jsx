@@ -3,7 +3,7 @@ import { styled, css } from 'styled-components'
 const SharedStyles = css`
 
     /* max-width: 50rem; */
-    width: 60%;
+    min-width: 60%;
     color: ${({theme}) => theme.colors.black};
     padding: 1.6rem 2.4rem;
     border: 1px solid ${({theme}) => theme.colors.border};

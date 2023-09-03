@@ -68,6 +68,13 @@ const sharedTextStyles = css`
             `
     }
 
+    ${ props => 
+        props.align &&
+            css`
+                align-items: ${ props.align };
+            `
+    }
+
     word-wrap: break-word;
     
 `;
