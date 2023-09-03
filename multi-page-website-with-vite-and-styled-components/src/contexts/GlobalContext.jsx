@@ -17,19 +17,15 @@ const initialState = {
         },
 
     },
-
     form:{
         data:[]
     },
-
     servicesPage:{
         services:[]
     },
-
     contactPage:{ },
-
-    page404:{}
-
+    page404:{},
+    footer:{}
 }
 
 const AppProvider = ({ children }) => {
@@ -74,6 +70,13 @@ const AppProvider = ({ children }) => {
         })
     }
 
+    const getFooterData = () => {
+        return dispatch({
+            type: "FOOTER_DATA",
+            payload: data.footer
+        })
+    }
+ 
     const dispatchReturner = ( page ) => {
 
         // page === "home" 
@@ -89,7 +92,8 @@ const AppProvider = ({ children }) => {
             "about" : () => getAboutPageData(),
             "services" : () => getServicesPageData(),
             "contact" : () => getContactPageData(),
-            "404" : () => getPage404Data()
+            "404" : () => getPage404Data(),
+            "footer" : () => getFooterData()
         }
 
         return pageMap[page]()

@@ -2,8 +2,6 @@ import { styled } from "styled-components"
 
 export const StyledFooterWrapper = styled.section`
 
-
-
 `
 
 export const StyledFooterTop = styled.div`

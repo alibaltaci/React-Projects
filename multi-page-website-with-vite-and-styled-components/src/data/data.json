@@ -27,6 +27,68 @@
         }
     ],
 
+    "footer":{
+        "top":{
+            "content":[
+                {
+                    "text": "Ready Go Get Started?"
+                },
+                {
+                    "text": "Talk To Us Today"
+                }
+            ],
+            "button":"Get Started",
+            "route":"/contact"
+        },
+        "contact":{
+            "about":{
+                "title":"Sisyphus Soft",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            "formData":{
+                "title": "Subscribe to get important updates",
+                "action":"#",
+                "data":[
+                    {
+                        "type":"email",
+                        "name": "Email",
+                        "placeholder":"Email"
+                    },
+                    {
+                        "type":"Submit",
+                        "value":"Subscribe"
+                    }
+                ]
+            },
+            "social":{
+                "title":"Follow Us",
+                "data":[
+                    {
+                        "type": "linkedin",
+                        "link":""
+                    },
+                    {
+                        "type": "youtube",
+                        "link":""
+                    },
+                    {
+                        "type": "instagram",
+                        "link":""
+                    }
+                ]
+            },
+            "phone":{
+                "title":"Call Us",
+                "number":"0 555 000 00 00"
+            }
+        },
+        "bottom":{
+            "right": "Sisyphus Soft. All Rights Reserved.",
+            "policy":"PRIVACY POLICY",
+            "terms":"TERMS & CONDITIONS"
+        }
+    },
+
     "home":{
         "hero":{
             "topContent":"THIS IS ME",
