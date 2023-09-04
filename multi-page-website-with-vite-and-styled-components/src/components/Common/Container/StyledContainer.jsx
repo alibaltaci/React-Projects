@@ -2,8 +2,10 @@ import { css, styled } from "styled-components"
 
 export const StyledContainer = styled.div`
 
+    display: flex;
     max-width: 120rem;
     margin: 0 auto;
+    align-items: center;
 
     ${ props => 
         props.width && 
@@ -52,6 +54,20 @@ export const StyledContainer = styled.div`
         props.padding && 
             css`
                 padding: ${props.padding};
+            `
+    }
+
+    ${ props => 
+        props.align && 
+            css`
+                align-items: ${props.align};
+            `
+    }
+
+    ${ props => 
+        props.justify && 
+            css`
+                justify-content: ${props.justify};
             `
     }
 

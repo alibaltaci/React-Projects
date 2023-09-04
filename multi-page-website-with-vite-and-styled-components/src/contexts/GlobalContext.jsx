@@ -32,7 +32,9 @@ const initialState = {
         contact:{
             about:{},
             formData:{},
-            social:{},
+            social:{
+                data:[]
+            },
             phone:{}
         },
         bottom:{}

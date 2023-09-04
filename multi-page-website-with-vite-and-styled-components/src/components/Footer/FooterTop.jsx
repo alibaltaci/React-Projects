@@ -6,7 +6,7 @@ import { useGlobalContext } from "../../contexts/GlobalContext";
 
 export default function FooterTop() {
 
-    const { content, button, route } = useGlobalContext().footer.top
+    const { content, button } = useGlobalContext().footer.top
   
     return (
     <StyledFooterTop>
@@ -19,7 +19,7 @@ export default function FooterTop() {
                 }
             </Container>
             <Container direction="column" gap="1rem" >
-                <Button route={route} text={button} />  
+                <Button route="/contact" text={button} />  
             </Container>
         </Container>
     </StyledFooterTop>
