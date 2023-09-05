@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import { navbar } from './data/data.json'
 import RouteReturner from './components/Header/RouteReturner'
+import GoToTop from './components/UI/GoToTop/GoToTop'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             ))
           }
       </Routes>
+      <GoToTop />
       <Footer />
     </>
   )
