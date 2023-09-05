@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import HeroSection from "../components/Common/Hero/HeroSection";
 import {  useGlobalContext } from "../contexts/GlobalContext";
+import Services from "./services/Services"
+import Contact from "./Contact/Contact"
 
 export default function Home() {
 
@@ -14,6 +16,8 @@ export default function Home() {
 
     <>
       <HeroSection />
+      <Services />
+      <Contact />
     </>
   )
 }

@@ -48,14 +48,14 @@ const AppProvider = ({ children }) => {
     const getHomePageData = () => {
         return dispatch({
             type: "HOME_DATA",
-            payload: data.home
+            payload: data.home.hero
         })
     }
 
     const getAboutPageData = () => {
         return dispatch({
             type: "ABOUT_DATA",
-            payload: data.about
+            payload: data.about.hero
         })
     }  
 

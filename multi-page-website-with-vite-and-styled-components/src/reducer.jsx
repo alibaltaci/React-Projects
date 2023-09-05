@@ -2,9 +2,9 @@ const reducer = (state, action) => {
 
     switch(action.type){
         case "HOME_DATA":
-            return  { ...state, common: action.payload}
+            return  { ...state, common: {...state.common, hero: action.payload}}
         case "ABOUT_DATA":
-            return { ...state, common: action.payload}
+            return { ...state, common: {...state.common, hero: action.payload}}
         case "SERVICES_DATA":
             return { ...state, servicesPage: action.payload }
         case "CONTACT_DATA":
