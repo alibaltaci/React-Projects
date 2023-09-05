@@ -15,6 +15,23 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    ::-webkit-scrollbar{
+        width: 1.5rem;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background-color: black; */
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        /* background: ${({theme}) => theme.colors.heading}; */
+        background: black;
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+
     div{
         color: ${ ( {theme} ) => theme.colors.heading };
         font-weight: 900;
@@ -27,6 +44,8 @@ export const GlobalStyles = createGlobalStyle`
     li{
         list-style: none;
     }
+
+
     
     /* --> Typography */
 
