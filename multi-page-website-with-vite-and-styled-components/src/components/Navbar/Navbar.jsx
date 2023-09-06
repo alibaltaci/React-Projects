@@ -2,11 +2,17 @@ import { NavLink } from 'react-router-dom'
 import { navbar } from '../../data/data.json'
 import StyledNav from './StyledNav'
 import MenuIcon from './MenuIcon'
+import { useState } from 'react'
 
 function Navbar() {
 
+    const [ openMenu, setOpenMenu ] = useState(false)
+
     return (
     <StyledNav>
+        <div className={ openMenu? 'active' : 'menuIcon'}>
+
+       
         <ul  className="navbar-list" >
             {
                 navbar.map( (data) => (
@@ -21,8 +27,9 @@ function Navbar() {
             }
         </ul>
 
-        <MenuIcon />
-        
+            <MenuIcon onClick={setOpenMenu} />
+        </div>
+
     </StyledNav>
   )
 }
