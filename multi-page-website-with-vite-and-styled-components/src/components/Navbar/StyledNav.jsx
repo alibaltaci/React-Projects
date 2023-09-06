@@ -29,6 +29,36 @@ const StyledNav = styled.nav`
         }}
     }
 
+    .mobile-navbar-btn{
+        display: none;
+
+        .close-outline{
+            display: none;
+        };
+
+        svg{
+            height: 2rem;
+        };
+
+    };
+
+    .mobile-navbar-btn [name="close-outline"] {
+        display: none;
+    }
+
+
+    @media ( max-width: ${({theme}) => theme.media.mobile} ) {
+        .mobile-navbar-btn{
+            display: inline-block;
+            z-index: 999;
+            border: ${({theme}) => theme.colors.black};
+
+            .mobile-nav-icon{
+                font-size: 4.2rem;
+                color: ${({theme}) => theme.colors.black};
+            }
+        }
+    }
 
 `
 export default StyledNav;

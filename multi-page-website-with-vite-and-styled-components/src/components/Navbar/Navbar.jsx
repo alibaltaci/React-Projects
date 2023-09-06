@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { navbar } from '../../data/data.json'
 import StyledNav from './StyledNav'
+import MenuIcon from './MenuIcon'
 
 function Navbar() {
 
@@ -19,6 +20,9 @@ function Navbar() {
                 ) )
             }
         </ul>
+
+        <MenuIcon />
+        
     </StyledNav>
   )
 }

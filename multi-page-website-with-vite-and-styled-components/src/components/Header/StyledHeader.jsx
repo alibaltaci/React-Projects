@@ -13,6 +13,7 @@ const StyledHeader = styled.header`
         max-width: 20%;
         min-width: 3rem;
     }
+
 `
 
 export default StyledHeader;
