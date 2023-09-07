@@ -31,5 +31,10 @@ export const StyledGoToTop = styled.section`
             transform: translateY( 1rem );
         }
     }
+
+    @media (max-width: ${({theme}) => theme.media.tab}) {
+        right: 0;
+        left: 40%;
+    }
     
 `

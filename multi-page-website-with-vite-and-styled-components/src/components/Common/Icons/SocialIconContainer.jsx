@@ -10,7 +10,7 @@ export default function SocialIconContainer({data}) {
             data.map( icon => {
                 const { link, type, title } = icon
                 return( 
-                    <StyledSocialIcon key={link} >
+                    <StyledSocialIcon key={icon} >
                         <a  href={ link } target="_blank" rel="noopener noreferrer" title={title} >
                             <IconReturner type={type} />
                         </a>
