@@ -17,7 +17,7 @@ export default function Services() {
   const { services, pageTitle, button, servicesRoute} = servicesPage
 
   return (
-    <StyledServicesPage className="section" >
+    <StyledServicesPage >
       <Typography elementType="h2" text={ pageTitle } />
       <Container grid="3" >
         {
@@ -28,11 +28,13 @@ export default function Services() {
                 <figure>
                   <img src={ image } alt={ title } />
                 </figure>
-                <div className="card-data">
-                  <Typography elementType="h3" text={ title } fontSize="2.4rem" margin="2rem 0" />
-                  <Typography text={ description } margin="2rem  0" />
+                {/* <div className="card-data"> */}
+                <Container direction="column" padding="2rem" gap="2rem">
+                  <Typography elementType="h3" text={ title } fontSize="2.4rem" align="center" marginBottom="0" />
+                  <Typography text={ description }  align="center" />
                   <Button route={servicesRoute} text={button} />
-                </div>
+                </Container>
+                {/* </div> */}
               </div>
             )
           }) 

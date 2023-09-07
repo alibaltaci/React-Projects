@@ -4,6 +4,9 @@ const StyledServicesPage = styled.section`
 
     padding: 9rem 0;
     background-color: ${({theme}) => theme.colors.bg};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .card{
         border: 0.1rem solid rgb(170 170 170 / 40%);
@@ -42,7 +45,6 @@ const StyledServicesPage = styled.section`
             height: 20rem;
             transition: all 0.2s linear;
         }
-
     }
 `
 
