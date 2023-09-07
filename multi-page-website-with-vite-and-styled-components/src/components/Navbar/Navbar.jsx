@@ -16,7 +16,10 @@ function Navbar() {
             {
                 navbar.map( (data) => (
                     data.page !== "page404" &&(
-                            <li key={data.path} >
+                            <li 
+                                key={data.path} 
+                                onClick={() => setOpenMenu(false)}
+                            >
                                 <NavLink className="navbar-link" to={data.path}>
                                         {data.content}
                                 </NavLink>
@@ -26,18 +29,20 @@ function Navbar() {
             }
         </ul>
 
+        <div className='mobile-navbar-btn'>
 
         <CgMenu 
             name="menu-outline" 
             className="mobile-nav-icon" 
             onClick={() => setOpenMenu(true)} 
-        />
+            />
 
         <CgClose 
             name="close-outline" 
             className="close-outline mobile-nav-icon" 
             onClick={() => setOpenMenu(false)}
-        />
+            />
+        </div>
 
         </div>
 

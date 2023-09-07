@@ -31,10 +31,9 @@ const StyledNav = styled.nav`
     .mobile-navbar-btn {
       display: none;
 
-      .close-outline {
+      &.close-outline {
         display: none;
       }
-
     }
 
     .mobile-navbar-btn[name="close-outline"] {
@@ -48,8 +47,12 @@ const StyledNav = styled.nav`
         border: ${({ theme }) => theme.colors.black};
 
         .mobile-nav-icon {
-          font-size: 2.2rem;
+          font-size: 3rem;
           color: ${({ theme }) => theme.colors.black};
+        }
+
+        .close-outline{
+          display: none;
         }
 
       }
@@ -91,10 +94,12 @@ const StyledNav = styled.nav`
 
       .active .mobile-nav-icon {
         display: none;
-        font-size: 2.2rem;
+        font-size: 3rem;
         position: absolute;
-        top: 3%;
-        right: 10%;
+        /* top: 4%;
+        right: 12%; */
+        top: 3.3rem;
+        right: 4.8rem;
         color: ${({ theme }) => theme.colors.black};
         z-index: 9999;
       }
