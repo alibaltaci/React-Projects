@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import { navbar } from '../../data/data.json'
 import StyledNav from './StyledNav'
-import MenuIcon from './MenuIcon'
 import { useState } from 'react'
+import { CgClose, CgMenu } from 'react-icons/cg';
 
 function Navbar() {
 
@@ -11,7 +11,6 @@ function Navbar() {
     return (
     <StyledNav>
         <div className={ openMenu? 'active' : 'menuIcon'}>
-
        
         <ul  className="navbar-list" >
             {
@@ -27,7 +26,19 @@ function Navbar() {
             }
         </ul>
 
-            <MenuIcon onClick={setOpenMenu} />
+
+        <CgMenu 
+            name="menu-outline" 
+            className="mobile-nav-icon" 
+            onClick={() => setOpenMenu(true)} 
+        />
+
+        <CgClose 
+            name="close-outline" 
+            className="close-outline mobile-nav-icon" 
+            onClick={() => setOpenMenu(false)}
+        />
+
         </div>
 
     </StyledNav>
