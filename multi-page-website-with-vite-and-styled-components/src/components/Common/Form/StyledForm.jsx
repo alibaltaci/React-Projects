@@ -23,4 +23,10 @@ export const StyledForm = styled.form`
     align-items: center;
     gap: 3rem;
     min-width: 50%;
+
+    @media ( max-width: ${({theme}) => theme.media.tab} ) {
+
+        min-width: 100%;
+        gap: 2rem;
+    }
 `

@@ -3,6 +3,7 @@ import Typography from '../../components/UI/Typography/Typography'
 import Form from "../../components/Common/Form/Form";
 import { useGlobalContext } from "../../contexts/GlobalContext";
 import { useEffect } from "react";
+import GoogleMap from "../../components/Common/GoogleMap/GoogleMap";
 
 export default function Contact() {
   
@@ -15,15 +16,7 @@ export default function Contact() {
   return (
     <StyledContact>
       <Typography elementType="h2" text={contactPage.pageTitle} />
-      <iframe 
-        src={contactPage.googleMapURL} 
-        width="100%" 
-        height="400" 
-        style={{border:0}} 
-        allowFullScreen="" 
-        loading="lazy" 
-        referrerPolicy="no-referrer-when-downgrade">
-      </iframe>
+      <GoogleMap location={contactPage.googleMapURL} />
       <Form />
     </StyledContact>
   )
