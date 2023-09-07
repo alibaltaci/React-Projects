@@ -75,8 +75,25 @@ const sharedTextStyles = css`
             `
     }
 
+    ${ props => 
+        props.width &&
+            css`
+                width: ${ props.width };
+            `
+    }
+
+    ${ props => 
+        props.maxWidth &&
+            css`
+                max-width: ${ props.maxWidth };
+            `
+    }
+
     word-wrap: break-word;
     
+    @media ( max-width: ${({theme}) => theme.media.mobile}) {
+        text-align: center;
+    }
 `;
 
 const sharedTitleStyles = css`

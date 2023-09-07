@@ -15,7 +15,12 @@ export default function HeroSection() {
             <div className="section-hero-data">
                 <Typography text={ topContent } className="hero-top-data" />
                 <Typography elementType="h1" text={ heading } className="hero-heading"  />
-                <Typography text={ content } opacity=".9" className="hero-para" />
+                <Typography text={ content } 
+                    opacity=".9"  
+                    margin="1.5rem 0 3.4rem 0"
+                    max-width="60rem"
+                    // align="center"
+                />
                 <Button route={route} text={button} />
             </div>
             {/* for image */}

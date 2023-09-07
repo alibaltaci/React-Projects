@@ -71,6 +71,15 @@ export const StyledContainer = styled.div`
             `
     }
 
+    @media ( max-width: ${({theme}) => theme.media.tab} ) {
+        ${ props => 
+        props.grid && 
+            css`
+                grid-template-columns: 1fr 1fr;
+            `
+        }
+    }
+
     @media ( max-width: ${({theme}) => theme.media.mobile} ) {
         ${ props => 
             props.grid && 
@@ -79,15 +88,6 @@ export const StyledContainer = styled.div`
                 `
         }
 
-    }
-
-    @media ( max-width: ${({theme}) => theme.media.tab} ) {
-        ${ props => 
-        props.grid && 
-            css`
-                grid-template-columns: 1fr;
-            `
-        }
     }
 
 `
