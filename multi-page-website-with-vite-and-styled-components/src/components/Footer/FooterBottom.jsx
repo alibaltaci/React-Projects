@@ -11,7 +11,6 @@ export default function FooterBottom() {
 
   return (
     <StyledFooterBottom>
-        <Container direction="row">
           <Container direction="row" >
             <Typography text={`${date} ${right}`} color="white" />
           </Container>
@@ -19,7 +18,6 @@ export default function FooterBottom() {
             <Typography text={policy} color="white" />
             <Typography text={ terms } color="white" />
           </Container>
-        </Container>
       </StyledFooterBottom> 
   )
 }
