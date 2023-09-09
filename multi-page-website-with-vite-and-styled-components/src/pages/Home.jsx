@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import HeroSection from "../components/Common/Hero/HeroSection";
 import {  useGlobalContext } from "../contexts/GlobalContext";
-import Services from "./Services/Services"
 import Contact from "./Contact/Contact"
+import Services from "./Services/Services";
 
 export default function Home() {
 

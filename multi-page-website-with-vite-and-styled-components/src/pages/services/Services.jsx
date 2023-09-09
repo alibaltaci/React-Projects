@@ -4,6 +4,8 @@ import StyledServicesPage from "./StyledServicesPage";
 import Button from "../../components/UI/Button/Button"
 import Typography from "../../components/UI/Typography/Typography"
 import Container from "../../components/Common/Container/Container"
+
+
 export default function Services() {
 
   const { dispatchReturner, servicesPage } = useGlobalContext()
@@ -12,9 +14,7 @@ export default function Services() {
       dispatchReturner("services");
   }, [])
 
-  console.log(servicesPage)
-
-  const { services, pageTitle, button, servicesRoute} = servicesPage
+  const { services, pageTitle, button} = servicesPage
 
   return (
     <StyledServicesPage >
@@ -32,7 +32,8 @@ export default function Services() {
                 <Container direction="column" padding="2rem" gap="2rem">
                   <Typography elementType="h3" text={ title } fontSize="2.4rem" align="center" marginBottom="0" />
                   <Typography text={ description }  align="center" />
-                  <Button route={servicesRoute} text={button} />
+                  <Button  route={  `/services` } text={button} />
+                  {/* <Button  route={  `service/${id}` } text={button} /> */}
                 </Container>
                 {/* </div> */}
               </div>

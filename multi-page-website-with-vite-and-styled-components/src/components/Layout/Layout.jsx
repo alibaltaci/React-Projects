@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import GoToTop from "../UI/GoToTop/GoToTop";
 
-export default function Laypout() {
+export default function Layout() {
   return (
     <>
     <Header />

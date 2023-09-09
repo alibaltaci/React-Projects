@@ -4,43 +4,20 @@ import Contact from "../pages/Contact/Contact"
 import Home from "../pages/Home"
 import Page404 from "../pages/Page404/Page404"
 import Services from "../pages/Services/Services"
-import Laypout from "./Layout/Laypout"
+import Layout from "./Layout/Layout"
 
-// const routes = [
-
-//     {
-//         page:"home",
-//         path:"/",
-//         element: <Home />
-//     },
-//     {
-//         page:"about",
-//         path:"/about",
-//         element: <About />
-//     },
-//     {
-//         page:"services",
-//         path:"/services",
-//         element: <Services />
-//     },
-//     {
-//         page:"contact",
-//         path:"/contact",
-//         element: <Contact />
-//     },
-//     {
-//         page:"page404",
-//         path:"/*",
-//         element: <Page404 />
-//     },
+export default function RoutesComponent() {
     
-// ]
+    return useRoutes(routes)
+    
+}
+
 const routes = [
 
     {
         page:"home",
         path:"/",
-        element: <Laypout />,
+        element: <Layout />,
         children:[
             {
                 page:"index",
@@ -55,8 +32,8 @@ const routes = [
             {
                 page:"services",
                 path:"services",
-                element: <Services />
-            },
+                element: <Services />,
+            },    
             {
                 page:"contact",
                 path:"contact",
@@ -73,8 +50,3 @@ const routes = [
     
 ]
 
-export default function RoutesComponent() {
-  return (
-    useRoutes(routes)
-  )
-}

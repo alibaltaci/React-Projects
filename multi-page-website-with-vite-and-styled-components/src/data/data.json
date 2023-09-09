@@ -14,6 +14,7 @@
             "content":"Services",
             "page":"services",
             "path":"/services"
+
         },
         {
             "content":"Contact",
@@ -67,17 +68,17 @@
                     {
                         "type": "linkedin",
                         "title": "LinkedIn",
-                        "link":""
+                        "link":"https://www.linkedin.com/in/alibaltaci/"
                     },
                     {
                         "type": "instagram",
                         "title": "Instagram",
-                        "link":""
+                        "link":"https://www.instagram.com/_alibaltaci_/"
                     },
                     {
                         "type": "youtube",
                         "title":"YouTube",
-                        "link":""
+                        "link":"https://www.youtube.com/channel/UCP_II4iZ96EFzqnF6eKaG9g"
                     }
                 ]
             },
@@ -118,43 +119,48 @@
     "servicesPage":{
         "pageTitle": "Our Services",
         "button": "Read More",
-        "servicesRoute": "/services",
         "services": [
             {
                 "id":1,
                 "title":"Web Development",
                 "image":"./images/services/web-services.jpg",
-                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit.",
+                "route":""
             },
             {
                 "id":2,
                 "title":"App Development",
                 "image":"./images/services/web-services.jpg",
-                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit.",
+                "route":""
             },
             {
                 "id":3,
                 "title":"Digital Marketing",
                 "image":"./images/services/web-services.jpg",
-                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit.",
+                "route":""
             },
             {
                 "id":4,
                 "title":"Data Science",
                 "image":"./images/services/web-services.jpg",
-                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit.",
+                "route":""
             },
             {
                 "id":5,
                 "title":"Cyber Security",
                 "image":"./images/services/web-services.jpg",
-                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit.",
+                "route":""
             },
             {
                 "id":6,
                 "title":"SEO",
                 "image":"./images/services/web-services.jpg",
-                "description":"Lorem ipsum sit amet consectetur adipisicing elit."
+                "description":"Lorem ipsum sit amet consectetur adipisicing elit.",
+                "route":""
             }
         ]
     },
