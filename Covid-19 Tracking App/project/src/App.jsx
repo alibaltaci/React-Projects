@@ -1,4 +1,6 @@
 import axios from 'axios';
+import GridContainer from './components/GridContainer/GridContainer';
+import Typography from './components/Typography/Typography';
 
 function App() {
 
@@ -44,6 +46,11 @@ function App() {
     <>
       <h1>Covid-19 Tracking App</h1>
       <button onClick={ () => getData() } >Click</button>
+
+
+      <GridContainer>
+        <Typography />
+      </GridContainer>
     </>
   )
 }
