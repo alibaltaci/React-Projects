@@ -1,6 +1,6 @@
 import axios from 'axios';
-import GridContainer from './components/GridContainer/GridContainer';
 import Typography from './components/Typography/Typography';
+import { FlexContainer } from './components/FlexContainer/FlexContainer';
 
 function App() {
 
@@ -44,13 +44,13 @@ function App() {
 
   return (
     <>
+    <FlexContainer>
       <h1>Covid-19 Tracking App</h1>
       <button onClick={ () => getData() } >Click</button>
+    </FlexContainer>
 
 
-      <GridContainer>
-        <Typography text="deneme" elementType="h1" variant="title_max" color="red_default" />
-      </GridContainer>
+      <Typography text="deneme" elementType="h1" variant="title_max" color="red_default" />
     </>
   )
 }
