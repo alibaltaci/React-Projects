@@ -49,7 +49,7 @@ function App() {
 
 
       <GridContainer>
-        <Typography />
+        <Typography text="deneme" elementType="h1" variant="title_max" color="red_default" />
       </GridContainer>
     </>
   )
