@@ -6,6 +6,9 @@ export const theme = {
         black_default: "#000000",
         white_default: "#FFFFFF",
         red_default: "#FF0000",
+        pastel_green: "#99CC99",
+        deep_fuchsia: "#550055",
+        aubergine: "#330033"
     },
 
     font: {
