@@ -12,4 +12,19 @@ export const GlobalStyles = createGlobalStyle`
         background: url("./endless-constellation.svg");
     }
 
+    ::-webkit-scrollbar{
+        width: .8rem;
+    }
+
+    ::-webkit-scrollbar-track{
+        background-color: ${({theme}) => theme.colors.pastel_green};
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: ${({theme}) => theme.colors.aubergine};
+        border: 2px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+
 ` 
