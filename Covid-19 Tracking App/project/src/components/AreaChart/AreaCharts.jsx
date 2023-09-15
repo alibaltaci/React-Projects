@@ -7,18 +7,17 @@ export default function AreaCharts() {
 
   const { selectedCountry, dailyData, totalData } = useGlobalContext()
 
-
-  console.log("chart page: ",  totalData)
+  const upperSelectedCountry = selectedCountry.toUpperCase()
 
   return (
     <FlexContainer type="column" align="center" >
-      <Typography text={selectedCountry.toUpperCase()} elementType="h2" color="pastel_green" />
+      <Typography text={upperSelectedCountry} elementType="h2" color="pastel_green" />
       <ReactApexCharts
                   series = {[{
-                    name: 'country',
+                    name: `${upperSelectedCountry}`,
                     data: [dailyData.active, dailyData.confirmed, dailyData.deaths]
                   }, {
-                    name: 'world',
+                    name: 'WORLD',
                     data: [totalData.active, totalData.confirmed, totalData.deaths]
                   }
                   ]}
@@ -27,6 +26,27 @@ export default function AreaCharts() {
                     chart: {
                       type: 'bar',
                       height: 350,
+
+                      toolbar: {
+                        show: true,
+                        export: {
+                          csv: {
+                            filename: `Covid-19 Stats ${upperSelectedCountry} vs WORLD` ,
+                            columnDelimiter: ',',
+                            headerCategory: 'category',
+                            headerValue: 'value',
+                            dateFormatter(timestamp) {
+                              return new Date(timestamp).toDateString()
+                            }
+                          },
+                          svg: {
+                            filename: `Covid-19 Stats ${upperSelectedCountry} vs WORLD` ,
+                          },
+                          png: {
+                            filename: `Covid-19 Stats ${upperSelectedCountry} vs WORLD` ,
+                          }
+                        },
+                      },
                     },
                     plotOptions: {
                       bar: {
@@ -45,10 +65,26 @@ export default function AreaCharts() {
                     },
                     xaxis: {
                       categories: ["Active", "Confirmed", "Death"],
+                      labels: {
+                        style: {
+                          fontWeight:"900",
+                          fontSize: '14px',
+                          colors: ['orange', "green",  "red"]
+                        },
+                        
+                      }
                     },
                     yaxis: {
-                      title: {
-                        text: '$ (thousands)'
+                      // title: {
+                      //   text: ''
+                      // },
+
+                      labels: {
+                        style: {
+                          fontWeight:"400",
+                          fontSize: '12px', 
+                          colors:"white"
+                        },
                       },
                     },
                     fill: {
@@ -57,11 +93,22 @@ export default function AreaCharts() {
                     tooltip: {
                       y: {
                         formatter: function (val) {
-                          return "$ " + val + " thousands"
+                          return val
                         }
+                      }
+                    },
+
+                    legend: {
+                      show: true, 
+                      position: 'top', 
+                      horizontalAlign: 'left',
+                      labels:{
+                        colors: "yellow"
                       }
                     }
                   }}
+
+                  
 
                   type="bar" height={350} width={800}
 
