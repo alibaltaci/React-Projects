@@ -47,6 +47,25 @@
       }
   }
 
+  export const getTotalData = async() => {
+
+      const options = {
+        method: 'GET',
+        url: `${BASE_URL}/reports/total`,
+        headers: {
+          'X-RapidAPI-Key': KEY,
+          'X-RapidAPI-Host': 'covid-19-statistics.p.rapidapi.com'
+        }
+      };
+        
+      try {
+        const { data } = await axios.request(options);
+        return data
+      } catch (error) {
+        console.error(error);
+      }
+  }
+
   //   // country names
   //   // https://covid-19-statistics.p.rapidapi.com/regions
 
