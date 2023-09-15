@@ -1,36 +1,10 @@
-import { useEffect, useState } from "react";
 import { StyledDropdown } from "./StyledDropdown"
-import { getCountries } from "../../api/api";
 import { StyledFlexContainerColumn } from "../FlexContainer/StyledFlexContainer";
-
+import { useGlobalContext } from "../../contexts/GlobalContext"
+ 
 const Dropdown = () => {
 
-    const [selectedCountry, setSelectedCountry] = useState('turkey');
-    const [countries, setCountries] = useState([])
-    // const [ input, setInput ] = useState("")
-
-    const handleCountryChange = (e) => {
-        setSelectedCountry(e.target.value);
-    };
-
-    useEffect( () => {
-        
-        const getCountryNames = async() => {
-            try {
-                const countryNames = await getCountries();
-                const sortedCountryNames = countryNames.data.map( country => country.name ).sort()
-                setCountries( sortedCountryNames );
-                console.log(sortedCountryNames)
-                // console.log("-->", countryNames.data[0].name)
-            } catch (error) {
-                console.log(error)
-            }
-            };
-
-        getCountryNames()
-
-    },[])
-
+    const {selectedCountry, countries, handleCountryChange }  = useGlobalContext()
 
   return (
         <StyledFlexContainerColumn width="50%" >
