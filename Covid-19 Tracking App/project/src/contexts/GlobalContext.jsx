@@ -1,14 +1,14 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { getCountries } from "../api/api";
+import { getCountries, getData, getTotalData } from "../api/api";
 
 
 const AppContext = createContext()
 
 const AppProvider = ( {children} ) => {
 
+    // Country Names 
     const [selectedCountry, setSelectedCountry] = useState('turkey');
     const [countries, setCountries] = useState([])
-    // const [ input, setInput ] = useState("")
 
     const handleCountryChange = (e) => {
         setSelectedCountry(e.target.value);
@@ -31,9 +31,50 @@ const AppProvider = ( {children} ) => {
         getCountryNames()
 
     },[])
+     
+
+    // Covid Data
+
+    const [ dailyData, setDailyData] = useState([])
+
+    useEffect( () => {
+        const getCountryData = async() => {
+            try{
+                const data = await getData(selectedCountry);
+                setDailyData(data.data[0])
+                console.log(data.data[0])
+            }
+            catch (error){
+                console.log(error)
+            }
+        } 
+
+        getCountryData()
+        
+    }, [selectedCountry])
+
+
+    // total data
+
+    const [ totalData, setTotalData] = useState([])
+
+    useEffect( () => {
+        const getWorldData = async() => {
+            try{
+                const data = await getTotalData()
+                setTotalData(data.data)
+            }catch(error){
+                console.log(error)
+            }
+            
+        }
+
+        getWorldData()
+    }, [])
+
 
     return(
-        <AppContext.Provider value={{selectedCountry, countries, handleCountryChange }}>
+        <AppContext.Provider value={{selectedCountry, countries, handleCountryChange, dailyData, totalData }}>
             { children }
         </AppContext.Provider>
     )
