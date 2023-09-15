@@ -8,7 +8,7 @@ export default function AreaCharts() {
   const { selectedCountry } = useGlobalContext()
 
   return (
-    <FlexContainer type="column" align="center" gap="3rem">
+    <FlexContainer type="column" align="center" >
       <Typography text={selectedCountry.toUpperCase()} elementType="h2" color="pastel_green" />
       <ReactApexCharts
         series={ [
@@ -119,17 +119,37 @@ export default function AreaCharts() {
           },
           xaxis: {
             type: 'datetime',
-            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
+            labels: {
+              style: {
+                fontWeight:"600",
+                fontSize: '14px', // Yazı tipi boyutu
+                color: 'red'    // Yazı rengi
+              },
+            }
+          },
+
+          yaxis: {
+            labels: {
+              style: {
+                fontSize: '14px', // Yazı tipi boyutu
+                fontWeight:"600",
+                color: '#fa0404', // Yazı rengi
+              },
+              offsetX: "-5"
+            }
           },
           tooltip: {
-            style: {
-              fontSize: '12px',
-              fontFamily: undefined,
-            },
             x: {
               format: 'dd/MM/yy HH:mm'
             },
           },
+
+          legend: {
+            show: true, // data isimlerini göster
+            position: 'top', // data isimlerini üst tarafta göster
+            horizontalAlign: 'left', // data isimlerini yatayda solda
+          }
 
           // colors: ['blue', 'green']
         }}
