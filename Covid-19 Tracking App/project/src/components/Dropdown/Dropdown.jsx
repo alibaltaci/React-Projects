@@ -18,8 +18,10 @@ const Dropdown = () => {
         const getCountryNames = async() => {
             try {
                 const countryNames = await getCountries();
-                setCountries(countryNames.data);
-                console.log("-->", countryNames.data[0].name)
+                const sortedCountryNames = countryNames.data.map( country => country.name ).sort()
+                setCountries( sortedCountryNames );
+                console.log(sortedCountryNames)
+                // console.log("-->", countryNames.data[0].name)
             } catch (error) {
                 console.log(error)
             }
@@ -38,149 +40,11 @@ const Dropdown = () => {
                 value={selectedCountry}
             >
                 { 
-                    countries.map(  el =>( 
-                        <option key={el.name} value={el.name.toLowerCase()}  >{el.name}</option>
+                    countries.map(  country =>( 
+                        <option key={country} value={country.toLowerCase()}  >{country}</option>
                         ))
                         
                 }
-
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-                <option key="deneme" value="deneme"  >
-                    Deneme 1
-                </option>
-                <option key="deneme2" value="deneme"  >
-                    Deneme 2
-                </option>
-                <option key="deneme3" value="deneme"  >
-                    Deneme 3
-                </option>
-
-
             </StyledDropdown>
         </StyledFlexContainerColumn>
   )
