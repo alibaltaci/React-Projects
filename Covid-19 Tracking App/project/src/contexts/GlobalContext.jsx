@@ -42,7 +42,6 @@ const AppProvider = ( {children} ) => {
             try{
                 const data = await getData(selectedCountry);
                 setDailyData(data.data[0])
-                console.log(data.data[0])
             }
             catch (error){
                 console.log(error)
