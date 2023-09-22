@@ -6,7 +6,7 @@ import { theme } from "../../styles/theme";
 
 export const StyledButton = styled.button`
 
-  /* width: fit-content;
+  width: fit-content;
   font-family: ${theme.font.secondary};
   display: flex;
   align-items: center;
@@ -38,28 +38,52 @@ export const StyledButton = styled.button`
   ${({ variant = "primary" }) => {
     if (variant === "primary") {
       return css`
-        color: ${theme.colors.white_default};
+        /* color: ${theme.colors.white_default}; */
         background-color: ${theme.colors.midnight_blue};
+        border: 1px solid ${theme.colors.midnight_blue};
+        &:hover{
+            p{
+                color: ${theme.colors.midnight_blue};
+            }
+        }
       `;
     }
     if (variant === "secondary") {
       return css`
-        color: ${theme.colors.white_default};
-        background-color: ${theme.colors.pale_pink};
+        /* color: ${theme.colors.white_default}; */
+        background-color: ${theme.colors.plum};
+        border: 1px solid ${theme.colors.plum};
+        &:hover{
+            p{
+                color: ${theme.colors.plum};
+            }
+        }
       `;
     }
 
     if (variant === "tertiary") {
       return css`
-        color: ${theme.colors.midnight_blue};
-        background-color: ${theme.colors.white_default};
-        border:1px solid ${theme.colors.midnight_blue+"A0"};
+        /* color: ${theme.colors.midnight_blue}; */
+        background-color: ${theme.colors.red_default};
+        border: 1px solid ${theme.colors.red_default};
+        /* border:1px solid ${theme.colors.midnight_blue+"A0"}; */
+        &:hover{
+            p{
+                color: ${theme.colors.red_default};
+            }
+        }
       `;
     }
     if (variant ==="salmon") {
       return css`
-        color: ${theme.colors.white_default};
+        /* color: ${theme.colors.white_default}; */
         background-color: ${theme.colors.salmon};
+        border: 1px solid ${theme.colors.salmon};
+        &:hover{
+            p{
+                color: ${theme.colors.salmon};
+            }
+        }
       `;
     }
   }}
@@ -202,9 +226,11 @@ export const StyledButton = styled.button`
   &:hover {
     opacity: 0.9;
     cursor: pointer;
-  } */
+    background-color: ${theme.colors.white_default};
+  }
 
 `;
+
 
 // export const Button1 = styled.button`
  

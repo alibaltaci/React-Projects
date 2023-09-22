@@ -11,7 +11,7 @@ export const theme = {
         midnight_blue: "#1B3358",
         dark_state_blue: "#473E66",
         thistle: "#BD83B8",
-        pale_pink: "#F5D7DB",
+        plum: "#751189",
         salmon: "#F1916D"
     },
 

@@ -18,7 +18,7 @@ function Register() {
                         return <input key={id} type={ type } placeholder={ placeholder } />
                     } )
                 }
-                <Button text={button} route="" />
+                <Button text={button} route="" buttonType="secondary" size="s" radius="xs" />
             </form>
             <Typography text={content} variant="paragraph_s" />
         </div>

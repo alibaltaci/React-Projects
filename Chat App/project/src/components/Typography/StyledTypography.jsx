@@ -91,6 +91,7 @@ export const sharedStyles =  css`
             `}
     }
 
+
     @media (max-width: ${theme.screen.tablet}) {
         ${(props) =>
         props.variant && calculateFontValues(props.variant, "tablet")}
