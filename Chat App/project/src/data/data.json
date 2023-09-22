@@ -1,0 +1,37 @@
+{
+    "home":{
+
+    },
+
+    "register":{
+        "title": "Balloon Chat",
+        "formTitle": "Register",
+        "button": "Sign Up",
+        "content": "You do have an account? Login",
+        "formElement":[
+            {
+                "id": 1,
+                "type": "text",
+                "placeholder": "Display Name"
+            },
+            {
+                "id": 2,
+                "type": "email",
+                "placeholder": "Email"
+            },
+            {
+                "id": 3,
+                "type": "password",
+                "placeholder": "Password"
+            },
+            {
+                "id": 4,
+                "type": "file"
+            }
+        ]
+    },
+
+    "login":{
+
+    }
+}
