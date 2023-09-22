@@ -1,3 +1,4 @@
+import Typography from "../components/Typography/Typography"
 import { register } from "../data/data.json"
 
 function Register() {
@@ -9,6 +10,8 @@ function Register() {
         <div>
             <h1>{ title }</h1>
             <h3>{ formTitle }</h3>
+            <Typography elementType="h1" text={ title } color="dark_state_blue" variant="title_4xl" />
+            <Typography elementType="h3" text={ formTitle } color="salmon" variant="title_2xl" />
             <form>
                 {
                     formElement.map( el => {
@@ -18,7 +21,7 @@ function Register() {
                 }
                 <button>{ button }</button>
             </form>
-            <p> { content } </p>
+            <Typography text={content} variant="paragraph_s" />
         </div>
     </div>
   )
