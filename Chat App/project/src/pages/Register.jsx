@@ -1,3 +1,4 @@
+import Button from "../components/Button/Button"
 import Typography from "../components/Typography/Typography"
 import { register } from "../data/data.json"
 
@@ -8,8 +9,6 @@ function Register() {
   return (
     <div>
         <div>
-            <h1>{ title }</h1>
-            <h3>{ formTitle }</h3>
             <Typography elementType="h1" text={ title } color="dark_state_blue" variant="title_4xl" />
             <Typography elementType="h3" text={ formTitle } color="salmon" variant="title_2xl" />
             <form>
@@ -19,7 +18,7 @@ function Register() {
                         return <input key={id} type={ type } placeholder={ placeholder } />
                     } )
                 }
-                <button>{ button }</button>
+                <Button text={button} route="" />
             </form>
             <Typography text={content} variant="paragraph_s" />
         </div>
