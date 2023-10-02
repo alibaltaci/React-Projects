@@ -7,7 +7,10 @@ function Register() {
     const { title, formTitle, button, content, formElement } = register
 
   return (
-    <div style={{backgroundImage: `url("./images/message-thomas-peham.jpg")`, maxHeight:"100vh"}}>
+    <div style={{backgroundImage: `url("./images/message-thomas-peham.jpg")`, 
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        maxHeight:"100vh"}}>
         <div >   
             <Typography elementType="h1" text={ title } color="dark_state_blue" variant="title_4xl" />
             <Typography elementType="h3" text={ formTitle } color="salmon" variant="title_2xl" />
