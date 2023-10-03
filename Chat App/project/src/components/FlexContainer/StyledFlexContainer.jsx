@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { Box } from "../Box"
-// import { theme } from "../../styles/theme"
+import { theme } from "../../styles/theme"
 
 export const StyledFlexContainerBasic = styled.div`
 
@@ -67,5 +67,72 @@ export const StyledFlexContainerRow = styled(FlexBase)`
     
     flex-direction: row;
 
+    ${(props) => 
+        props.transformOptions?.[1] && 
+        css`
+            @media ( max-width: ${theme.screen[props.transformOptions[0]]} ){
+                align-items: ${props.transformOptions[1]};
+            }
+        `
+    }
+
+    ${(props) => 
+        props.transformOptions?.[2] &&
+        css`
+            @media ( max-width: ${theme.screen[props.transformOptions[0]]} ){
+                justify-content: ${props.transformOptions[2]};
+            }
+        `
+    }
+
+    ${(props) => 
+        props.transformOptions?.[3] &&
+        css`
+            @media (max-width: ${theme.screen[props.transformOptions[0]]}) {
+                flex-direction: ${theme.transformOptions[3]};
+            }
+        `
+    }
+
 `
+export const StyledFlexContainerColumn = styled(FlexBase)`
+    
+    flex-direction: column;
+
+    ${(props) => 
+        props.transformOptions?.[1] && 
+        css`
+            @media ( max-width: ${theme.screen[props.transformOptions[0]]} ){
+                align-items: ${props.transformOptions[1]};
+            }
+        `
+    }
+
+    ${(props) => 
+        props.transformOptions?.[2] &&
+        css`
+            @media ( max-width: ${theme.screen[props.transformOptions[0]]} ){
+                justify-content: ${props.transformOptions[2]};
+            }
+        `
+    }
+
+    /* ${(props) => 
+        props.transformOptions?.[3] &&
+        css`
+            @media (max-width: ${theme.screen[props.transformOptions[0]]}) {
+                flex-direction: ${theme.transformOptions[3]};
+            }
+        `
+    } */
+
+`
+
+
+export const InputContainer = styled(StyledFlexContainerBasic)`
+  width: 322px;
+  height: 51px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+`;
 
