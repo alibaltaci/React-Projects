@@ -13,119 +13,119 @@ export const Box = styled.div`
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.border && 
         css`
             border: ${props.border};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.borderRadius && 
         css`
             border-radius: ${theme.borderRadius[props.borderRadius]};
         `
     } 
 
-    ${({props}) => 
+    ${(props) => 
         props.position && 
         css`
             position: ${props.position};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.backgroundColor && 
         css`
             background-color: ${theme.colors[props.backgroundColor]};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.marginTop && 
         css`
             margin-top: ${props.marginTop};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.marginBottom && 
         css`
             margin-bottom: ${props.marginBottom};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.margin && 
         css`
             margin: ${props.margin};
         `
     }
     
-    ${({props}) => 
+    ${(props) => 
         props.paddingTop && 
         css`
             padding-top: ${props.paddingTop};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.paddingBottom && 
         css`
             padding-bottom: ${props.paddingBottom};
         `
     }
     
-    ${({props}) => 
+    ${(props) => 
         props.padding && 
         css`
             padding: ${props.padding};
         `
     }
 
-    ${({props})  => 
+    ${(props)  => 
         props.width && 
         css`
             width: ${props.width};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.minWidth && 
         css`
             min-width: ${props.minWidth};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.maxWidth && 
         css`
             max-width: ${props.maxWidth};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.height && 
         css`
             height: ${props.height};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.maxHeight && 
         css`
             min-height: ${props.minHeight};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.minHeight && 
         css`
             min-height: ${props.minHeight};
         `
     }
 
-    ${({props}) => 
+    ${(props) => 
         props.visibilityTransformOptions && 
         css`
             @media (max-width: ${theme.screen[props.visibilityTransformOptions[0]]};) {
