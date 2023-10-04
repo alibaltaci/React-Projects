@@ -129,10 +129,10 @@ export const StyledFlexContainerColumn = styled(FlexBase)`
 `
 
 
-export const InputContainer = styled(StyledFlexContainerBasic)`
-  width: 322px;
-  height: 51px;
-  background: rgba(0, 0, 0, 0);
-  border-radius: 10px;
-`;
+// export const InputContainer = styled(StyledFlexContainerBasic)`
+//   width: 322px;
+//   height: 51px;
+//   background: rgba(0, 0, 0, 0);
+//   border-radius: 10px;
+// `;
 
