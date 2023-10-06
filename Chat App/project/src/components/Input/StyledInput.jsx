@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/Theme"
+import { hexToRGB } from "../utils/function";
 
 export const StyledInput = styled.input`
 
@@ -68,12 +69,35 @@ export const StyledInput = styled.input`
         props.outline && 
         css`
             outline: ${props.inactiveOutlineColor
-                ?`1px solid ${props.about.inactiveOutlineColor}`
+                ?`1px solid ${props.inactiveOutlineColor}`
                 : `1p solid #2661AB`
             };
+
+            &:focus{
+                outline: ${props.activeOutlineColor
+                    ?`1px solid ${props.activeOutlineColor}`
+                    :`1px solid #2661AB`
+                };
+                box-shadow: 2px 2px 2px 2px 
+                    ${hexToRGB(props.activeOutlineColor || "#2661AB", 0,3)}
+            }
         `
     }
-    
 
+    ${(props) => 
+        props.background && 
+        css`
+            background: ${props.background};
+        `
+    }
 
+    color: ${({color}) => 
+        color || theme.colors.navy_blue
+    };
+
+    font-size: ${({textSize}) => 
+        textSize 
+        ? theme.screenFontSizes["mobile"][textSize] 
+        : theme.screenFontSizes.laptop.s
+    }    
 `
