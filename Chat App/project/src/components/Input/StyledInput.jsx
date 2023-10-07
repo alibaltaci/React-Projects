@@ -99,5 +99,31 @@ export const StyledInput = styled.input`
         textSize 
         ? theme.screenFontSizes["mobile"][textSize] 
         : theme.screenFontSizes.laptop.s
-    }    
+    };
+`
+
+export const StyledTextArea = styled.textarea(StyledInput)`
+
+
+/* ${(props) =>
+    props.background &&
+    css`
+      background: ${props.background};
+    `}
+  color: ${({ color }) => color || theme.colors.black_default};
+  font-size: ${({ textSize }) =>
+    textSize ? theme.screenFontSizes.laptop[textSize] : theme.screenFontSizes.laptop.m};
+
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    color: ${({ placeholderColor }) =>
+      placeholderColor || theme.colors.black_default};
+    opacity: ${({ placeholderOpacity }) => placeholderOpacity || 0.4};
+  }
+  :-ms-input-placeholder {
+    color: ${({ placeholderColor }) =>
+      placeholderColor || theme.colors.black_default};
+    opacity: ${({ placeholderOpacity }) => placeholderOpacity || 0.6};
+  } */
+
 `
