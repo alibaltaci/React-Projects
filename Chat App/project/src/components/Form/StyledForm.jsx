@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { FlexContainer } from "../FlexContainer/FlexContainer";
+import { StyledFlexContainerColumn } from "../FlexContainer/StyledFlexContainer";
 
-export const StyledFormContentWrapper = styled(FlexContainer).attrs({type:"column"})`
+export const StyledFormContentWrapper = styled(StyledFlexContainerColumn)`
 
     height: fit-content;
     width: 100%;

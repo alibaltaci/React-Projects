@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { Box } from "../Box"
-import { theme } from "../../styles/Theme"
+import { theme } from "../../styles/theme";
 
 export const StyledFlexContainerBasic = styled.div`
 
