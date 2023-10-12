@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/theme";
+import { hexToRGB } from "../utils/function";
 
 export const Box = styled.div`
 
@@ -38,6 +39,18 @@ export const Box = styled.div`
         props.backgroundColor && 
         css`
             background-color: ${theme.colors[props.backgroundColor]};
+            ${props.bgColorOpacity &&
+            css`
+                background-color: ${hexToRGB(theme.colors[props.backgroundColor], props.bgColorOpacity)};
+        
+            `}
+        `
+    }
+
+    ${(props) =>
+        props.opacity && 
+        css`
+            opacity: ${props.opacity};
         `
     }
 
