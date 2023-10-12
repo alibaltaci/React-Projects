@@ -1,12 +1,14 @@
-import Button from "../components/Button/Button"
-import Typography from "../components/Typography/Typography"
 import { register } from "../data/data.json"
+import { Button, Typography } from "../components"
 
 function Register() {
 
     const { title, formTitle, button, content, formElement } = register
 
   return (
+    // <FlexContainer>
+
+    // </FlexContainer>
     <div style={{backgroundImage: `url("./images/message-thomas-peham.jpg")`, 
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

@@ -1,5 +1,5 @@
 import { FlexContainer } from "../FlexContainer/FlexContainer"
-import  Typography  from "../Typography/Typography"
+import { Typography } from "../Typography/Typography"
 import { StyledInput, StyledTextArea } from "./StyledInput"
 
 const InputTitle = ({isRequired, title, titleVariant}) => {

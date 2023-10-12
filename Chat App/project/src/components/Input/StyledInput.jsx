@@ -102,8 +102,8 @@ export const StyledInput = styled.input`
     };
 `
 
-export const StyledTextArea = styled.textarea(StyledInput)`
-
+// to change the label (input --> textarea): .attrs({as: "textarea"})
+export const StyledTextArea = styled(StyledInput).attrs({as: "textarea"})`
 
 /* ${(props) =>
     props.background &&

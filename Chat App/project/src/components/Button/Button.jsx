@@ -1,8 +1,8 @@
 // import { NavLink } from "react-router-dom";
+import { Typography } from "../Typography/Typography";
 import { StyledButton } from "./StyledButton";
-import Typography from "../Typography/Typography";
 
-export default function Button({route, text, buttonType,  ...props}) {
+export const Button = ({route, text, buttonType,  ...props}) =>  {
 
     console.log(route)
     

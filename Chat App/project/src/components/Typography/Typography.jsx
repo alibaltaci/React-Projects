@@ -1,6 +1,6 @@
 import { StyledH1, StyledH2, StyledH3, StyledP, StyledSpan } from "./StyledTypography";
 
-export default function Typography({elementType, text, children, ...props}) {
+export const Typography = ({elementType, text, children, ...props}) => {
 
   const elementMap = {
     "span": StyledSpan,
