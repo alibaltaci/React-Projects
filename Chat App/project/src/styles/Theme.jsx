@@ -54,17 +54,17 @@ export const theme = {
       screenFontSizes: {
 
         mobile: {
-          min: "1.5rem",
-          xs: "1.6rem",
-          s: "1.7rem",
-          m: "1.8rem",
-          l: "1.9rem",
-          xl: "2rem",
-          "2xl": "1.7rem",
-          "3xl": "2.2rem",
-          "4xl": "2.4rem",
-          "5xl": "2.6rem",
-          max: "5.5rem",
+          min: "1rem",
+          xs: "1.1rem",
+          s: "1.2rem",
+          m: "1.3rem",
+          l: "1.4rem",
+          xl: "1.5rem",
+          "2xl": "1.6rem",
+          "3xl": "1.7rem",
+          "4xl": "1.8rem",
+          "5xl": "2.2rem",
+          max: "3rem",
         },
     
         tablet: {

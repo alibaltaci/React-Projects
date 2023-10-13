@@ -128,7 +128,7 @@ export const Box = styled.div`
     ${(props) => 
         props.maxHeight && 
         css`
-            min-height: ${props.minHeight};
+            max-height: ${props.maxHeight};
         `
     }
 

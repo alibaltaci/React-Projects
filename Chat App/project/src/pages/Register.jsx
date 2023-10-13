@@ -25,6 +25,9 @@ function Register() {
             gap="2rem" 
             borderRadius="s" 
             border={`3px solid salmon`}
+            // transformOptions={["tablet","center" ,"center"]}
+            maxWidth="90%"
+            maxHeight="100%"
         >   
             <Typography elementType="h1" text={ title } color="salmon" variant="title_4xl" />
             <Form title={formTitle} >
@@ -48,7 +51,7 @@ function Register() {
                 }
                 <Button text={button} route="" buttonType="secondary" size="s" radius="xs" variant="salmon" />
             </Form>
-            <Typography text={content} variant="paragraph_s" />
+            <Typography text={content} variant="paragraph_s" paddingBottom="1rem"/>
         </FlexContainer>
     </div>
     </FlexContainer>
