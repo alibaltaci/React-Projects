@@ -12,21 +12,25 @@
             {
                 "id": 1,
                 "type": "text",
-                "placeholder": "Display Name"
+                "placeholder": "Display Name",
+                "required":true
             },
             {
                 "id": 2,
                 "type": "email",
-                "placeholder": "Email"
+                "placeholder": "Email",
+                "required":true
             },
             {
                 "id": 3,
                 "type": "password",
-                "placeholder": "Password"
+                "placeholder": "Password",
+                "required":true
             },
             {
                 "id": 4,
-                "type": "file"
+                "type": "file",
+                "required":false
             }
         ]
     },

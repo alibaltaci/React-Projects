@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/theme";
-import { hexToRGB } from "../utils/function";
+import { borderEditor, hexToRGB } from "../utils/function";
 
 export const Box = styled.div`
 
@@ -17,7 +17,8 @@ export const Box = styled.div`
     ${(props) => 
         props.border && 
         css`
-            border: ${props.border};
+            /* border: ${props.border}; */
+            border: ${borderEditor(props.border)};
         `
     }
 

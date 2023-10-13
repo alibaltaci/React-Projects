@@ -9,8 +9,9 @@ const InputTitle = ({isRequired, title, titleVariant}) => {
 
       <Typography 
         text={title} 
-        color="idnight_blue"
-        elementType={titleVariant}
+        color="salmon"
+        elementType="h3"
+        variant={titleVariant}
         marginTrim
       />
       {
@@ -18,7 +19,8 @@ const InputTitle = ({isRequired, title, titleVariant}) => {
           <Typography 
             text="*"
             color="red_default"
-            elementType={titleVariant}
+            elementType="h3"
+            variant="title_xs"
             marginTrim
           />
         )

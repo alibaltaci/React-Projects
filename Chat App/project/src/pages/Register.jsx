@@ -1,5 +1,6 @@
 import { register } from "../data/data.json"
-import { Button, FlexContainer, Typography } from "../components"
+import { Button, FlexContainer, Form, Input, Typography } from "../components"
+
 
 function Register() {
 
@@ -15,18 +16,38 @@ function Register() {
         display:"flex",
         alignItems:"center",
         justifyContent:"center"}}>
-        <FlexContainer type="column" align="center" justify="center" backgroundColor="navy_blue" bgColorOpacity={0.7} blur >   
-            <Typography elementType="h1" text={ title } color="dark_state_blue" variant="title_4xl" />
-            <Typography elementType="h3" text={ formTitle } color="salmon" variant="title_2xl" />
-            <form>
+        <FlexContainer 
+            type="column" 
+            align="center" 
+            justify="center" 
+            backgroundColor="navy_blue" 
+            bgColorOpacity={0.7} 
+            gap="2rem" 
+            borderRadius="s" 
+            border={`3px solid salmon`}
+        >   
+            <Typography elementType="h1" text={ title } color="salmon" variant="title_4xl" />
+            <Form title={formTitle} >
                 {
                     formElement.map( el => {
-                        const { id, type, placeholder } = el
-                        return <input key={id} type={ type } placeholder={ placeholder } />
+                        const { id, type, placeholder, required } = el
+                        return <Input 
+                                    key={id} 
+                                    type={ type } 
+                                    // placeholder={ placeholder }
+                                    isRequired={required}
+                                    title={placeholder}
+                                    titleVariant="title_m"
+                                    paddingVertical="8px"
+                                    paddingHorizonal="8px"
+                                    outline
+                                    radius="xs"
+                                    
+                                />
                     } )
                 }
-                <Button text={button} route="" buttonType="secondary" size="s" radius="xs" />
-            </form>
+                <Button text={button} route="" buttonType="secondary" size="s" radius="xs" variant="salmon" />
+            </Form>
             <Typography text={content} variant="paragraph_s" />
         </FlexContainer>
     </div>

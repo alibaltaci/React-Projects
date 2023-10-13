@@ -70,16 +70,16 @@ export const StyledInput = styled.input`
         css`
             outline: ${props.inactiveOutlineColor
                 ?`1px solid ${props.inactiveOutlineColor}`
-                : `1p solid #2661AB`
+                : `1px solid ${theme.colors.salmon}`
             };
 
             &:focus{
                 outline: ${props.activeOutlineColor
                     ?`1px solid ${props.activeOutlineColor}`
-                    :`1px solid #2661AB`
+                    :`1px solid ${theme.colors.salmon}`
                 };
                 box-shadow: 2px 2px 2px 2px 
-                    ${hexToRGB(props.activeOutlineColor || "#2661AB", 0,3)}
+                    ${hexToRGB(props.activeOutlineColor || theme.colors.salmon, 0,3)}
             }
         `
     }
