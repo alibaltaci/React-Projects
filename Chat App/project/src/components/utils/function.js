@@ -1,3 +1,5 @@
+import { theme } from "../../styles/theme";
+
 export function hexToRGB(hex, alpha){
 
     const r = parseInt(hex.slice(1, 3), 16)
@@ -8,5 +10,20 @@ export function hexToRGB(hex, alpha){
         return "rgba(" + r + "," + g + "," + b + "," + alpha + ")";
     }else{
         return "rgba(" + r + "," + g + "," + b + "," + ")";
+    }
+}
+
+
+export function borderEditor(border){
+
+    const arr = border.split(" ")
+    const color = theme.colors[arr[2]]
+
+    if( color ){
+        return `${arr[0]} ${arr[1]} ${color}`
+        
+    }
+    else{
+        return border
     }
 }
