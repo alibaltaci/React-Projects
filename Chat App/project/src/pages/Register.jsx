@@ -36,7 +36,9 @@ function Register() {
                 {
                     formElement.map( el => {
                         const { id, type, placeholder, required } = el
-                        return <Input 
+                
+
+                            return <Input 
                                     key={id} 
                                     type={ type } 
                                     // placeholder={ placeholder }
@@ -47,10 +49,11 @@ function Register() {
                                     paddingHorizonal="8px"
                                     outline
                                     radius="xs"
-                                    
-                                />
-                    } )
+                                    />
+                                }
+                    )
                 }
+
                 <Button text={button} route="" buttonType="secondary" size="s" radius="xs" variant="salmon" />
             </Form>
             <Typography text={content} variant="paragraph_s" paddingBottom="1rem"/>

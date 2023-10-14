@@ -7,6 +7,12 @@ export const StyledInput = styled.input`
     border: none;
 
     ${(props) => 
+        props.id === "file" && 
+        css`
+            display: none;
+        `
+    }
+    ${(props) => 
         props.matchParent && 
         css`
             width: 100%;
@@ -103,9 +109,12 @@ export const StyledInput = styled.input`
     };
 `
 
-export const StyledInputFile = styled(StyledInput)`
-
-    display: none;
+export const StyledLabel = styled.label`
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
 `
 
 // to change the label (input --> textarea): .attrs({as: "textarea"})

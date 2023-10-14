@@ -1,7 +1,7 @@
 import { FlexContainer } from "../FlexContainer/FlexContainer"
 import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
-import { StyledInput, StyledInputFile, StyledTextArea } from "./StyledInput"
+import { StyledInput,  StyledLabel,  StyledTextArea } from "./StyledInput"
 
 const InputTitle = ({isRequired, title, titleVariant}) => {
 
@@ -109,37 +109,21 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
   // file
   if(props.type === "file"){
     return(
-      <FlexContainer type="column" >
-        <StyledInputFile {...props} />
-        <label htmlFor="file">
-          <FlexContainer type="row" align="center">
+      <FlexContainer type="row" >
+        <StyledInput {...props} id="file" />
+        <StyledLabel htmlFor="file" >
 
           <BallonProfile />
           {
-            title && !isTitleArray && (
-              <InputTitle 
-              isRequired={isRequired}
+            title && (
+            <InputTitle
               title={title}
+              isRequired={isRequired}
               titleVariant={titleVariant}
-              />
-              )
-            }
-          {
-            title && isTitleArray && (
-              <FlexContainer type="column" >
-                {title.map( t => (
-                  <InputTitle 
-                  key={t}
-                  isRequired={isRequired}
-                  title={t}
-                  titleVariant={titleVariant}
-                  />
-                  ))}
-              </FlexContainer>
+            />
             )
           }
-          </FlexContainer>
-        </label>
+        </StyledLabel>
         
       </FlexContainer>
     )

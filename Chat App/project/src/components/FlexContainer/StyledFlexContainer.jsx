@@ -5,6 +5,7 @@ import { Box } from "../Box/Box";
 export const StyledFlexContainerBasic = styled.div`
 
     display: flex;
+    overflow: hidden;
     flex-wrap: ${({wrap}) => wrap};
     flex-direction: ${({direction}) => direction || "row"};
     justify-content: ${({justify}) => justify || "center"};
