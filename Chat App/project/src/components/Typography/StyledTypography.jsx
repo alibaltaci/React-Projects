@@ -71,6 +71,16 @@ export const sharedStyles =  css`
         css`
         margin: ${props.margin};
     `}
+    ${(props) =>
+        props.marginTop &&
+        css`
+        margin-top: ${props.marginTop};
+    `}
+    ${(props) =>
+        props.marginBottom &&
+        css`
+        margin-bottom: ${props.marginBottom};
+    `}
     
     ${(props) =>
         props.marginTrim &&

@@ -38,5 +38,23 @@
 
     "login":{
 
+        "title":"Balloon Chat",
+        "formTitle":"Login",
+        "button":"Sign In",
+        "content": "You don't have an account? Register",
+        "formElement":[
+            {
+                "id": 1,
+                "type": "email",
+                "placeholder": "Email",
+                "required":true
+            },
+            {
+                "id": 2,
+                "type": "password",
+                "placeholder": "Password",
+                "required":true
+            }
+        ]
     }
 }

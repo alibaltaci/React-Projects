@@ -112,7 +112,6 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
       <FlexContainer type="row" >
         <StyledInput {...props} id="file" />
         <StyledLabel htmlFor="file" >
-
           <BallonProfile />
           {
             title && (

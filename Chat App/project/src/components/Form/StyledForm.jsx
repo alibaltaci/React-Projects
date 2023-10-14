@@ -5,7 +5,7 @@ export const StyledFormContentWrapper = styled(StyledFlexContainerColumn)`
 
     height: fit-content;
     width: 100%;
-    gap: 15px;
-    padding: 50px;
+    gap: 1rem;
+    padding: 2rem;
 
 `

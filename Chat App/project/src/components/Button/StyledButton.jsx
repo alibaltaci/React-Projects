@@ -147,7 +147,7 @@ export const StyledButton = styled.button`
   ${(props) =>
     props.width &&
     css`
-      width: ${props.margin}px;
+      width: ${props.width}px;
     `}
 
   ${(props) =>
@@ -187,15 +187,15 @@ export const StyledButton = styled.button`
     `}
 
   ${(props) =>
-    props.top &&
+    props.marginTop &&
     css`
-      top: ${props.top};
+      margin-top: ${props.marginTop};
     `}
 
   ${(props) =>
-    props.bottom &&
+    props.marginBottom &&
     css`
-      bottom: ${props.bottom};
+      margin-bottom: ${props.marginBottom};
     `}
 
   ${(props) =>
