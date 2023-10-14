@@ -102,6 +102,11 @@ export const StyledInput = styled.input`
     };
 `
 
+export const StyledInputFile = styled(StyledInput)`
+
+    display: none;
+`
+
 // to change the label (input --> textarea): .attrs({as: "textarea"})
 export const StyledTextArea = styled(StyledInput).attrs({as: "textarea"})`
 

@@ -1,6 +1,6 @@
 import { FlexContainer } from "../FlexContainer/FlexContainer"
 import { Typography } from "../Typography/Typography"
-import { StyledInput, StyledTextArea } from "./StyledInput"
+import { StyledInput, StyledInputFile, StyledTextArea } from "./StyledInput"
 
 const InputTitle = ({isRequired, title, titleVariant}) => {
 
@@ -100,6 +100,41 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
             </FlexContainer>
           )
         }
+      </FlexContainer>
+    )
+  }
+
+
+  // file
+  if(props.type === "file"){
+    return(
+      <FlexContainer type="row" >
+        <StyledInputFile {...props} />
+        <label htmlFor="file">
+          {
+            title && !isTitleArray && (
+              <InputTitle 
+              isRequired={isRequired}
+              title={title}
+              titleVariant={titleVariant}
+              />
+              )
+            }
+          {
+            title && isTitleArray && (
+              <FlexContainer type="column" >
+                {title.map( t => (
+                  <InputTitle 
+                  key={t}
+                  isRequired={isRequired}
+                  title={t}
+                  titleVariant={titleVariant}
+                  />
+                  ))}
+              </FlexContainer>
+            )
+          }
+        </label>
       </FlexContainer>
     )
   }

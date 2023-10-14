@@ -27,7 +27,6 @@ function Register() {
             border={`3px solid salmon`}
             // transformOptions={["tablet","center" ,"center"]}
             maxWidth="90%"
-            maxHeight="100%"
         >   
             <Typography elementType="h1" text={ title } color="salmon" variant="title_4xl" />
             <Form title={formTitle} >
