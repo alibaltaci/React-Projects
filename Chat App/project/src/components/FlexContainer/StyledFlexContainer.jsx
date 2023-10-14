@@ -26,6 +26,14 @@ export const StyledFlexContainerBasic = styled.div`
 export const FlexBase = styled(Box)`
 
     display: flex;
+
+    ${(props) => 
+        props.center && 
+        css`
+            align-items: center;
+            justify-content: center;
+        `
+    }
     
     ${(props) => 
         props.align && 
