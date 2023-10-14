@@ -30,7 +30,7 @@
             {
                 "id": 4,
                 "type": "file",
-                "placeholder":"Profile Photo",
+                "placeholder":"Add Profile Photo",
                 "required":false
             }
         ]

@@ -15,7 +15,9 @@ function Register() {
         height:"100vh",
         display:"flex",
         alignItems:"center",
-        justifyContent:"center"}}>
+        justifyContent:"center",
+        overflow:"hidden"}}
+        >
         <FlexContainer 
             type="column" 
             align="center" 
@@ -27,6 +29,7 @@ function Register() {
             border={`3px solid salmon`}
             // transformOptions={["tablet","center" ,"center"]}
             maxWidth="90%"
+            width="30rem"
         >   
             <Typography elementType="h1" text={ title } color="salmon" variant="title_4xl" />
             <Form title={formTitle} >

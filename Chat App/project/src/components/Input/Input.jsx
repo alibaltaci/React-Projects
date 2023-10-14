@@ -1,4 +1,5 @@
 import { FlexContainer } from "../FlexContainer/FlexContainer"
+import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
 import { StyledInput, StyledInputFile, StyledTextArea } from "./StyledInput"
 
@@ -108,9 +109,12 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
   // file
   if(props.type === "file"){
     return(
-      <FlexContainer type="row" >
+      <FlexContainer type="column" >
         <StyledInputFile {...props} />
         <label htmlFor="file">
+          <FlexContainer type="row" align="center">
+
+          <BallonProfile />
           {
             title && !isTitleArray && (
               <InputTitle 
@@ -134,7 +138,9 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
               </FlexContainer>
             )
           }
+          </FlexContainer>
         </label>
+        
       </FlexContainer>
     )
   }

@@ -87,10 +87,11 @@ export const StyledInput = styled.input`
     ${(props) => 
         props.background && 
         css`
-            background: ${props.background};
+            background: ${props.background}
+           
         `
     }
-
+    
     color: ${({color}) => 
         color || theme.colors.navy_blue
     };
