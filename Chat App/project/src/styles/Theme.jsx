@@ -6,9 +6,12 @@ export const theme = {
         black_default: "#000000",
         white_default: "#FFFFFF",
         red_default: "#FF0000",
+        merah: "#ab4e68",
+        midnight_blue: "#101739",
+        aubergine: "#382d36",
+        
         vibrant_vermilion: "#fd5f00",
         navy_blue: "#06142E",
-        midnight_blue: "#1B3358",
         dark_state_blue: "#473E66",
         thistle: "#BD83B8",
         plum: "#751189",

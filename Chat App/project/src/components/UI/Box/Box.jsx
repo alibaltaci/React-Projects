@@ -15,6 +15,14 @@ export const Box = styled.div`
     }
 
     ${(props) => 
+        props.horizonalPadding &&
+        css`
+            padding-left: ${props.horizonalPadding};
+            padding-right: ${props.horizonalPadding};
+        `
+    }
+
+    ${(props) => 
         props.border && 
         css`
             /* border: ${props.border}; */

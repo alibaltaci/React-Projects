@@ -1,9 +1,10 @@
-import { FlexContainer, Typography } from "../UI"
+import { Navbar } from "../Navbar/Navbar"
+import { FlexContainer } from "../UI"
 
 export const Sidebar = () => {
   return(
-    <FlexContainer type="column" width="30%" backgroundColor="salmon" radiusLeft="s" >
-      <Typography text="Sidebar" />
+    <FlexContainer type="column" width="30%"  radiusLeft="s" >
+      <Navbar />
     </FlexContainer>
   )
 }
