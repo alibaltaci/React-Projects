@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 import {Box} from "../Box/Box"
-import { theme } from "../../styles/theme"
+import { theme } from "../../../styles/theme"
 
 export const StyledBackgroundImageContainer = styled(Box)`
 

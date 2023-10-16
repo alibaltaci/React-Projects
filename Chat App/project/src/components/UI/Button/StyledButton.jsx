@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../styles/theme";
+import { theme } from "../../../styles/theme";
 
 //  buttonSizes = "s" | "m" | "l";
 //  borderRadiusVariants = "xs" | "s" | "m" | "l";

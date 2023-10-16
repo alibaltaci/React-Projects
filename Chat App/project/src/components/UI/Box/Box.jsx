@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../styles/theme";
-import { borderEditor, hexToRGB } from "../utils/function";
+import { theme } from "../../../styles/theme";
+import { borderEditor, hexToRGB } from "../../utils/function";
 
 export const Box = styled.div`
 

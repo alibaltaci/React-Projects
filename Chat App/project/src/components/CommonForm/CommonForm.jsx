@@ -1,4 +1,4 @@
-import BalloonChatIcon from "../Icons/BalloonChatIcon"
+import BalloonChatIcon from "../UI/Icons/BalloonChatIcon"
 import { Button, FlexContainer, Form, Input, Typography } from "../index"
 
 
