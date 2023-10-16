@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components"
-import {Box} from "../Box/Box"
 import { theme } from "../../../styles/theme"
+import { StyledFlexContainerBasic } from "../FlexContainer/StyledFlexContainer"
 
-export const StyledBackgroundImageContainer = styled(Box)`
+export const StyledBackgroundImageContainer = styled(StyledFlexContainerBasic)`
 
     position: relative;
-    display: flex;
-    align-items: flex-end;
+    overflow: hidden;
+    /* align-items: flex-end; */
     aspect-ratio: ${({aspectRatio}) => aspectRatio};
     z-index: 0;
 
@@ -17,8 +17,9 @@ export const StyledBackgroundImageContainer = styled(Box)`
 
 `
 
-export const BackgroundOpacityWrapper = styled(Box)`
+export const BackgroundOpacityWrapper = styled(StyledFlexContainerBasic)`
     position: absolute;
+    align-items: flex-end;
     inset: 0;
     /* left: 0;
     top: 0;
