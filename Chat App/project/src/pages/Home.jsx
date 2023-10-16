@@ -1,7 +1,9 @@
-import { BackgroundImageContainer } from "../components/UI"
+import { Chat, Sidebar } from "../components"
+import { BackgroundImageContainer, FlexContainer } from "../components/UI"
      
 function Home() {
-  return (
+
+  return ( 
     <BackgroundImageContainer 
       imageUrl="./images/chat-bg.jpg" 
       height="100vh"
@@ -9,11 +11,11 @@ function Home() {
       verticalImgPosition="bottom"
       loading="lazy"
       alt="Balloon Chat"
-
     >
-      <p>aaaa</p>
-      <p>aaaa</p>
-      <p>aaaa</p>
+      <FlexContainer type="row" border="1px solid white" radius="xs">
+        <Sidebar />
+        <Chat /> 
+      </FlexContainer>
 
     </BackgroundImageContainer>
   )

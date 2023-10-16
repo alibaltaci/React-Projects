@@ -8,7 +8,9 @@ export const StyledImage = styled.img`
     ${(props) => 
         props.verticalImgPosition === "bottom" &&
         css`
+            /* object-fit: cover; */
             width: 100%;
+            /* height: 100%; */
             position: "relative";
             top: "50%";
             transform: "translateY(-50%)";
@@ -20,5 +22,16 @@ export const StyledImage = styled.img`
         css`
             border-radius: ${theme.borderRadius[props.borderRadius]};
         `
+    }
+
+    @media ( max-width: ${theme.screen.tablet} ){
+
+        ${(props) => 
+            props.verticalImgPosition === "bottom" &&
+            css`
+                object-fit: cover;
+                height: 100%;
+            `
+        }     
     }
 `

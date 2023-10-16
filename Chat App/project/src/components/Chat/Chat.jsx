@@ -1,6 +1,6 @@
 
-export default function Chat() {
-  return (
-    <div>Chat</div>
+export const Chat = () => {
+  return(
+    <p>Chat</p>
   )
 }

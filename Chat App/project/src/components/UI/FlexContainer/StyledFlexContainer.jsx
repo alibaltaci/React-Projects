@@ -28,6 +28,13 @@ export const FlexBase = styled(Box)`
     display: flex;
 
     ${(props) => 
+        props.radius && 
+        css`
+            border-radius: ${theme.borderRadius[props.radius]};
+        `
+    }
+
+    ${(props) => 
         props.center && 
         css`
             align-items: center;
