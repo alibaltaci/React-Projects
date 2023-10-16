@@ -1,5 +1,6 @@
+import { FlexContainer } from "../FlexContainer/FlexContainer"
 import { Image } from "../Image/Image"
-import { BackgroundOpacityWrapper, ContentContainer, StyledBackgroundImageContainer } from "./StyledBackgroudImageContainer"
+import { BackgroundOpacityWrapper, StyledBackgroundImageContainer } from "./StyledBackgroudImageContainer"
 
 export const BackgroundImageContainer = ({children, bgOpacity, aspectRatio ="1.65", imageUrl, loading, alt, verticalImgPosition, ...props}) => {
     
@@ -13,9 +14,9 @@ export const BackgroundImageContainer = ({children, bgOpacity, aspectRatio ="1.6
                     verticalImgPosition={verticalImgPosition}
                 />
             </BackgroundOpacityWrapper>
-            <ContentContainer>
+            <FlexContainer index="2" >
                 {children}
-            </ContentContainer>
+            </FlexContainer>
         </StyledBackgroundImageContainer>
 
     )

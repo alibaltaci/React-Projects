@@ -35,6 +35,20 @@ export const FlexBase = styled(Box)`
     }
 
     ${(props) => 
+        props.radiusLeft &&
+        css`
+            border-radius: ${theme.borderRadius[props.radiusLeft]} 0 0 ${theme.borderRadius[props.radiusLeft]};
+        `
+    }
+
+    ${(props) => 
+        props.radiusRight &&
+        css`
+            border-radius: 0 ${theme.borderRadius[props.radiusRight]} ${theme.borderRadius[props.radiusRight]} 0;
+        `
+    }
+
+    ${(props) => 
         props.center && 
         css`
             align-items: center;
