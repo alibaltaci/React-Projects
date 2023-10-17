@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 export const StyledProfileImage = styled.img`
 
     border-radius: 50%;
+    object-fit: cover;
     
     ${(props) => 
         props.bgColor &&
