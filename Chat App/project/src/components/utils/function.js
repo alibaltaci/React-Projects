@@ -27,3 +27,14 @@ export function borderEditor(border){
         return border
     }
 }
+
+export function scrollEditor(value){
+
+    const arr = value.split("-")
+
+    if(arr.length > 1){
+            return `overflow-${arr[1]}: ${arr[0]}`
+    }else{
+        return `overflow: ${value}`
+    }
+}

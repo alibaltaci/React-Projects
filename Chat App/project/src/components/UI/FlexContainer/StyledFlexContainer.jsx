@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/theme";
 import { Box } from "../Box/Box";
+import { scrollEditor } from "../../utils/function";
+
 
 export const StyledFlexContainerBasic = styled.div`
 
@@ -27,11 +29,22 @@ export const FlexBase = styled(Box)`
 
     display: flex;
 
-    ${(props) => 
-        props.radius && 
+    ${(props) =>{  
+        const value = theme.borderRadius[props.radius];
+        return value && 
         css`
-            border-radius: ${theme.borderRadius[props.radius]};
-        `
+            border-radius: ${
+            props.radiusZeroOne 
+            ? `0 ${value} ${value} ${value}` 
+            : props.radiusZeroTwo 
+            ? `${value} 0 ${value} ${value}` 
+            : props.radiusZeroThree
+            ? `${value} ${value} 0 ${value}` 
+            : props.radiusZeroFour
+            ? `${value} ${value}  ${value} 0` 
+            : value
+            };
+        `}
     }
 
     ${(props) => 
@@ -45,6 +58,34 @@ export const FlexBase = styled(Box)`
         props.radiusRight &&
         css`
             border-radius: 0 ${theme.borderRadius[props.radiusRight]} ${theme.borderRadius[props.radiusRight]} 0;
+        `
+    }
+
+${(props) => 
+        props.radiusOne &&
+        css`
+            border-radius: ${theme.borderRadius[props.radiusOne]} 0 0 0;
+        `
+    }
+
+    ${(props) => 
+        props.radiusTwo &&
+        css`
+            border-radius: 0 ${theme.borderRadius[props.radiusTwo]} 0 0;
+        `
+    }
+
+    ${(props) => 
+        props.radiusThree &&
+        css`
+            border-radius: 0 0 ${theme.borderRadius[props.radiusThree]} 0;
+        `
+    }
+
+    ${(props) => 
+        props.radiusFour &&
+        css`
+            border-radius: 0 0 0 ${theme.borderRadius[props.radiusFour]} ;
         `
     }
 
@@ -88,6 +129,14 @@ export const FlexBase = styled(Box)`
         props.wrap &&
         css`
             flex-wrap: ${props.wrap};
+        `
+    }
+
+    ${(props) =>
+        props.overflow &&
+        css`
+            ${scrollEditor(props.overflow)}
+            
         `
     }
 

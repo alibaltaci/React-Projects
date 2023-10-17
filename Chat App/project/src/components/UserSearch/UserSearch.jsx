@@ -2,7 +2,7 @@ import { FlexContainer, Input } from "../UI"
 
 export const UserSearch = () => {
     return(
-        <FlexContainer type="column">
+        <FlexContainer type="column" >
 
         <Input 
             placeholder="Find a user" 
@@ -15,7 +15,7 @@ export const UserSearch = () => {
             bgOpacity=".8"
             />
         <div style={{
-            borderBottom:"2px solid white"
+            borderBottom:"1px solid white"
         }} />
         </FlexContainer>
     )

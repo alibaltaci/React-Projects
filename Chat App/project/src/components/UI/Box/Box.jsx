@@ -23,19 +23,16 @@ export const Box = styled.div`
     }
 
     ${(props) => 
-        props.border && 
+        (props.border || props.borderHover) && 
         css`
             /* border: ${props.border}; */
-            border: ${borderEditor(props.border)};
+            border: ${ props.border && borderEditor(props.border)};
+
+            &:hover{
+                border: ${ props.borderHover && borderEditor(props.borderHover) }
+            }
         `
     }
-
-    ${(props) => 
-        props.borderRadius && 
-        css`
-            border-radius: ${theme.borderRadius[props.borderRadius]};
-        `
-    } 
 
     ${(props) => 
         props.position && 
@@ -47,12 +44,15 @@ export const Box = styled.div`
     ${(props) => 
         props.backgroundColor && 
         css`
-            background-color: ${theme.colors[props.backgroundColor]};
-            ${props.bgColorOpacity &&
-            css`
-                background-color: ${hexToRGB(theme.colors[props.backgroundColor], props.bgColorOpacity)};
-        
-            `}
+            background-color: ${ props.bgOpacity
+            ? hexToRGB(theme.colors[props.backgroundColor], props.bgOpacity)
+            : theme.colors[props.backgroundColor]
+            };
+            &:hover {
+                background-color: ${props.bgOpacityHover
+                ? hexToRGB(theme.colors[props.backgroundColor], props.bgOpacityHover)
+                : hexToRGB(theme.colors[props.backgroundColor], props.bgOpacity)
+            }}
         `
     }
 
