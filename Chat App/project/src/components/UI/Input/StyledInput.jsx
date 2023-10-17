@@ -5,6 +5,7 @@ import { hexToRGB } from "../../utils/function";
 export const StyledInput = styled.input`
 
     border: none;
+    outline: none;
 
     ${(props) => 
         props.id === "file" && 
@@ -71,7 +72,7 @@ export const StyledInput = styled.input`
         `
     }
 
-    ${(props) =>
+    /* ${(props) =>
         props.outline && 
         css`
             outline: ${props.inactiveOutlineColor
@@ -88,7 +89,7 @@ export const StyledInput = styled.input`
                     ${hexToRGB(props.activeOutlineColor || theme.colors.salmon, 0,3)}
             }
         `
-    }
+    } */
 
     ${(props) => 
         props.background && 
@@ -97,9 +98,18 @@ export const StyledInput = styled.input`
            
         `
     }
-    
+
+    ${(props) => 
+        props.bgColor && 
+        css`
+            background-color: ${ props.bgOpacity
+            ? hexToRGB(theme.colors[props.bgColor], props.bgOpacity)
+            : theme.colors[props.bgColor]};
+        `
+    }
+
     color: ${({color}) => 
-        color || theme.colors.navy_blue
+        theme.colors[color] || color || theme.colors.navy_blue
     };
 
     font-size: ${({textSize}) => 

@@ -5,4 +5,5 @@ export {CommonForm} from "./CommonForm/CommonForm"
 export {Chat} from "./Chat/Chat"
 export {Sidebar} from "./Sidebar/Sidebar"
 export {Navbar} from "./Navbar/Navbar"
+export {UserSearch} from "./UserSearch/UserSearch"
 

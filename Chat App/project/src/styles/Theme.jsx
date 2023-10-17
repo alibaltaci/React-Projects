@@ -47,6 +47,7 @@ export const theme = {
       },
 
       borderRadius: {
+        none:0,
         xs: "6px",
         s: "10px",
         m: "15px",

@@ -8,7 +8,7 @@ export const Navbar = () => {
         <BalloonChatIcon />
         <FlexContainer type="row" align="center" width="100%" margin="1rem">
             <ProfileImage src="./images/balloon-profile.svg" alt="profile" width="3rem" height="3rem" bgColor="white" marginRight="1rem" />
-            <Typography text="John Apple" elementType="span" color="white_default" variant="paragraph_xs" />
+            <Typography text="John Smith" elementType="span" color="white_default" variant="paragraph_xs" />
         </FlexContainer>
         <Button text="Logout"  size="s" />
     </FlexContainer>
