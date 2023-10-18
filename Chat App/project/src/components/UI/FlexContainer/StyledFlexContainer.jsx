@@ -27,6 +27,12 @@ export const StyledFlexContainerBasic = styled.div`
 
 export const FlexBase = styled(Box)`
 
+    /* ${(props) => 
+        css`
+            display: ${props.display || "flex"};
+        `
+    } */
+
     display: flex;
 
     ${(props) =>{  
@@ -100,7 +106,7 @@ ${(props) =>
     ${(props) => 
         props.align && 
         css`
-            align-items: ${props.align}
+            align-items: ${props.align};
         `
     }
 
@@ -144,7 +150,9 @@ ${(props) =>
 
 export const StyledFlexContainerRow = styled(FlexBase)`
     
-    flex-direction: row;
+    flex-direction: ${({direction}) =>
+        direction ? direction : "row"
+    };
 
     ${(props) => 
         props.transformOptions?.[1] && 

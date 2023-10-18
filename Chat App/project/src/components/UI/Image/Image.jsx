@@ -1,6 +1,6 @@
 import { StyledImage } from "./StyledImage"
 
-export const Image = ({src, alt, loading, borderRadius, verticalImgPosition}) => {
+export const Image = ({src, alt, loading, borderRadius, verticalImgPosition, ...props}) => {
     return(
         <StyledImage
             src={src}
@@ -8,6 +8,7 @@ export const Image = ({src, alt, loading, borderRadius, verticalImgPosition}) =>
             loading={loading}
             borderRadius={borderRadius}
             verticalImgPosition={verticalImgPosition}
+            {...props}
         />
     )
 }

@@ -8,4 +8,6 @@ export {Navbar} from "./Navbar/Navbar"
 export {UserSearch} from "./UserSearch/UserSearch"
 export {Users} from "./Users/Users"
 export {UserCard} from "./UserCard/UserCard"
-
+export {ChatTop} from "./ChatTop/ChatTop"
+export {Message} from "./Message/Message"
+export {Messages} from "./Messages/Messages"

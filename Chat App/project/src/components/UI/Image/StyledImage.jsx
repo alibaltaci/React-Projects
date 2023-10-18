@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/theme";
+import { FlexBase } from "../FlexContainer/StyledFlexContainer";
 
-export const StyledImage = styled.img`
+export const StyledImage = styled(FlexBase).attrs({as: "img"})`
 
     z-index: 0;
 
@@ -23,6 +24,8 @@ export const StyledImage = styled.img`
             border-radius: ${theme.borderRadius[props.borderRadius]};
         `
     }
+
+
 
     @media ( max-width: ${theme.screen.tablet} ){
 

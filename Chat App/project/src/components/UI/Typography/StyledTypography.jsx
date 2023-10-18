@@ -26,6 +26,10 @@ const calculateFontValues = ( variant, screen ) => {
 
 export const sharedStyles =  css`
 
+    display:${({display}) => 
+        display ? display: "flex"
+    };
+
     color: ${({ color }) =>
         color ? theme.colors?.[color] : theme.colors.black_default
     };

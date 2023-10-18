@@ -78,6 +78,20 @@ export const Box = styled.div`
     }
 
     ${(props) => 
+        props.marginRight && 
+        css`
+            margin-right: ${props.marginRight};
+        `
+    }
+
+    ${(props) => 
+        props.marginLeft && 
+        css`
+            margin-left: ${props.marginLeft};
+        `
+    }
+
+    ${(props) => 
         props.margin && 
         css`
             margin: ${props.margin};
