@@ -18,8 +18,8 @@ function Home() {
       width="100%"
     >
       <StyledHome type="row" border="1px solid white" radius="s" width="80%" height="90%"   >
-        { isResponsive && !isVisible && <Sidebar /> }
-        { isResponsive && isVisible && <Chat /> }
+        { (isResponsive || !isVisible) ? !isVisible && <Sidebar /> : <Sidebar /> }
+        { isVisible && <Chat /> }
          
       </StyledHome>
 
