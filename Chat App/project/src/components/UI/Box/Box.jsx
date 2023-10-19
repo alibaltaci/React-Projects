@@ -111,6 +111,20 @@ export const Box = styled.div`
             padding-bottom: ${props.paddingBottom};
         `
     }
+
+    ${(props) => 
+        props.paddingLeft && 
+        css`
+            padding-left: ${props.paddingLeft};
+        `
+    }
+
+    ${(props) => 
+        props.paddingRight && 
+        css`
+            padding-right: ${props.paddingRight};
+        `
+    }
     
     ${(props) => 
         props.padding && 

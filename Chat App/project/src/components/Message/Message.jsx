@@ -15,7 +15,7 @@ export const Message = ({data}) => {
                     ? <Image src={message} width="50%" radius="xs" margin=".8rem" />
                     :<FlexContainer justify="flex-end" width="60%">
                         <FlexContainer type="column" backgroundColor="black_default" margin=".8rem" padding=".6rem" radius="m" radiusZeroThree maxWidth="max-content" >
-                            <Typography text={message} color="white_default" align="right" />
+                            <Typography text={message} color="white_default" align="left" />
                         </FlexContainer>  
                     </FlexContainer>
                 }

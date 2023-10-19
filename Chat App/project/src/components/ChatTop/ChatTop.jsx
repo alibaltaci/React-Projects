@@ -4,7 +4,7 @@ import { SlOptions } from "react-icons/sl"
 
 export const ChatTop = () => {
     return(
-        <FlexContainer type="row" backgroundColor="black_default" height="5rem" radiusTwo="s" align="center" justify="space-between" horizonalPadding="2rem" >
+        <FlexContainer type="row" backgroundColor="black_default" height="6.3rem" radiusTwo="s" align="center" justify="space-between" horizonalPadding="2rem" >
         <FlexContainer type="row" align="center" >
           <ProfileImage src="./images/balloon-profile.svg" alt="profile" loading="lazy" width="3rem" height="3rem" bgColor="white" marginRight="1rem" />
           <Typography elementType="span" text="Alex" color="white_default" variant="parahraph_xl" />

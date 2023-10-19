@@ -29,6 +29,13 @@ export const StyledInput = styled.input`
     }
 
     ${(props) => 
+        props.widthInput &&
+        css`
+            width: ${props.widthInput};
+        `
+    }
+
+    ${(props) => 
         props.height && 
         css`
             height: ${props.height};
