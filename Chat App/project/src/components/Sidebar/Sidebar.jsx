@@ -1,13 +1,16 @@
 import { Navbar, UserSearch } from ".."
-import { FlexContainer } from "../UI"
 import { Users } from "../Users/Users"
+import { StyledSidebar } from "./StyledSidebar"
 
 export const Sidebar = () => {
+  
   return(
-    <FlexContainer type="column" width="30%"  radiusLeft="s" >
+    <StyledSidebar width="30%"  radiusLeft="s" >
       <Navbar />
       <UserSearch />
       <Users />
-    </FlexContainer>
+    </StyledSidebar>
+
+
   )
 }

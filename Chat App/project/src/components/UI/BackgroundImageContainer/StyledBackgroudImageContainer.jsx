@@ -11,8 +11,8 @@ export const StyledBackgroundImageContainer = styled(StyledFlexContainerBasic)`
     z-index: 0;
 
     @media (max-width: ${theme.screen.tablet}){
-        padding-bottom: 20px;
-        padding-left: 20px;
+        /* padding-bottom: 20px;
+        padding-left: 20px; */
     }
 
 `

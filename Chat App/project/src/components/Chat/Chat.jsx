@@ -1,12 +1,12 @@
-import { FlexContainer } from "../UI"
 import { ChatBottom, ChatTop, Messages } from "..";
+import { StyledChat } from "./StyledChat";
 
 export const Chat = () => {
   return(
-    <FlexContainer type="column" width="70%" backgroundColor="black_default" radiusRight="s" bgOpacity=".6" >
+    <StyledChat  width="70%" backgroundColor="black_default" radiusRight="s" bgOpacity=".6" >
       <ChatTop />
       <Messages />
       <ChatBottom />
-    </FlexContainer>
+    </StyledChat>
   )
 }

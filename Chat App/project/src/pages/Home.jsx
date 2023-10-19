@@ -1,5 +1,6 @@
 import { Chat, Sidebar } from "../components"
-import { BackgroundImageContainer, FlexContainer } from "../components/UI"
+import { BackgroundImageContainer } from "../components/UI"
+import { StyledHome } from "./StyledHome"
      
 function Home() {
 
@@ -13,10 +14,10 @@ function Home() {
       alt="Balloon Chat"
       width="100%"
     >
-      <FlexContainer type="row" border="1px solid white" radius="s" width="80%" height="90%" >
+      <StyledHome type="row" border="1px solid white" radius="s" width="80%" height="90%"   >
         <Sidebar />
         <Chat /> 
-      </FlexContainer>
+      </StyledHome>
 
     </BackgroundImageContainer>
   )
