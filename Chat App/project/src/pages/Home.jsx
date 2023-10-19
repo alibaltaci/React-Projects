@@ -1,9 +1,12 @@
 import { Chat, Sidebar } from "../components"
 import { BackgroundImageContainer } from "../components/UI"
+import { useGlobalContext } from "../contexts/GlobalContext"
 import { StyledHome } from "./StyledHome"
-     
+
 function Home() {
 
+  const {isResponsive, isVisible} = useGlobalContext()
+  
   return ( 
     <BackgroundImageContainer 
       imageUrl="./images/chat-bg.jpg" 
@@ -15,8 +18,9 @@ function Home() {
       width="100%"
     >
       <StyledHome type="row" border="1px solid white" radius="s" width="80%" height="90%"   >
-        <Sidebar />
-        <Chat /> 
+        { isResponsive && !isVisible && <Sidebar /> }
+        { isResponsive && isVisible && <Chat /> }
+         
       </StyledHome>
 
     </BackgroundImageContainer>
