@@ -1,14 +1,13 @@
-import { Box } from "../Box/Box";
 import { StyledFormContentWrapper } from "./StyledForm";
-import { Typography } from "../Typography/Typography"
+import { Typography, FlexContainer } from ".."
   
 export const Form = ({children, title, ...props }) => {
   return (
-    <Box {...props}>
+    <FlexContainer type="column" {...props} width="90%" center >
       <Typography elementType="h2" text={title} variant="title_2xl" color="salmon" />
       <StyledFormContentWrapper  >
-        {children}
+        {children}  
       </StyledFormContentWrapper>
-    </Box>
+    </FlexContainer>
   )
 }

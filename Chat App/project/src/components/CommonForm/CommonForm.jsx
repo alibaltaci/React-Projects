@@ -1,5 +1,5 @@
 import BalloonChatIcon from "../UI/Icons/BalloonChatIcon"
-import { Button, FlexContainer, Form, Input, Typography } from "../index"
+import { BackgroundImageContainer, Button, FlexContainer, Form, Input, Typography } from "../index"
 
 
 export function CommonForm({data}) {
@@ -8,16 +8,15 @@ export function CommonForm({data}) {
 
   return (
     <FlexContainer type="column" align="center" justify="center" >
-
-    <div style={{backgroundImage: `url("./images/message-thomas-peham.jpg")`, 
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height:"100vh",
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
-        overflow:"hidden"}}
+        <BackgroundImageContainer 
+            imageUrl="./images/message-thomas-peham.jpg" 
+            loading="lazy" 
+            alt="balloon" 
+            height="100vh"
+            overflow="hidden"
+            verticalImgPosition="bottom"
         >
+
         <FlexContainer 
             type="column" 
             align="center" 
@@ -25,7 +24,7 @@ export function CommonForm({data}) {
             backgroundColor="navy_blue" 
             bgColorOpacity={0.7} 
             gap="1rem" 
-            borderRadius="s" 
+            radius="s" 
             border={`3px solid salmon`}
             // transformOptions={["tablet","center" ,"center"]}
             maxWidth="90%"
@@ -61,7 +60,7 @@ export function CommonForm({data}) {
             </Form>
             <Typography text={content} variant="paragraph_s" marginBottom="1rem" color="salmon"/>
         </FlexContainer>
-    </div>
+        </BackgroundImageContainer>
     </FlexContainer>
 
   )

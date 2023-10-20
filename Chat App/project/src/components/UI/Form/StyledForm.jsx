@@ -7,5 +7,4 @@ export const StyledFormContentWrapper = styled(StyledFlexContainerColumn)`
     width: 100%;
     gap: 1rem;
     padding: 2rem;
-
 `

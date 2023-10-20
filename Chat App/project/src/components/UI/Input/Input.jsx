@@ -130,7 +130,10 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
 
   // input
   return(
-    <FlexContainer type="column" {...props} >
+    <FlexContainer type="column" 
+      width={props.width} 
+      height={props.height} 
+    >
       {
         title && !isTitleArray && (
           <InputTitle
