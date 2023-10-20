@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+
 export const GlobalStyles = createGlobalStyle`
 
     *{
@@ -8,19 +9,19 @@ export const GlobalStyles = createGlobalStyle`
         font-family: ${({theme}) => `${theme.font.primary} , ${theme.font.secondary}` };
     }
 
-    /* ::-webkit-scrollbar{
-        width: .8rem;
+    ::-webkit-scrollbar{
+        width: .4rem;
     }
 
     ::-webkit-scrollbar-track{
-        background-color: ${({theme}) => theme.colors.pastel_green};
+        /* background-color: ${({theme}) => theme.colors.black_default}; */
     }
 
     ::-webkit-scrollbar-thumb{
-        background-color: ${({theme}) => theme.colors.aubergine};
+        background-color: ${({theme}) => theme.colors.white_default};
         border: 2px solid transparent;
         border-radius: 9px;
         background-clip: content-box;
-    } */
+    }
 
 ` 
