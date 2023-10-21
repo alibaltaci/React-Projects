@@ -3,7 +3,7 @@ import { BackgroundImageContainer, Button, FlexContainer, FormComponent, Input, 
 // import { ErrorMessage } from "formik";
 
 
-export function CommonForm({data, onClick}) {
+export function CommonForm({data}) {
 
     const { title, formTitle, button, content, formElement } = data
 
@@ -60,7 +60,7 @@ export function CommonForm({data, onClick}) {
                                     }
                         )
                     }
-                    <Button text={button} type="submit" onClick={onClick} route="" buttonType="secondary" size="s" radius="xs" variant="salmon" marginTop="9rem" />
+                    <Button text={button} type="submit" route="" buttonType="secondary" size="s" radius="xs" variant="salmon" marginTop="9rem" />
             </FormComponent>
 
             <Typography text={content} variant="paragraph_s" marginBottom=".8rem" color="salmon"/>
