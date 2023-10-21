@@ -14,14 +14,16 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues}) {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
-        type="column" align="center" justify="center" 
+        type="column" 
+        align="center" 
+        justify="center"
+        maxHeight="130vh"
     >
         <BackgroundImageContainer 
             imageUrl="./images/message-thomas-peham.jpg" 
             loading="lazy" 
             alt="balloon" 
-            height="100vh"
-            overflow="hidden"
+            height="120vh"
             verticalImgPosition="bottom"
         >
 
@@ -36,6 +38,7 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues}) {
             // transformOptions={["tablet","center" ,"center"]}
             maxWidth="90%"
             width="30rem"
+            
         >   
 
             <FlexContainer type="row" marginTop=".8rem" center gap="1rem" >
@@ -43,7 +46,7 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues}) {
                 <BalloonChatIcon />
             </FlexContainer>
 
-            <FormComponent title={formTitle} >
+            <FormComponent title={formTitle}>
                     {
                         formElement.map( el => {
                             const { id, type, placeholder, required, name } = el

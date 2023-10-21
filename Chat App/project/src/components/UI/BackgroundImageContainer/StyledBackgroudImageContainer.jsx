@@ -5,8 +5,7 @@ import { StyledFlexContainerBasic } from "../FlexContainer/StyledFlexContainer"
 export const StyledBackgroundImageContainer = styled(StyledFlexContainerBasic)`
 
     position: relative;
-    overflow: hidden;
-    /* align-items: flex-end; */
+    overflow: auto;    /* align-items: flex-end; */
     aspect-ratio: ${({aspectRatio}) => aspectRatio};
     z-index: 0;
 

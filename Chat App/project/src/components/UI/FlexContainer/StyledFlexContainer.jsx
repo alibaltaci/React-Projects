@@ -35,6 +35,13 @@ export const FlexBase = styled(Box)`
 
     display: flex;
 
+    ${(props) => 
+        props.flexGrow &&
+        css`
+            flex-grow: ${props.flexGrow};
+        `
+    }
+
     ${(props) =>{  
         const value = theme.borderRadius[props.radius];
         return value && 
