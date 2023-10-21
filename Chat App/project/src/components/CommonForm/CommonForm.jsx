@@ -1,14 +1,21 @@
 import BalloonChatIcon from "../UI/Icons/BalloonChatIcon"
 import { BackgroundImageContainer, Button, FlexContainer, FormComponent, Input, Typography } from ".."
+import { Formik } from "formik"
 // import { ErrorMessage } from "formik";
 
 
-export function CommonForm({data}) {
+export function CommonForm({data, onSubmit, validationSchema, initialValues}) {
 
     const { title, formTitle, button, content, formElement } = data
 
   return (
-    <FlexContainer type="column" align="center" justify="center" >
+    <FlexContainer
+        as={Formik} 
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+        type="column" align="center" justify="center" 
+    >
         <BackgroundImageContainer 
             imageUrl="./images/message-thomas-peham.jpg" 
             loading="lazy" 

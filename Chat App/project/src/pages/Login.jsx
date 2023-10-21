@@ -1,6 +1,5 @@
 import { login } from "../data/data.json"
 import { CommonForm } from "../components"
-import { Formik } from "formik"
 import * as Yup from "yup"
 
 function Login() {
@@ -26,13 +25,12 @@ function Login() {
   }
 
   return(
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      <CommonForm data={login} />
-    </Formik>
+      <CommonForm 
+        data={login} 
+        onSubmit={onSubmit} 
+        validationSchema={validationSchema} 
+        initialValues={initialValues} 
+      />
   )
 }
 
