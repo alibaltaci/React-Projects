@@ -1,5 +1,5 @@
 // UI
-export { BackgroundImageContainer, Box, Button, FlexContainer, Form, Image, Input, Typography } from "./UI"
+export { BackgroundImageContainer, Box, Button, FlexContainer, FormComponent, Image, Input, Typography } from "./UI"
 
 export {CommonForm} from "./CommonForm/CommonForm"
 export {Chat} from "./Chat/Chat"

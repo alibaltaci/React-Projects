@@ -105,24 +105,35 @@
             {
                 "id": 1,
                 "type": "text",
+                "name":"displayName",
                 "placeholder": "Display Name",
                 "required":true
             },
             {
                 "id": 2,
                 "type": "email",
+                "name":"email",
                 "placeholder": "Email",
                 "required":true
             },
             {
                 "id": 3,
                 "type": "password",
+                "name":"password",
                 "placeholder": "Password",
                 "required":true
             },
             {
                 "id": 4,
+                "type": "password",
+                "name":"passwordConfirmation",
+                "placeholder": "Password Confirmation",
+                "required":true
+            },
+            {
+                "id": 5,
                 "type": "file",
+                "name":"profilePhoto",
                 "placeholder":"Add Profile Photo",
                 "required":false
             }

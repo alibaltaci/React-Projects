@@ -1,3 +1,4 @@
+import { Field } from "formik"
 import { FlexContainer } from "../FlexContainer/FlexContainer"
 import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
@@ -67,8 +68,13 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
             />
           )
         }
+        
+        <Field 
+          as={StyledTextArea}
+          {...props}
+        />
+        {/* <StyledTextArea {...props} /> */}
 
-        <StyledTextArea {...props} />
       </FlexContainer>
     )
   }
@@ -77,7 +83,11 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
   if(props.type ===  "checkbox"){
     return(
       <FlexContainer type="row" >
-        <StyledInput {...props} />
+         <Field 
+          as={StyledInput}
+          {...props}
+        />
+        {/* <StyledInput {...props} /> */}
         {
           title && !isTitleArray && (
             <InputTitle 
@@ -110,7 +120,12 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
   if(props.type === "file"){
     return(
       <FlexContainer type="row" >
-        <StyledInput {...props} id="file" />
+        <Field 
+          id="file"
+          as={StyledInput}
+          {...props}
+        />
+        {/* <StyledInput {...props} id="file" /> */}
         <StyledLabel htmlFor="file" >
           <BallonProfile />
           {
@@ -122,6 +137,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
             />
             )
           }
+
         </StyledLabel>
         
       </FlexContainer>
@@ -160,8 +176,10 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
         )
       }
 
-      <StyledInput {...props} />
-
+        <Field 
+          as={StyledInput}
+          {...props}
+        />
       {
         !!props.errorMessage && (
           <Typography 

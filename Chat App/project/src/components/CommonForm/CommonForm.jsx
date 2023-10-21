@@ -1,8 +1,9 @@
 import BalloonChatIcon from "../UI/Icons/BalloonChatIcon"
-import { BackgroundImageContainer, Button, FlexContainer, Form, Input, Typography } from "../index"
+import { BackgroundImageContainer, Button, FlexContainer, FormComponent, Input, Typography } from ".."
+// import { ErrorMessage } from "formik";
 
 
-export function CommonForm({data}) {
+export function CommonForm({data, onClick}) {
 
     const { title, formTitle, button, content, formElement } = data
 
@@ -23,42 +24,46 @@ export function CommonForm({data}) {
             justify="center" 
             backgroundColor="navy_blue" 
             bgColorOpacity={0.7} 
-            gap="1rem" 
             radius="s" 
             border={`3px solid salmon`}
             // transformOptions={["tablet","center" ,"center"]}
             maxWidth="90%"
             width="30rem"
         >   
-            <FlexContainer type="row" marginTop="1rem" center gap="1rem" >
+
+            <FlexContainer type="row" marginTop=".8rem" center gap="1rem" >
                 <Typography elementType="h1" text={ title } color="salmon" variant="title_4xl"  />
                 <BalloonChatIcon />
             </FlexContainer>
-            <Form title={formTitle}  >
-                {
-                    formElement.map( el => {
-                        const { id, type, placeholder, required } = el
-                
 
-                            return <Input 
-                                    key={id} 
-                                    type={ type } 
-                                    // placeholder={ placeholder }
-                                    isRequired={required}
-                                    title={placeholder}
-                                    titleVariant="title_m"
-                                    paddingVertical="8px"
-                                    paddingHorizonal="8px"
-                                    outline
-                                    radius="xs"
-                                    />
-                                }
-                    )
-                }
+            <FormComponent title={formTitle} >
+                    {
+                        formElement.map( el => {
+                            const { id, type, placeholder, required, name } = el
+                    
 
-                <Button text={button} route="" buttonType="secondary" size="s" radius="xs" variant="salmon" marginTop="9rem" />
-            </Form>
-            <Typography text={content} variant="paragraph_s" marginBottom="1rem" color="salmon"/>
+                                return <Input 
+                                        key={id} 
+                                        type={ type } 
+                                        name={name}
+                                        // id={name}
+                                        // placeholder={ placeholder }
+                                        isRequired={required}
+                                        title={placeholder}
+                                        titleVariant="title_m"
+                                        paddingVertical="8px"
+                                        paddingHorizonal="8px"
+                                        outline
+                                        radius="xs"
+                                        marginTop="2rem"
+                                        />
+                                    }
+                        )
+                    }
+                    <Button text={button} type="submit" onClick={onClick} route="" buttonType="secondary" size="s" radius="xs" variant="salmon" marginTop="9rem" />
+            </FormComponent>
+
+            <Typography text={content} variant="paragraph_s" marginBottom=".8rem" color="salmon"/>
         </FlexContainer>
         </BackgroundImageContainer>
     </FlexContainer>

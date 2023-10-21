@@ -2,13 +2,13 @@
 import { Typography } from "../Typography/Typography";
 import { StyledButton } from "./StyledButton";
 
-export const Button = ({route, text, buttonType,  ...props}) =>  {
+export const Button = ({ text, buttonType, type, ...props}) =>  {
 
-    console.log(route)
+    // console.log(route)
     
         return (
             // <NavLink to={ route } >
-                <StyledButton  variant={buttonType}  {...props} >
+                <StyledButton  variant={buttonType} type={type}  {...props} >
                     <Typography 
                         text={ text } 
                         variant="label_xs"
