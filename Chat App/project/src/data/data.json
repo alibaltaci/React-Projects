@@ -107,28 +107,36 @@
                 "type": "text",
                 "name":"displayName",
                 "placeholder": "Display Name",
-                "required":true
+                "required":true,
+                "errorMessageRequired": "Please Enter a Name"
             },
             {
                 "id": 2,
                 "type": "email",
                 "name":"email",
                 "placeholder": "Email",
-                "required":true
+                "required":true,
+                "errorMessageRequired": "Please Enter Your Email Address",
+                "errorMessageValid":"Please Enter a Valid Email Address"
             },
             {
                 "id": 3,
                 "type": "password",
                 "name":"password",
                 "placeholder": "Password",
-                "required":true
+                "required":true,
+                "errorMessageRequired": "Please Enter a Password",
+                "errorMessageValid":"Please Enter Minimum 6 Characters"
             },
             {
                 "id": 4,
                 "type": "password",
                 "name":"passwordConfirmation",
                 "placeholder": "Password Confirmation",
-                "required":true
+                "required":true,
+                "errorMessageRequired": "Please Re-enter The Password",
+                "errorMessageValid":"The Passwords You Entered Are Not The same"
+
             },
             {
                 "id": 5,

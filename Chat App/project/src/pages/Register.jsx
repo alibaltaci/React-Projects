@@ -6,11 +6,10 @@ import * as Yup from "yup"
 function Register() {
 
     const validationSchema = Yup.object().shape({
-        displayName:  Yup.string().required("Name"),
-        email: Yup.string().email("Wrong email").required("Email"),
-        password: Yup.string().min(6, "Min 6 charecter").required("password"),
-        passwordConfirmation: Yup.string().oneOf([Yup.ref("password"), null], "Wrong").required("Confirm"),
-        profilePhoto: Yup.mixed()
+        displayName:  Yup.string().required("Please Enter a Name"),
+        email: Yup.string().email("Please Enter a Valid Email Address").required("Please Enter Your Email Address"),
+        password: Yup.string().min(6, "Please Enter Minimum 6 Characters").required("Please Enter a Password"),
+        passwordConfirmation: Yup.string().oneOf([Yup.ref("password"), null], "The Passwords You Entered Are Not The Same").required("Please Re-enter The Password")
     })
 
     const initialValues = {

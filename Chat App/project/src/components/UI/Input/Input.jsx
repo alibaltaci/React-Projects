@@ -1,4 +1,4 @@
-import { Field } from "formik"
+import { ErrorMessage, Field } from "formik"
 import { FlexContainer } from "../FlexContainer/FlexContainer"
 import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
@@ -180,7 +180,17 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
           as={StyledInput}
           {...props}
         />
-      {
+        <ErrorMessage name={props.name} >
+          {(error) => (
+            <Typography 
+            text={error}
+            elementType="paragraph_min"
+            color="red_default"
+            marginTrim
+            />
+          )}
+        </ErrorMessage>
+      {/* {
         !!props.errorMessage && (
           <Typography 
             text={props.errorMessage}
@@ -189,7 +199,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
             marginTrim
           />
         )
-      }
+      } */}
 
     </FlexContainer>
   )
