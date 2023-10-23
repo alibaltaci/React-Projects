@@ -190,7 +190,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
             />
           )}
         </ErrorMessage>
-      {/* {
+      {
         !!props.errorMessage && (
           <Typography 
             text={props.errorMessage}
@@ -199,7 +199,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
             marginTrim
           />
         )
-      } */}
+      }
 
     </FlexContainer>
   )

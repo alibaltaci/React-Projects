@@ -4,7 +4,7 @@ import { Formik } from "formik"
 // import { ErrorMessage } from "formik";
 
 
-export function CommonForm({data, onSubmit, validationSchema, initialValues}) {
+export function CommonForm({data, onSubmit, validationSchema, initialValues, errorMessage}) {
 
     const { title, formTitle, button, content, formElement } = data
 
@@ -66,6 +66,7 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues}) {
                                         outline
                                         radius="xs"
                                         marginTop="2rem"
+                                        errorMessage={type ==="email" && errorMessage}
                                         />
                                     }
                         )

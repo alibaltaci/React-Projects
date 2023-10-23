@@ -1,10 +1,14 @@
 import { register } from "../data/data.json"
 import { CommonForm } from "../components"
 import * as Yup from "yup"
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import { useState } from "react";
 
 
 function Register() {
+
+    const [errorMessage, setErrorMessage] = useState(false)
 
     const validationSchema = Yup.object().shape({
         displayName:  Yup.string().required("Please Enter a Name"),
@@ -21,32 +25,45 @@ function Register() {
         profilePhoto: undefined
     }
 
-    const onSubmit= ( values, {resetForm} ) => {
+    const onSubmit = ( values, {resetForm} ) => {
         try{
-            console.log( {values} )
-            resetForm()
+            // https://firebase.google.com/docs/auth/web/password-auth
+            const { email, password } = values
+
+
+            // Use Firebase to create a user 
+            createUserWithEmailAndPassword(auth, email, password)
+                // eslint-disable-next-line no-unused-vars
+                .then((userCredential) => {
+                    // User signed up successfully
+                    // const user = userCredential.user;
+                    setErrorMessage(false)
+
+                    // reset form ()
+                    resetForm();
+                })
+                // eslint-disable-next-line no-unused-vars
+                .catch((error) => {
+                    // const errorCode = error.code;
+                    // const errorMessage = error.message;
+                    // ..
+                    setErrorMessage("Email Already In Use")
+                })
+
         }
         catch(error){
             console.log(error)
         }
     }
 
-    // https://firebase.google.com/docs/auth/web/password-auth
-
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        // Signed up 
-        const user = userCredential.user;
-        // ...
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-    });
     return(
-            <CommonForm data={register} onSubmit={onSubmit} validationSchema={validationSchema} initialValues={initialValues} />
+            <CommonForm 
+                data={register} 
+                onSubmit={onSubmit} 
+                validationSchema={validationSchema} 
+                initialValues={initialValues} 
+                errorMessage={errorMessage} 
+            />
     )
 }
 
