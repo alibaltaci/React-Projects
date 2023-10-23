@@ -1,6 +1,7 @@
 import { register } from "../data/data.json"
 import { CommonForm } from "../components"
 import * as Yup from "yup"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 function Register() {
@@ -30,42 +31,22 @@ function Register() {
         }
     }
 
+    // https://firebase.google.com/docs/auth/web/password-auth
+
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    });
     return(
             <CommonForm data={register} onSubmit={onSubmit} validationSchema={validationSchema} initialValues={initialValues} />
-
-        //     {/* <Form>
-        //   <div>
-        //     <div>
-
-        //     <label htmlFor="displayName">Adınız:</label>
-        //     <Field type="text" id="displayName" name="displayName" />
-        //     <ErrorMessage name="displayName" component="div" className="error" />
-        //     </div>
-        //   </div>
-        //   <div>
-        //     <label htmlFor="email">E-posta Adresiniz:</label>
-        //     <Field type="email" id="email" name="email" />
-        //     <ErrorMessage name="email" component="div" className="error" />
-        //   </div>
-        //   <div>
-        //     <label htmlFor="password">Parolanız:</label>
-        //     <Field type="password" id="password" name="password" />
-        //     <ErrorMessage name="password" component="div" className="error" />
-        //   </div>
-        //   <div>
-        //     <label htmlFor="passwordConfirmation">Parola Doğrulama:</label>
-        //     <Field type="password" id="passwordConfirmation" name="passwordConfirmation" />
-        //     <ErrorMessage name="passwordConfirmation" component="div" className="error" />
-        //   </div>
-        //   <div>
-        //     <label htmlFor="profilePhoto">Resim Yükle:</label>
-        //     <Field type="file" id="profilePhoto" name="profilePhoto" accept="image/*" />
-        //     <ErrorMessage name="profilePhoto" component="div" className="error" />
-        //   </div>
-        //   <div>
-        //     <button type="submit">Gönder</button>
-        //   </div>
-        // </Form> */}
     )
 }
 
