@@ -46,8 +46,8 @@ function Register() {
                 .catch((error) => {
                     // const errorCode = error.code;
                     // const errorMessage = error.message;
-                    // ..
-                    setErrorMessage("Email Already In Use")
+
+                    setErrorMessage(error.code === "auth/mail-already-in-use" ? "Email Already In Use" : true)
                 })
 
         }

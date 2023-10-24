@@ -71,6 +71,7 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues, err
                                     }
                         )
                     }
+                    { errorMessage && <Typography text="Something Is Wrong" color="red_default" variant="paragraph_s" display="block" />}
                     <Button text={button} type="submit" route="" buttonType="secondary" size="s" radius="xs" variant="salmon" marginTop="9rem" />
             </FormComponent>
 
