@@ -1,14 +1,16 @@
 import { register } from "../data/data.json"
 import { CommonForm } from "../components"
+import { useState } from "react";
 import * as Yup from "yup"
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
-import { useState } from "react";
+import { auth, storage } from "../firebase";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 
 function Register() {
 
     const [errorMessage, setErrorMessage] = useState(false)
+    const [stErrorMessage, setSTErrorMessage] = useState(false)
 
     const validationSchema = Yup.object().shape({
         displayName:  Yup.string().required("Please Enter a Name"),
@@ -28,7 +30,7 @@ function Register() {
     const onSubmit = ( values, {resetForm} ) => {
         try{
             // https://firebase.google.com/docs/auth/web/password-auth
-            const { email, password } = values
+            const { email, password, profilePhoto, displayName } = values
 
 
             // Use Firebase to create a user 
@@ -37,7 +39,42 @@ function Register() {
                 .then((userCredential) => {
                     // User signed up successfully
                     // const user = userCredential.user;
+
+                    // upload file 
+                    const storageRef = ref(storage, displayName);
+
+                    const uploadTask = uploadBytesResumable(storageRef, profilePhoto);
+    
+                    // Register three observers:
+                    uploadTask.on('state_changed', 
+                    (snapshot) => {
+                        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        console.log('Upload is ' + progress + '% done');
+                        switch (snapshot.state) {
+                            case 'paused':
+                                console.log('Upload is paused');
+                                break;
+                            case 'running':
+                                console.log('Upload is running');
+                                break;
+                        }
+                    },
+                    // eslint-disable-next-line no-unused-vars
+                    (error) => {
+                        // Handle unsuccessful uploads
+                        setSTErrorMessage(true)
+                    }, 
+                    () => {
+                        // Handle successful uploads on complete
+                        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                        console.log('File available at', downloadURL);
+                        });
+                    }
+                    );
+
                     setErrorMessage(false)
+                    setSTErrorMessage(false)
 
                     // reset form ()
                     resetForm();
@@ -47,12 +84,12 @@ function Register() {
                     // const errorCode = error.code;
                     // const errorMessage = error.message;
 
-                    setErrorMessage(error.code === "auth/mail-already-in-use" ? "Email Already In Use" : true)
+                    setErrorMessage(error.code === "auth/email-already-in-use" && "Email Already In Use")
+                    setSTErrorMessage(error.code === "auth/network-request-failed" && true)
                 })
-
         }
         catch(error){
-            console.log(error)
+            setSTErrorMessage(true)
         }
     }
 
@@ -63,6 +100,7 @@ function Register() {
                 validationSchema={validationSchema} 
                 initialValues={initialValues} 
                 errorMessage={errorMessage} 
+                stErrorMessage={stErrorMessage}
             />
     )
 }
