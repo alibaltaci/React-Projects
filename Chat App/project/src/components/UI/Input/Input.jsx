@@ -3,6 +3,7 @@ import { FlexContainer } from "../FlexContainer/FlexContainer"
 import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
 import { StyledInput,  StyledLabel,  StyledTextArea } from "./StyledInput"
+import { useState } from "react"
 
 const InputTitle = ({isRequired, title, titleVariant}) => {
 
@@ -36,6 +37,13 @@ const InputTitle = ({isRequired, title, titleVariant}) => {
 export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...props} ) => {
 
   const isTitleArray = Array.isArray(title)
+
+  const [fileName, setFileName] = useState(null)
+
+  const handleFileChange = (e) => {
+    const name = e.target.files[0].name;
+    setFileName(name)  
+  }
 
   // from input tag
   // text-area
@@ -124,17 +132,27 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
           id="file"
           as={StyledInput}
           {...props}
+          onChange={handleFileChange}
         />
         {/* <StyledInput {...props} id="file" /> */}
         <StyledLabel htmlFor="file" >
-          <BallonProfile />
           {
+            fileName ? (
+              <InputTitle
+                title={fileName}
+                isRequired={isRequired}
+                titleVariant={titleVariant}
+              />
+            ) :
             title && (
-            <InputTitle
-              title={title}
-              isRequired={isRequired}
-              titleVariant={titleVariant}
-            />
+              <>
+                <BallonProfile />
+                <InputTitle
+                  title={title}
+                  isRequired={isRequired}
+                  titleVariant={titleVariant}
+                />
+              </>
             )
           }
 

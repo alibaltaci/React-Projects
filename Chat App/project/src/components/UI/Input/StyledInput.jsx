@@ -132,6 +132,7 @@ export const StyledLabel = styled.label`
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    overflow: hidden;
 `
 
 // to change the label (input --> textarea): .attrs({as: "textarea"})
