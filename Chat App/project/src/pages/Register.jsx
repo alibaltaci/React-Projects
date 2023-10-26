@@ -5,12 +5,15 @@ import * as Yup from "yup"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-
+import { useRegisterContext } from "../contexts";
+// import { collection, doc, getDocs, setDoc } from "firebase/firestore";
 
 function Register() {
 
     const [errorMessage, setErrorMessage] = useState(false)
     const [stErrorMessage, setSTErrorMessage] = useState(false)
+
+    const { setFileName, setSelectedFile } = useRegisterContext()
 
     const validationSchema = Yup.object().shape({
         displayName:  Yup.string().required("Please Enter a Name"),
@@ -26,6 +29,18 @@ function Register() {
         passwordConfirmation: "",
         profilePhoto: undefined
     }
+
+    // const isDisplayNameUnique = async(name) => {
+    //     const querySnapshot = await getDocs(collection(db, "users"))
+    //     const names = querySnapshot.docs.map( doc => doc.data().displayName) 
+    //     return !names.includes(name)
+    // }
+
+    // await setDoc(doc(db, "users", user.uid), {
+    //     displayName,
+    //     email,
+    // })
+
 
     const onSubmit = ( values, {resetForm} ) => {
         try{
@@ -78,6 +93,9 @@ function Register() {
 
                     // reset form ()
                     resetForm();
+
+                    setFileName(null)
+                    setSelectedFile(null)
                 })
                 // eslint-disable-next-line no-unused-vars
                 .catch((error) => {

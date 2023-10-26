@@ -1,19 +1,11 @@
-import { useState } from "react";
 import { BsCameraVideoFill, BsFileEarmarkImage, BsPersonFillAdd, BsSendFill } from "react-icons/bs";
 import { MdAttachFile } from "react-icons/md";
 import { SlOptions } from "react-icons/sl";
+import { useHoverColor } from "../../../hooks";
 
 export const ReactIconReturner = ({icon, color="white", hoverColor="plum", cursor="pointer", size="1.5rem", ...props }) => {
-    
-    const [clr, setClr] = useState(color)
 
-    const handleColorOver = () => {
-        setClr(hoverColor)
-    }
-
-    const handleColorOut = () => {
-        setClr(color)
-    }
+    const { clr, handleColorOver, handleColorOut } = useHoverColor(color, hoverColor)
 
     const iconsMap = {
         "file": MdAttachFile,

@@ -1,14 +1,17 @@
-import Login from "./pages/Login"
+// import Login from "./pages/Login"
 import Register from "./pages/Register"
-import Home from "./pages/Home"
+// import Home from "./pages/Home"
+import { RegisterFormProvider } from "./contexts"
 
 function App() {
 
   return (
     <>
-      <Home />
-      <Register />
-      <Login />
+      {/* <Home /> */}
+      <RegisterFormProvider>
+        <Register />
+      </RegisterFormProvider>
+      {/* <Login /> */}
     </>
   )
 }

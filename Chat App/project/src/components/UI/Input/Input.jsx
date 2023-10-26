@@ -3,7 +3,7 @@ import { FlexContainer } from "../FlexContainer/FlexContainer"
 import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
 import { StyledInput,  StyledLabel,  StyledTextArea } from "./StyledInput"
-import { useState } from "react"
+import { useRegisterContext } from "../../../contexts"
 
 const InputTitle = ({isRequired, title, titleVariant}) => {
 
@@ -38,11 +38,14 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
 
   const isTitleArray = Array.isArray(title)
 
-  const [fileName, setFileName] = useState(null)
+  const { setSelectedFile, fileName, setFileName } = useRegisterContext();
 
   const handleFileChange = (e) => {
-    const name = e.target.files[0].name;
-    setFileName(name)  
+    // const name = e.target.files[0].name;
+    //   setFileName( name )  
+      setSelectedFile(e.target.files[0]);
+      setFileName(e.target.files[0] ? e.target.files[0].name : null);
+      
   }
 
   // from input tag
@@ -151,6 +154,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
                   title={title}
                   isRequired={isRequired}
                   titleVariant={titleVariant}
+                  
                 />
               </>
             )
