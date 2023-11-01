@@ -1,7 +1,7 @@
 import Home from "./pages/Home"
-import Register from "./pages/Register"
-import Login from "./pages/Login"
+import LoginPage from "./pages/LoginPage"
 import NotFound from "./pages/NotFound"
+import RegisterPage from "./pages/RegisterPage"
 
 const routes = [
     {
@@ -10,25 +10,25 @@ const routes = [
         children:[ 
             {
                 name: "index",
-                path : true,
-                element: Home
+                index : true,
+                element: <Home />
             },
             {
                 name: "register",
                 path :"register",
-                element: Register
+                element: <RegisterPage />
             },
             {
                 name: "login",
                 path :"login",
-                element: Login
+                element: <LoginPage />
             }
         ]
     },
     {
         name: "notFound",
         path: "/*",
-        element: NotFound
+        element: <NotFound />
     }
 ]
 
