@@ -2,9 +2,11 @@
 export { BackgroundImageContainer, Box, Button, FlexContainer, FormComponent, Image, Input, Typography } from "./UI"
 
 export {CommonForm} from "./CommonForm/CommonForm"
+export {LoginForm} from "./LoginForm/LoginForm"
 export {Chat} from "./Chat/Chat"
 export {Sidebar} from "./Sidebar/Sidebar"
 export {Navbar} from "./Navbar/Navbar"
+export {RegisterForm} from "./RegisterForm/RegisterForm"
 export {UserSearch} from "./UserSearch/UserSearch"
 export {Users} from "./Users/Users"
 export {UserCard} from "./UserCard/UserCard"

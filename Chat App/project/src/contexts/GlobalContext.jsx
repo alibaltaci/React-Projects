@@ -6,6 +6,9 @@ const AppContext = createContext()
 
 const AppProvider = ( {children} ) => {
 
+
+    const [selectedFile, setSelectedFile] = useState(undefined);
+    const [fileName, setFileName] = useState(undefined);
     const [isVisible, setIsVisible] = useState(true)
 
     const handleVisible = () => {
@@ -15,8 +18,19 @@ const AppProvider = ( {children} ) => {
     const isResponsive = useMediaQuery({query: `(max-width: ${theme.screen.tablet})`})
 
 
+    const contextValue = {
+        selectedFile,
+        setSelectedFile,
+        fileName,
+        setFileName,
+        isVisible, 
+        setIsVisible, 
+        isResponsive, 
+        handleVisible  
+    };
+
     return(
-        <AppContext.Provider value={{isVisible, setIsVisible, isResponsive, handleVisible}} >
+        <AppContext.Provider value={contextValue} >
             {children}
         </AppContext.Provider>
     )

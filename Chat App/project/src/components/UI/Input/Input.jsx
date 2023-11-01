@@ -3,7 +3,7 @@ import { FlexContainer } from "../FlexContainer/FlexContainer"
 import BallonProfile from "../Icons/BallonProfile"
 import { Typography } from "../Typography/Typography"
 import { StyledInput,  StyledLabel,  StyledTextArea } from "./StyledInput"
-import { useRegisterContext } from "../../../contexts"
+import { useGlobalContext } from "../../../contexts/GlobalContext"
 
 const InputTitle = ({isRequired, title, titleVariant}) => {
 
@@ -38,7 +38,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
 
   const isTitleArray = Array.isArray(title)
 
-  const { setSelectedFile, fileName, setFileName } = useRegisterContext();
+  const { setSelectedFile, fileName, setFileName } = useGlobalContext();
 
   const handleFileChange = (e) => {
     // const name = e.target.files[0].name;

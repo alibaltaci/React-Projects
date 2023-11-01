@@ -1,8 +1,8 @@
-import { login } from "../data/data.json"
-import { CommonForm } from "../components"
+import { login } from "../../data/data.json"
+import { CommonForm } from ".."
 import * as Yup from "yup"
 
-function Login() {
+export const LoginForm = () => {
 
   // const message = ({value, type}) => {
 
@@ -32,13 +32,13 @@ function Login() {
   }
 
   return(
+    // <p>Ali</p>
       <CommonForm 
         data={login} 
         onSubmit={onSubmit} 
         validationSchema={validationSchema} 
         initialValues={initialValues} 
+        
       />
   )
 }
-
-export default Login
