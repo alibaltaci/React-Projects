@@ -2,6 +2,7 @@ import Home from "./pages/Home"
 import LoginPage from "./pages/LoginPage"
 import NotFound from "./pages/NotFound"
 import RegisterPage from "./pages/RegisterPage"
+import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute"
 
 const routes = [
     {
@@ -11,7 +12,8 @@ const routes = [
             {
                 name: "index",
                 index : true,
-                element: <Home />
+                element: <Home />,
+                auth: true
             },
             {
                 name: "register",
@@ -32,4 +34,16 @@ const routes = [
     }
 ]
 
-export default routes
+const authMap = routes => routes.map( route => {
+    if( route?.auth ){
+         route.element = <PrivateRoute>{ route.element }</PrivateRoute>
+         console.log( "-->", route.element )
+    }
+    if( route?.children ){
+         route.children = authMap( route.children )
+    }
+
+    return route
+})
+
+export default authMap( routes );
