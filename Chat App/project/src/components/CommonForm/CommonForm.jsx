@@ -66,7 +66,7 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues, err
                                         outline
                                         radius="xs"
                                         marginTop="2rem"
-                                        errorMessage={type === "email" && errorMessage && errorMessage[type] ? errorMessage[type] : undefined}
+                                        errorMessage={type === "email" && errorMessage }
                                         />
                                     }
                         )

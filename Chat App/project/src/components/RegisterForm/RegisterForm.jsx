@@ -10,9 +10,12 @@ import {
         // getDocs, 
         doc, 
         setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom"
 import { useGlobalContext } from "../../contexts/GlobalContext";
 
 export const RegisterForm = () => {
+
+    const navigate = useNavigate()
 
     const [errorMessage, setErrorMessage] = useState(false)
     const [stErrorMessage, setSTErrorMessage] = useState(false)
@@ -77,7 +80,12 @@ export const RegisterForm = () => {
                         email,
                         profilePhoto: downloadURL
                     })
+                    await setDoc( doc(db, "userChats", res.user.uid), {} )
+                    
                 });
+
+                navigate("/")
+
             });
 
 
