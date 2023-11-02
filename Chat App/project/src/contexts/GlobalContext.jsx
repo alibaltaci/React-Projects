@@ -1,6 +1,8 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { theme } from "../styles/theme";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
 
 const AppContext = createContext()
 
@@ -17,6 +19,16 @@ const AppProvider = ( {children} ) => {
 
     const isResponsive = useMediaQuery({query: `(max-width: ${theme.screen.tablet})`})
 
+    //auth
+    const [currentUser, setCurrentUser] = useState({})
+    
+    useEffect(() => {
+        const unsub = onAuthStateChanged(auth, (user) => {
+            setCurrentUser(user)
+        })
+        return () => unsub();
+    }, [])
+
 
     const contextValue = {
         selectedFile,
@@ -26,7 +38,8 @@ const AppProvider = ( {children} ) => {
         isVisible, 
         setIsVisible, 
         isResponsive, 
-        handleVisible  
+        handleVisible,
+        currentUser
     };
 
     return(
