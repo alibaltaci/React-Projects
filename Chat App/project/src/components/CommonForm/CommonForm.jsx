@@ -4,7 +4,7 @@ import { Formik } from "formik"
 // import { ErrorMessage } from "formik";
 
 
-export function CommonForm({data, onSubmit, validationSchema, initialValues, errorMessage, stErrorMessage}) {
+export function CommonForm({data, onSubmit, validationSchema, initialValues, errorMessage, stErrorMessage, invalidError}) {
 
     const { title, formTitle, button, content, formElement } = data
 
@@ -46,7 +46,11 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues, err
                 <BalloonChatIcon />
             </FlexContainer>
 
+
             <FormComponent title={formTitle}>
+
+                { invalidError && <Typography text="Email or password is incorrect" color="red_default" variant="paragraph_s" display="block" />}
+
                     {
                         formElement.map( el => {
                             const { id, type, placeholder, required, name } = el
