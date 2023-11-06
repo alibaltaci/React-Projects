@@ -1,12 +1,13 @@
 import BalloonChatIcon from "../UI/Icons/BalloonChatIcon"
 import { BackgroundImageContainer, Button, FlexContainer, FormComponent, Input, Typography } from ".."
 import { Formik } from "formik"
+import { Link } from "react-router-dom"
 // import { ErrorMessage } from "formik";
 
 
 export function CommonForm({data, onSubmit, validationSchema, initialValues, errorMessage, stErrorMessage, invalidError}) {
 
-    const { title, formTitle, button, content, formElement } = data
+    const { title, formTitle, button, content,  redirectToPage, path, formElement } = data
 
   return (
     <FlexContainer
@@ -79,7 +80,13 @@ export function CommonForm({data, onSubmit, validationSchema, initialValues, err
                     <Button text={button} type="submit" route="" buttonType="secondary" size="s" radius="xs" variant="salmon" marginTop="9rem" />
             </FormComponent>
 
-            <Typography text={content} variant="paragraph_s" marginBottom=".8rem" color="salmon"/>
+            <FlexContainer type="row" gap=".4rem">
+                <Typography text={content} variant="paragraph_s" marginBottom=".8rem" color="salmon"/>
+                <Link to={path} style={{textDecoration: "none"}} >
+                    <Typography text={redirectToPage} variant="paragraph_s" marginBottom=".8rem" color="salmon"/>
+                </Link>
+            </FlexContainer>
+            
         </FlexContainer>
         </BackgroundImageContainer>
     </FlexContainer>

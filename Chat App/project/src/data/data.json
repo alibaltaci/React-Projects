@@ -100,7 +100,9 @@
         "title": "Balloon Chat",
         "formTitle": "Register",
         "button": "Sign Up",
-        "content": "You do have an account? Login",
+        "content": "You do have an account?",
+        "redirectToPage": "Login",
+        "path": "/login",
         "formElement":[
             {
                 "id": 1,
@@ -153,7 +155,9 @@
         "title":"Balloon Chat",
         "formTitle":"Login",
         "button":"Sign In",
-        "content": "You don't have an account? Register",
+        "content": "You don't have an account?",
+        "redirectToPage": "Register",
+        "path": "/register",
         "formElement":[
             {
                 "id": 1,
