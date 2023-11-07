@@ -28,11 +28,11 @@ export const LoginForm = () => {
       const {email, password} = values;
       signInWithEmailAndPassword(auth, email, password)
       .then( () => { 
-        navigate("/")
+        setErrorMessage(false)
         resetForm()
+        navigate("/")
       })
       .catch( err =>{
-        console.log(err.message)
         setErrorMessage(err.code)
       }  )
     }

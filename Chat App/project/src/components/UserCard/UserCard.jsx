@@ -1,12 +1,18 @@
+import { useGlobalContext } from "../../contexts/GlobalContext"
 import { FlexContainer, ProfileImage, Typography } from "../UI"
 
 export const UserCard = ({ user, ...props}) => {
 
+
     if(props.owner){
+
+        const {currentUser } = useGlobalContext()
+
+        console.log("-->", currentUser.photoURL)
         return(
             <FlexContainer type="row" align="center" width="100%" margin="1rem" >
-                <ProfileImage src="./images/balloon-profile.svg" alt="profile" loading="lazy" width="3rem" height="3rem" bgColor="white" marginRight="1rem" />
-                <Typography text="John Smith" elementType="span" color="white_default" variant="paragraph_xs" />
+                <ProfileImage src={currentUser.photoURL} alt="profile" loading="lazy" width="3rem" height="3rem" bgColor="white" marginRight="1rem" />
+                <Typography text={currentUser.displayName} elementType="span" color="white_default" variant="paragraph_xs" />
             </FlexContainer>
         )
     }

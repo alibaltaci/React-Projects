@@ -34,7 +34,7 @@ export const RegisterForm = () => {
         email: "",
         password: "",
         passwordConfirmation: "",
-        profilePhoto: undefined
+        profilePhoto: undefined,
     }
 
     // const isDisplayNameUnique = (name) => {
@@ -54,9 +54,9 @@ export const RegisterForm = () => {
             const res =  await createUserWithEmailAndPassword(auth, email, password)
 
             // upload file 
-            const storageRef = ref(storage, displayName);
+            const storageRef = ref(storage, `images/${displayName}`);
 
-            const uploadTask = uploadBytesResumable(storageRef, profilePhoto);
+            const uploadTask = uploadBytesResumable(storageRef, profilePhoto );
 
             // Register three observers:
             uploadTask.on(
@@ -71,20 +71,20 @@ export const RegisterForm = () => {
                 getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
                     await updateProfile(res.user, {
                         displayName,
-                        profilePhoto: downloadURL,
+                        photoURL: downloadURL,
 
                     })
                     await setDoc( doc(db, "users", res.user.uid), {
                         uid: res.user.uid,
                         displayName,
                         email,
-                        profilePhoto: downloadURL
+                        photoURL: downloadURL
                     })
                     await setDoc( doc(db, "userChats", res.user.uid), {} )
                     
                 });
 
-                navigate("/")
+                navigate("/login")
 
             });
 
