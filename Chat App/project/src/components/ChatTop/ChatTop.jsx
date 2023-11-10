@@ -11,7 +11,7 @@ export const ChatTop = () => {
   const { clr, handleColorOver, handleColorOut } = useHoverColor("white", "plum")
 
     return(
-        <FlexContainer type="row" gap="1rem" backgroundColor="black_default" height="6.3rem" radiusTwo="s" align="center" justify="space-between" horizonalPadding="2rem" >
+        <FlexContainer type="row" gap="1rem" backgroundColor="black_default" height="6.3rem" radiusTwo="s" align="center" justify="space-between" paddingHorizonal="2rem" >
         <FlexContainer type="row" align="center" gap="1rem" >
           { isResponsive && <AiOutlineMenu color={clr} size="2rem" onClick={handleVisible} cursor="pointer" onMouseOver={handleColorOver} onMouseOut={handleColorOut} /> }
           <FlexContainer type="row" align="center" >

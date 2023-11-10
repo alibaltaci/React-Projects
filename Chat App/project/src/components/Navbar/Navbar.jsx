@@ -14,7 +14,7 @@ export const Navbar = () => {
   const { clr, handleColorOver, handleColorOut } = useHoverColor("white", "plum")
 
   return (
-    <FlexContainer type="row" align="center" height="6.5rem" backgroundColor="black_default" radiusOne="s" horizonalPadding="0.5rem" >        
+    <FlexContainer type="row" align="center" height="6.5rem" backgroundColor="black_default" radiusOne="s" paddingHorizonal="0.5rem" >        
         <BalloonChatIcon />
         <UserCard owner userData={ currentUser } />
         <FlexContainer type="row" align="center" gap="1rem" >

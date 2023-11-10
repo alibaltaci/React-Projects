@@ -15,10 +15,10 @@ export const Box = styled.div`
     }
 
     ${(props) => 
-        props.horizonalPadding &&
+        props.paddingHorizonal &&
         css`
-            padding-left: ${props.horizonalPadding};
-            padding-right: ${props.horizonalPadding};
+            padding-left: ${props.paddingHorizonal};
+            padding-right: ${props.paddingHorizonal};
         `
     }
 

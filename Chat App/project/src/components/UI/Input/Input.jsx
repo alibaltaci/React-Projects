@@ -200,8 +200,11 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
 
         <Field 
           as={StyledInput}
+          onChange={props.onChange}
+          name={props.name} 
           {...props}
         />
+        {/* formik error messages */}
         <ErrorMessage name={props.name} >
           {(error) => (
             <Typography 
@@ -213,6 +216,7 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
           )}
         </ErrorMessage>
       {
+        // optional error messages
         !!props.errorMessage && (
           <Typography 
             text={props.errorMessage}
