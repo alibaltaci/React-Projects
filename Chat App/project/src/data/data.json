@@ -6,8 +6,8 @@
     "users":[
         {
             "id":1,
-            "profilePhoto":"./images/users/amir.jpg",
-            "name":"Amir",
+            "photoURL":"./images/users/amir.jpg",
+            "displayName":"Amir",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -16,8 +16,8 @@
         },
         {
             "id":2,
-            "profilePhoto":"./images/users/clementine.jpg",
-            "name":"Clementine",
+            "photoURL":"./images/users/clementine.jpg",
+            "displayName":"Clementine",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -26,8 +26,8 @@
         },
         {
             "id":3,
-            "profilePhoto":"./images/users/alex.jpg",
-            "name":"Alex",
+            "photoURL":"./images/users/alex.jpg",
+            "displayName":"Alex",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -36,8 +36,8 @@
         },
         {
             "id":4,
-            "profilePhoto":"./images/users/aurora.jpg",
-            "name":"Aurora",
+            "photoURL":"./images/users/aurora.jpg",
+            "displayName":"Aurora",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -46,8 +46,8 @@
         },
         {
             "id":5,
-            "profilePhoto":"./images/users/chelsea.jpg",
-            "name":"Chelsea",
+            "photoURL":"./images/users/chelsea.jpg",
+            "displayName":"Chelsea",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -56,8 +56,8 @@
         },
         {
             "id":6,
-            "profilePhoto":"./images/users/david.jpg",
-            "name":"David",
+            "photoURL":"./images/users/david.jpg",
+            "displayName":"David",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -66,8 +66,8 @@
         },
         {
             "id":7,
-            "profilePhoto":"./images/users/lucas.jpg",
-            "name":"Lucas",
+            "photoURL":"./images/users/lucas.jpg",
+            "displayName":"Lucas",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -76,8 +76,8 @@
         },
         {
             "id":8,
-            "profilePhoto":"./images/users/penelope.jpg",
-            "name":"Penelope",
+            "photoURL":"./images/users/penelope.jpg",
+            "displayName":"Penelope",
             "messages":[
                 "messege 1",
                 "messege 2",
@@ -86,8 +86,8 @@
         },
         {
             "id":9,
-            "profilePhoto":"./images/users/ash.jpg",
-            "name":"Ash",
+            "photoURL":"./images/users/ash.jpg",
+            "displayName":"Ash",
             "messages":[
                 "messege 1",
                 "messege 2",

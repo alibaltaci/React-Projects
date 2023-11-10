@@ -7,7 +7,7 @@ export const Users = () => {
         <FlexContainer type="column" backgroundColor="black_default" bgOpacity=".9" height="100%" radiusFour="s" overflow="scroll-y" >
             
             {
-                users.map( user => <UserCard key={user.id}  user={user} />)
+                users.map( user => <UserCard key={user.id}  userData={user} />)
             }
       
         </FlexContainer>
