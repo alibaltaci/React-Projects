@@ -200,8 +200,6 @@ export const Input = ( {title, isRequired, titleVariant = "paragraph_min", ...pr
 
         <Field 
           as={StyledInput}
-          onChange={props.onChange}
-          name={props.name} 
           {...props}
         />
         {/* formik error messages */}
