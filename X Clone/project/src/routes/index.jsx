@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom"
-import Explore from "~/pages/explore"
-import Home from "~/pages/home"
-import Notifications from "~/pages/notifications"
+import Explore from "~/pages/Explore"
+import Home from "~/pages/Home"
+import NotFound from "~/pages/NotFound"
+import Notifications from "~/pages/Notifications"
 
 
 const routes = createBrowserRouter([
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
     {
         path: "/notifications",
         element:<Notifications />
+    },
+    {
+        path: "*",
+        element:<NotFound />
     },
 ])
 
