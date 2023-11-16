@@ -1,0 +1,16 @@
+{
+    "components":{
+        "icons":[
+            {
+                "text": "Home",
+                "icon": "home",
+                "route": "/"
+            },
+            {
+                "text": "Explore",
+                "icon": "explore",
+                "route": "/explore"
+            }
+        ]
+    }
+}
