@@ -1,6 +1,12 @@
+import { Helmet } from "react-helmet";
 
 export default function Notifications() {
   return (
-    <div>Notifications Page</div>
+    <div>
+        <Helmet >
+          <title>Notifications / X Clone</title>
+        </Helmet>
+      Notifications Page
+    </div>
   )
 }
