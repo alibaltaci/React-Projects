@@ -4,12 +4,62 @@
             {
                 "text": "Home",
                 "icon": "home",
-                "route": "/"
+                "route": "/",
+                "notification": 1
             },
             {
                 "text": "Explore",
                 "icon": "explore",
-                "route": "/explore"
+                "route": "/explore",
+                "notification": null
+            },
+            {
+                "text": "Notifications",
+                "icon": "notification",
+                "route": "/notifications",
+                "notification": 2
+            },
+            {
+                "text": "Messages",
+                "icon": "message",
+                "route": "/messages",
+                "notification": null
+            },
+            {
+                "text": "List",
+                "icon": "list",
+                "route": "/list",
+                "notification": null
+            },
+            {
+                "text": "Bookmarks",
+                "icon": "bookmark",
+                "route": "/bookmark",
+                "notification": null
+            },
+            {
+                "text": "Communities",
+                "icon": "communities",
+                "route": "/communities",
+                "notification": null
+            },
+            {
+                "text": "Premium",
+                "icon": "x",
+                "route": "/premium",
+                "notification": null
+            },
+            {
+                "text": "Profile",
+                "icon": "profile",
+                "route": "/profile",
+                "notification": null
+            },
+            {
+                "text": "More",
+                "icon": "more",
+                "route": "/more",
+                "notification": null
             }
         ]
     }

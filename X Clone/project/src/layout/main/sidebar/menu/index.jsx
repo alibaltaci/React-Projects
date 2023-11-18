@@ -11,7 +11,7 @@ export default function Menu() {
     <nav className="mt-0.5 mb-1">
         {
             icons.map( (el, index) =>{ 
-                const { text, icon, route} = el
+                const { text, icon, route, notification} = el
                 return(
                     <NavLink key={index} to={route} className="py-1 block group" >
                         {({isActive}) => (
@@ -23,7 +23,12 @@ export default function Menu() {
                                     )
                                 }
                             >
-                                <IconReturner icon={icon} isActive={isActive} />
+                                <div className="w-[26.25] h-[26.25] relative">
+                                    { !!notification && !isActive &&
+                                        <span className="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] absolute -top-1.5 -right-1 flex items-center justify-center text-[11px]">{ notification }</span>
+                                    }
+                                    <IconReturner icon={icon} isActive={isActive} />
+                                </div>
                                 <div className="pr-4 text-[20px]">
                                     {text}
                                 </div>
