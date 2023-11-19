@@ -58,8 +58,7 @@
             {
                 "text": "More",
                 "icon": "more",
-                "route": "/more",
-                "notification": null
+                "type": "button"
             }
         ]
     }
