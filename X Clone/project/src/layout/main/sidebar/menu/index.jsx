@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import { IconReturner } from "~/components/icons";
 import {components} from "../../../../data"
-import { Button } from "~/components";
+import NewPost from "./newPost";
+import More from "./more";
 
 export default function Menu() {
 
@@ -39,25 +40,12 @@ export default function Menu() {
                         </NavLink>
                     ): 
                     (
-                        <button key={index} className="py-1 block group ">
-                                <div className={  "p-3 rounded-full transition-colors inline-flex items-center gap-5 text-[20px] group-hover:bg-[#eff3f41a]"}>
-                                    <div className="w-[26.25] h-[26.25] relative">
-                                        <IconReturner icon={icon} />
-                                    </div>
-                                    <div className="pr-4 text-[20px]">
-                                        {text}
-                                    </div>
-                                </div>
-                        </button>
+                        <More key={index} text={text} icon={icon} />
                     )
             })
         }
 
-        <div className="py-4 w-[90%]">  
-            <Button size="large">
-                Post
-            </Button>
-        </div>
+        <NewPost />
     </nav>
   )
 }

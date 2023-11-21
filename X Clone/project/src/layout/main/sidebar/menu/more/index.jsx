@@ -1,5 +1,6 @@
 import { Popover } from "@headlessui/react";
 import { Disclosure } from '@headlessui/react'
+import { Link } from "react-router-dom";
 import { IconReturner } from "~/components/icons";
 
 const data = {
@@ -59,7 +60,7 @@ export default function More({text, icon}) {
             </div>
         </div>
         </Popover.Button>
-        <Popover.Panel className="absolute w-[318px] bottom-0 left-0 bg-black shadow-box rounded-xl h-[16.8rem] overflow-hidden ">
+        <Popover.Panel className="absolute w-[318px] bottom-0 left-0 bg-black shadow-box rounded-xl  overflow-hidden ">
             <button className="px-4 h-14 hover:bg-[#eff3f41a] transition-colors inline-flex items-center gap-5 w-full  " >
                 <div className="w-[26.25] h-[26.25] relative">
                     <IconReturner icon="money" />
@@ -81,8 +82,10 @@ export default function More({text, icon}) {
                             contents.map( (el, index) => {
                                 const { content, icon } = el
                                 return <Disclosure.Panel key={index} className="hover:bg-[#eff3f41a] transition-colors flex">
-                                    <IconReturner icon={ icon } />
-                                    { content }
+                                    <Link to="/" className="flex items-center px-3 h-11 gap-3 font-medium text-[15px]">
+                                        <IconReturner icon={ icon } />
+                                        { content }
+                                    </Link>
                                 </Disclosure.Panel>
                             } )
                         }
