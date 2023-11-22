@@ -16,7 +16,7 @@ export default function Menu() {
                 const { text, icon, route, notification, type} = el
                 return type !== "button" ?
                     (
-                        <NavLink key={index} to={route} className="py-1 block group" >
+                        <NavLink key={index} to={route} className=" mb-[-4px] block group" >
                             {({isActive}) => (
                                 <div 
                                     className={ 
@@ -32,7 +32,7 @@ export default function Menu() {
                                         }
                                         <IconReturner icon={icon} isActive={isActive} />
                                     </div>
-                                    <div className="pr-4 text-[20px]">
+                                    <div className="pr-4">
                                         {text}
                                     </div>
                                 </div>
@@ -40,12 +40,13 @@ export default function Menu() {
                         </NavLink>
                     ): 
                     (
-                        <More key={index} text={text} icon={icon} />
+                        <More key={index}  text={text} icon={icon} />
                     )
             })
         }
 
         <NewPost />
+
     </nav>
   )
 }

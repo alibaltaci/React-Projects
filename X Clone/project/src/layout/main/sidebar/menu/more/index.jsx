@@ -55,7 +55,7 @@ export default function More({text, icon}) {
   
   return (
     <Popover className="relative group"> 
-        <Popover.Button  className="py-1 block  outline-none" >
+        <Popover.Button  className="block outline-none" >
         <div className={  "p-3 rounded-full transition-colors inline-flex items-center gap-5 text-[20px] group-hover:bg-[#eff3f41a]"}>
             <div className="w-[26.25] h-[26.25] relative">
                 <IconReturner icon={icon} />
@@ -75,6 +75,8 @@ export default function More({text, icon}) {
                 </div>
             </button>
 
+            <div className="h-px bg-[#2f3336] my-0.5 w-[89%] mx-auto" />
+
             {
                 data.disclosureData.map( (disclosure, index) => {
                     const {title, contents} = disclosure
@@ -83,7 +85,7 @@ export default function More({text, icon}) {
                             <>
                                 <Disclosure.Button className="h-[52px] w-full flex items-center px-4 font-bold justify-between hover:bg-[#eff3f41a] transition-colors">
                                     { title }
-                                    <div className={`transform duration-100 ${ open && '-rotate-180  text-[#1d9bf0] '}`}>
+                                    <div className={` transform duration-100 ${ open && '-rotate-180  text-[#1d9bf0] '}`}>
                                         <IconReturner icon="arrow" />
                                     </div>
                                 </Disclosure.Button>
