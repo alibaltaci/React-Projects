@@ -1,8 +1,8 @@
 import {layout} from "~/data"
+import { store } from "~/store";
 import NewPost from "./newPost";
 import More from "./more";
 import MenuElement from "./menuElement";
-import { store } from "~/store";
 
 
 export default function Menu() {
@@ -15,7 +15,7 @@ export default function Menu() {
     <nav className="mt-0.5 mb-1">
         {
             menu.map( (el, index) =>(
-                el.type === "button" 
+                el.type === "more" 
                 ? <More key={index}  text={el.text} icon={el.icon} />
                 : el.type === "profile" 
                 ? <MenuElement key={index} data={{ ...el, route: `/${states.auth?.currentAccount?.userName}` }} />

@@ -29,13 +29,13 @@
                 {
                     "text": "Lists",
                     "icon": "list",
-                    "route": "/list",
+                    "route": "/lists",
                     "notification": null
                 },
                 {
                     "text": "Bookmarks",
                     "icon": "bookmark",
-                    "route": "/bookmark",
+                    "route": "/bookmarks",
                     "notification": null
                 },
                 {
@@ -47,8 +47,8 @@
                 {
                     "text": "Premium",
                     "icon": "x",
-                    "route": "/premium",
-                    "notification": null
+                    "notification": null,
+                    "type": "premium"
                 },
                 {
                     "text": "Profile",
@@ -59,7 +59,7 @@
                 {
                     "text": "More",
                     "icon": "more",
-                    "type": "button"
+                    "type": "more"
                 }
             ]
         }

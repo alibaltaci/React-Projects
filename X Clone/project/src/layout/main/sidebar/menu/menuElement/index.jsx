@@ -5,9 +5,7 @@ import { IconReturner } from "~/components/icons";
 export default function MenuElement({ data } ) {
 
     const { text, icon, route, notification} = data
-
-    console.log("-->", data)
-
+    
   return (
     <NavLink to={route} className=" mb-[-4px] block group" >
         {({isActive}) => (
