@@ -1,4 +1,4 @@
-import { AdIcon, ArrowIcon, BookmarkIcon, CommunitiesIcon, DisplayIcon, ExploreIcon, GraphIcon, HelpIcon, HomeIcon, ListIcon, MessageIcon, MoneyIcon, MoreIcon, NotificationIcon, ProfileIcon, SettingIcon, ShortcutIcon, XIcon } from ".."
+import { AdIcon, ArrowIcon, BookmarkIcon, CommunitiesIcon, DisplayIcon, ExploreIcon, GraphIcon, HelpIcon, HomeIcon, ListIcon, MessageIcon, MoneyIcon, MoreIcon, NotificationIcon, PointsIcon, ProfileIcon, SettingIcon, ShortcutIcon, XIcon } from ".."
 
 export function IconReturner({icon, isActive}) {
 
@@ -20,7 +20,8 @@ export function IconReturner({icon, isActive}) {
         "setting": SettingIcon,
         "help": HelpIcon,
         "display": DisplayIcon,
-        "shortcut": ShortcutIcon
+        "shortcut": ShortcutIcon,
+        "points": PointsIcon
     }
 
     const SelectedIcon = iconMap[icon]
