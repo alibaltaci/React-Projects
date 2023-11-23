@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     currentAccount: {
         id: 1,
-        userName: 'Ali Baltacı ',
-        fullName: '_alibaltaci',
+        fullName: 'Ali Baltacı',
+        userName: '_alibaltaci',
         avatar: 'https://pbs.twimg.com/profile_images/1718310791361761280/3NuF9y6u_400x400.jpg',
         bgImage: 'https://pbs.twimg.com/profile_banners/1718304376895213569/1698535135/1500x500'
     },
