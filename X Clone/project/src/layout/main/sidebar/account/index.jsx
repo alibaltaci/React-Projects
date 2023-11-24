@@ -1,6 +1,7 @@
 import { Popover } from "@headlessui/react";
 import { IconReturner } from "~/components/icons";
 import { useAccount } from "~/store/auth/hooks";
+import AccountList from "./accountList";
 
 export default function Account() {
 
@@ -8,7 +9,7 @@ export default function Account() {
 
   return (
     <div className="mt-auto">
-        <Popover>
+        <Popover className="relative">
             <Popover.Button 
                 className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] outline-none w-full flex text-left items-center justify-between"
             >
@@ -21,8 +22,8 @@ export default function Account() {
                 </div>
                 <IconReturner icon="points" />
             </Popover.Button>
-            <Popover.Panel>
-                panel
+            <Popover.Panel className="absolute bottom-full py-3 w-[300px] left-1/2 -translate-x-1/2 bg-black shadow-box rounded-xl overflow-hidden ">
+                <AccountList />
             </Popover.Panel>
         </Popover>
     </div>

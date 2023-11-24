@@ -6,9 +6,27 @@ const initialState = {
         fullName: 'Ali Baltacı',
         userName: '_alibaltaci',
         avatar: 'https://pbs.twimg.com/profile_images/1718310791361761280/3NuF9y6u_400x400.jpg',
-        bgImage: 'https://pbs.twimg.com/profile_banners/1718304376895213569/1698535135/1500x500'
+        bgImage: 'https://pbs.twimg.com/profile_banners/1718304376895213569/1698535135/1500x500',
+        notification: 1
     },
-    accounts: []
+    accounts: [
+        {
+            id: 1,
+            fullName: 'Ali Baltacı',
+            userName: '_alibaltaci',
+            avatar: 'https://pbs.twimg.com/profile_images/1718310791361761280/3NuF9y6u_400x400.jpg',
+            bgImage: 'https://pbs.twimg.com/profile_banners/1718304376895213569/1698535135/1500x500',
+            notification: 1
+        },
+        {
+            id: 2,
+            fullName: 'Denizm',
+            userName: 'AktagDeniz',
+            avatar: 'https://pbs.twimg.com/profile_images/1129772145360461824/-Xo475AB_400x400.jpg',
+            bgImage: 'https://pbs.twimg.com/profile_banners/3170341777/1511557332/1500x500',
+            notification: 3
+        },
+    ]
 }
 
 const auth = createSlice({
