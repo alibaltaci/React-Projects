@@ -4,7 +4,7 @@ import { useAccount, useAccounts } from "~/store/auth/hooks"
 import {layout} from "~/data"
 import { setCurrentAccount } from "~/store/auth/actions"
 
-export default function AccountList() {
+export default function AccountList( {close} ) {
 
   const currentAccount = useAccount()
   const accounts = useAccounts().filter( el => el.id !== currentAccount.id )
@@ -26,6 +26,7 @@ export default function AccountList() {
               disabled={ currentAccountId === id}
               onClick={() => {
                 setCurrentAccount(account)
+                close()
               }}
               className={classNames("py-3 px-4 flex items-center text-left w-full transition-colors ",{
               "hover:bg-[#eff3f41a]" : currentAccountId !== id

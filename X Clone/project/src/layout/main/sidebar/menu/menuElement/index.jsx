@@ -7,7 +7,7 @@ export default function MenuElement({ data } ) {
     const { text, icon, route, notifications} = data
     
   return (
-    <NavLink to={route} className=" mb-[-4px] block group" >
+    <NavLink to={ typeof route === 'function' ? route() : route } className=" mb-[-4px] block group" >
         {({isActive}) => (
             <div 
                 className={ 

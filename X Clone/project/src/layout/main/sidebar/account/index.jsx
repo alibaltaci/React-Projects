@@ -49,7 +49,9 @@ export default function Account() {
                 className="absolute bottom-full py-3 w-[300px] left-1/2 -translate-x-1/2 bg-black shadow-box rounded-xl overflow-hidden"
             >
                 <Popover.Panel >
-                    <AccountList />
+                    {({ close }) => (
+                         <AccountList close={ close } />
+                    )}
                 </Popover.Panel>
             </Transition>
             </>
