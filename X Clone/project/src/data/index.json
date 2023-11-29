@@ -61,7 +61,20 @@
                     "icon": "more",
                     "type": "more"
                 }
+            ],
+            "account":[
+                {
+                    "content":"Add an existing account"
+                },
+                {
+                    "content":"Manage accounts"
+                },
+                {
+                    "content":"Log out @",
+                    "variant":"out"
+                }
             ]
+
         }
         
     }

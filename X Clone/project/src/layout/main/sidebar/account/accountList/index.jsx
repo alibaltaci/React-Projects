@@ -1,20 +1,24 @@
 import classNames from "classnames"
 import { IconReturner } from "~/components/icons"
 import { useAccount, useAccounts } from "~/store/auth/hooks"
+import {layout} from "~/data"
 
 export default function AccountList() {
 
-  const currentAccountId = useAccount().id
+  const currentAccount = useAccount()
   const accounts = useAccounts()
+
+  const data = layout.sidebar.account
 
   return (
     <div >
       {
         accounts.map( account => {
           const { id, userName, fullName, notification, avatar} = account
+          const currentAccountId = currentAccount.id
           return(
             <button key={ id } className={classNames("py-3 px-4 flex items-center text-left w-full transition-colors ",{
-              "hover:bg-[#eff3f41a]" : currentAccountId !== id
+              "hover:bg-[#eff3f41a]" : currentAccount !== id
             })} >
               <img src={ avatar } alt={ userName } className="w-10 h-10 rounded-full"  />   
                 <div className="mx-3 text-[15px] flex-1">
@@ -31,9 +35,24 @@ export default function AccountList() {
 
       <div className="h-px bg-[#2f3336] my-3" />
 
-      <>
-        burdan devam 
-      </>
+      {
+        data.map( (el) => {
+          const {content, variant} = el
+          return(
+            variant 
+            ?(
+              <button key={content} className="py-2.5 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold">
+                {content}{currentAccount.userName}
+              </button>
+          )
+          :(
+            <button key={content} className="py-2.5 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold">
+              {content}
+            </button>
+            )
+          )
+        })
+      }  
     </div>
   )
 }
