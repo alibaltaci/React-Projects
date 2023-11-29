@@ -17,8 +17,6 @@ export default function Account() {
         dispatch( _setTotalNotifications() )
     },[dispatch])
 
-    console.log(totalNotifications)
-
   return (
     <div className="mt-auto">
         <Popover className="relative">

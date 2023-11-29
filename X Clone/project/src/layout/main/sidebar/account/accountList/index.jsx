@@ -2,23 +2,33 @@ import classNames from "classnames"
 import { IconReturner } from "~/components/icons"
 import { useAccount, useAccounts } from "~/store/auth/hooks"
 import {layout} from "~/data"
+import { setCurrentAccount } from "~/store/auth/actions"
 
 export default function AccountList() {
 
   const currentAccount = useAccount()
-  const accounts = useAccounts()
+  const accounts = useAccounts().filter( el => el.id !== currentAccount.id )
+
+  const allAccountsData = [currentAccount, ...accounts]
 
   const data = layout.sidebar.account
 
   return (
     <div >
       {
-        accounts.map( account => {
+        allAccountsData.map( account => {
           const { id, userName, fullName, notifications, avatar} = account
           const currentAccountId = currentAccount.id
           return(
-            <button key={ id } className={classNames("py-3 px-4 flex items-center text-left w-full transition-colors ",{
-              "hover:bg-[#eff3f41a]" : currentAccount !== id
+            <button 
+              type="button"
+              key={ id }
+              disabled={ currentAccountId === id}
+              onClick={() => {
+                setCurrentAccount(account)
+              }}
+              className={classNames("py-3 px-4 flex items-center text-left w-full transition-colors ",{
+              "hover:bg-[#eff3f41a]" : currentAccountId !== id
             })} >
               <img src={ avatar } alt={ userName } className="w-10 h-10 rounded-full"  />   
                 <div className="mx-3 text-[15px] flex-1">
