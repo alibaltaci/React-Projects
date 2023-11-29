@@ -4,7 +4,7 @@ import { IconReturner } from "~/components/icons";
 
 export default function MenuElement({ data } ) {
 
-    const { text, icon, route, notification} = data
+    const { text, icon, route, notifications} = data
     
   return (
     <NavLink to={route} className=" mb-[-4px] block group" >
@@ -18,8 +18,8 @@ export default function MenuElement({ data } ) {
                 }
             >
                 <div className="w-[26.25] h-[26.25] relative">
-                    { !!notification && !isActive &&
-                        <span className="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] absolute -top-1.5 -right-1 flex items-center justify-center text-[11px]">{ notification }</span>
+                    { !!notifications && !isActive &&
+                        <span className="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] absolute -top-1.5 -right-1 flex items-center justify-center text-[11px]">{ notifications }</span>
                     }
                     <IconReturner icon={icon} isActive={isActive} />
                 </div>

@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet";
 
-export default function Notifications() {
+export default function notifications() {
   return (
     <div>
         <Helmet >
-          <title>Notifications / X Clone</title>
+          <title>notifications / X Clone</title>
         </Helmet>
-      Notifications Page
+      notifications Page
     </div>
   )
 }

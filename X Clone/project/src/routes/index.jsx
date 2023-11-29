@@ -6,7 +6,7 @@ import Home from "~/pages/Home"
 import Lists from "~/pages/Lists"
 import Messages from "~/pages/Messages"
 import NotFound from "~/pages/NotFound"
-import Notifications from "~/pages/Notifications"
+import notifications from "~/pages/notifications"
 import VisitedProfile from "~/pages/VisitedProfile"
 
 
@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "notifications",
-                element:<Notifications />
+                element:<notifications />
             },
             {
                 path: "bookmarks",

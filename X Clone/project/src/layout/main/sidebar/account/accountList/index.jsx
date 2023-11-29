@@ -14,7 +14,7 @@ export default function AccountList() {
     <div >
       {
         accounts.map( account => {
-          const { id, userName, fullName, notification, avatar} = account
+          const { id, userName, fullName, notifications, avatar} = account
           const currentAccountId = currentAccount.id
           return(
             <button key={ id } className={classNames("py-3 px-4 flex items-center text-left w-full transition-colors ",{
@@ -26,8 +26,8 @@ export default function AccountList() {
                     <p className="text-[#71767b]" >@{ userName }</p>
                 </div> 
                 { currentAccountId === id && <IconReturner icon="active" />}
-                { !!notification && (currentAccountId !== id) &&
-                  <span className="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] -top-1.5 -right-1 flex items-center justify-center text-[11px]">{ notification }</span>
+                { !!notifications && (currentAccountId !== id) &&
+                  <span className="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] -top-1.5 -right-1 flex items-center justify-center text-[11px]">{ notifications }</span>
                 }
             </button>
         )})

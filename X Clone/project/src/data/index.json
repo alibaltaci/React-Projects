@@ -6,54 +6,54 @@
                     "text": "Home",
                     "icon": "home",
                     "route": "/",
-                    "notification": 1
+                    "notifications": 1
                 },
                 {
                     "text": "Explore",
                     "icon": "explore",
                     "route": "/explore",
-                    "notification": null
+                    "notifications": null
                 },
                 {
-                    "text": "Notifications",
+                    "text": "notifications",
                     "icon": "notification",
                     "route": "/notifications",
-                    "notification": 2
+                    "notifications": 2
                 },
                 {
                     "text": "Messages",
                     "icon": "message",
                     "route": "/messages",
-                    "notification": null
+                    "notifications": null
                 },
                 {
                     "text": "Lists",
                     "icon": "list",
                     "route": "/lists",
-                    "notification": null
+                    "notifications": null
                 },
                 {
                     "text": "Bookmarks",
                     "icon": "bookmark",
                     "route": "/bookmarks",
-                    "notification": null
+                    "notifications": null
                 },
                 {
                     "text": "Communities",
                     "icon": "communities",
                     "route": "/communities",
-                    "notification": null
+                    "notifications": null
                 },
                 {
                     "text": "Premium",
                     "icon": "x",
-                    "notification": null,
+                    "notifications": null,
                     "type": "premium"
                 },
                 {
                     "text": "Profile",
                     "icon": "profile",
-                    "notification": null,
+                    "notifications": null,
                     "type": "profile"
                 },
                 {

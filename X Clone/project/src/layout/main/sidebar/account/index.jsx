@@ -1,12 +1,23 @@
 import { Popover, Transition } from "@headlessui/react";
 import { IconReturner } from "~/components/icons";
-import { useAccount } from "~/store/auth/hooks";
+import { useAccount, useNotifications } from "~/store/auth/hooks";
 import AccountList from "./accountList";
 import classNames from "classnames";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { _setTotalNotifications } from "~/store/auth";
 
 export default function Account() {
 
     const account = useAccount()
+    const totalNotifications =  useNotifications() 
+
+    const dispatch = useDispatch()
+    useEffect(()=> {
+        dispatch( _setTotalNotifications() )
+    },[dispatch])
+
+    console.log(totalNotifications)
 
   return (
     <div className="mt-auto">
@@ -26,7 +37,7 @@ export default function Account() {
                     </div> 
                 </div>
                 <div className="relative">
-                    <span className="absolute w-[7px]  h-[7px] rounded-full bg-[#1d9bf0] -top-[3px] -right-[3px]" />
+                    { !!totalNotifications && <span className="absolute w-[7px]  h-[7px] rounded-full bg-[#1d9bf0] -top-[3px] -right-[3px]" /> } 
                     <IconReturner icon="points" />
                 </div>
             </Popover.Button> 
