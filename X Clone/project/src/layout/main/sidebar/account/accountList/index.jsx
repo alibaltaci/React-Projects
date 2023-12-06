@@ -23,7 +23,7 @@ export default function AccountList( {close} ) {
             <button 
               type="button"
               key={ id }
-              disabled={ currentAccountId === id}
+              disabled={ currentAccountId === id }
               onClick={() => {
                 setCurrentAccount(account)
                 close()
