@@ -50,17 +50,17 @@ export default function AccountList( {close} ) {
         data.map( (el) => {
           const {content, variant} = el
           return(
-            variant 
-            ?(
+            // variant 
+            // ?(
               <button key={content} className="py-2.5 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold">
-                {content}{currentAccount.userName}
+                {`${content}  ${ variant && currentAccount.userName}`}
               </button>
-          )
-          :(
-            <button key={content} className="py-2.5 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold">
-              {content}
-            </button>
-            )
+          // )
+          // :(
+          //   <button key={content} className="py-2.5 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold">
+          //     {content}
+          //   </button>
+          //   )
           )
         })
       }  
