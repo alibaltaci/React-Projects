@@ -7,7 +7,7 @@ export default function Search() {
   const [ active, setActive ] = useState(false)
 
   return (
-    <div className="min-h-[32px] h-[53px] mb-3 mt-[5px] flex item-center  ">
+    <div className="min-h-[32px] h-[53px] mb-3 mt-[5px] flex item-center flex-col  ">
         <label className="h-[43px] rounded-full bg-[#202327] w-full flex text-[#71767b] relative group border focus-within:bg-black focus-within:border-[#1d9bf0] ">
           <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
             <IconReturner icon="search" isActive={active}  />
@@ -30,6 +30,13 @@ export default function Search() {
                 >
                   <IconReturner icon="delete"  />
                 </button>)
+            }
+            {
+              active && (
+                <div className="absolute top-full w-full bg-black shadow-box px-4" > 
+                  Hi
+                </div>
+              )
             }
         </label>
     </div>
