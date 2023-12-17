@@ -11,7 +11,7 @@ export default function Search() {
   const ref = useClickAway( () => {
     setIsOpen(false)
   })
- 
+   
   return (
     <div className="min-h-[32px] h-[53px] mb-3 mt-[5px] flex item-center flex-col top-0 sticky"
       ref={ref}
@@ -43,7 +43,7 @@ export default function Search() {
             {
               isOpen && (
                 <div 
-                className="absolute w-[350px] top-full -left-px -translate-y-1 bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]"
+                className="absolute w-[350px] top-[48px] -left-px -translate-y-1 bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]"
                 > 
                   <p className="text-center p-3 pt-5 leading-5">
                     Try searching for people, lists, or keywords
