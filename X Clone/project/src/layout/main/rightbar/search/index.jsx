@@ -13,17 +13,17 @@ export default function Search() {
   })
    
   return (
-    <div className="min-h-[32px] h-[53px] mb-3 mt-[5px] flex item-center flex-col top-0 sticky"
+    <div className="min-h-[32px] h-[53px] mb-2 mt-[5px] flex item-center top-0 sticky z-10 bg-black text-[#71767b]"
       ref={ref}
     >
-        <label className="h-[43px] rounded-full bg-[#202327] w-full flex text-[#71767b] relative group border focus-within:bg-black focus-within:border-[#1d9bf0] ">
+        <label className="h-[43px] rounded-full bg-[#202327] w-full flex relative group border focus-within:bg-black focus-within:border-[#1d9bf0] ">
           <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
             <IconReturner icon="search" isActive={active}  />
           </div>
             <input 
               placeholder="Search" 
               type="text" 
-              className="w-full h-full pl-[56px] rounded-full bg-transparent outline-none text-white " 
+              className="w-full h-full pl-[56px] rounded-full bg-transparent outline-none text-white placeholder-[#71767b] " 
               value={query}
               onChange={ e => setQuery( e.target.value ) }
               onFocus={ () => {setActive(true), setIsOpen(true)} }
@@ -43,7 +43,7 @@ export default function Search() {
             {
               isOpen && (
                 <div 
-                className="absolute w-[350px] top-[48px] -left-px -translate-y-1 bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]"
+                className="absolute w-[350px] top-[48px] -left-px -translate-y-1 bg-black shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]"
                 > 
                   <p className="text-center p-3 pt-5 leading-5">
                     Try searching for people, lists, or keywords
