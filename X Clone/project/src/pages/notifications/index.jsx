@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-export default function notifications() {
+export default function Notifications() {
   return (
     <div>
         <Helmet >
